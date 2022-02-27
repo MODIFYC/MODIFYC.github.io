@@ -4,7 +4,7 @@
 
 *Cayman Blog is a Jekyll theme for GitHub Pages. It is based on the nice [Cayman theme](https://pages-themes.github.io/cayman/), with blogging features added. You can [preview the theme to see what it looks like](http://lorepirri.github.io/cayman-blog), or even [use it today](#usage).*
 
-<img src="https://raw.githubusercontent.com/lorepirri/cayman-blog/master/thumbnail.png" alt="Thumbnail of cayman-blog" style="max-width:30%; border: 1px solid grey;"/> <img src="https://raw.githubusercontent.com/lorepirri/cayman-blog/master/thumbnail-mobile.gif" alt="Thumbnail of cayman-blog for mobile" style="max-width:30%;"/>
+<img src="https://raw.githubusercontent.com/lorepirri/cayman-blog/master/thumbnail.png" alt="Thumbnail of cayman-blog" style="max-width:30%; border: 1px solid grey;"/> <img src="https://raw.githubusercontent.com/lorepirri/cayman-blog/master/thumbnail-mobile.png" alt="Thumbnail of cayman-blog for mobile" style="width: 239px; height: 424px;"/>
 
 ## Install
 
@@ -72,8 +72,8 @@ This method is preferred for existing _Jekyll blogs_, as well as newly created o
 3. Delete the `screenshot.png` and `screenshot-mobile.png` files
 3. Empty the `_posts` folder
 4. Install bundler and gems with `$ script/bootstrap`
-5. Run Jekyll with `$ bundle exec jekyll serve`
-6. Modify `_config.yml`, `about.md`, `contact.md`, and `now.md` for your project
+5. Run Jekyll with `$ script/server`
+6. Modify `_config.yml`, `about.md`, `contact.md` for your project
 7. [Customize the theme](customizing)
 
 ## Customizing
@@ -107,11 +107,9 @@ gem 'jekyll-feed'
 And then add this line to your site's `_config.yml`:
 
 ```yml
-plugins:
+gems:
   - jekyll-feed
 ```
-
-:warning: If you are using Jekyll < 3.5.0 use the `gems` key instead of `plugins`.
 
 For more information about configuring this plugin, see the official [Jekyll Feed plugin](https://github.com/jekyll/jekyll-feed) page.
 
@@ -121,7 +119,7 @@ Cayman Blog includes simple SEO tags from [jekyll-social-metatags](https://githu
 
 The usage is compatible with the plugin [Jekyll SEO Tag](https://github.com/jekyll/jekyll-seo-tag), which provides a battle-tested template of crowdsourced best-practices.
 
-To switch to a better SEO tags however, one should install [Jekyll SEO Tag](https://github.com/jekyll/jekyll-seo-tag):
+To switch to a better SEO tags however, one should install [Jekyll Feed plugin](https://github.com/jekyll/jekyll-feed):
 
 1. Add this line to your site's Gemfile:
 
@@ -132,7 +130,7 @@ To switch to a better SEO tags however, one should install [Jekyll SEO Tag](http
 2. And then add this line to your site's `_config.yml`:
 
     ```yml
-    plugins:
+    gems:
       - jekyll-seo-tag
     ```
 
@@ -222,16 +220,3 @@ If you'd like to preview the theme locally (for example, in the process of propo
 ### Running tests
 
 The theme contains a minimal test suite, to ensure a site with the theme would build successfully. To run the tests, simply run `script/cibuild`. You'll need to run `script/bootstrap` once before the test script will work.
-
-
-#
-
-* Gemfile
- - gem "kramdown-parser-gfm"
-* _config.yml
- - url: [본인 URL]
- - baseurl: ""
-
-- $ bundle install
-- $ bundle add webrick
-- $ bundle exec jekyll serve
