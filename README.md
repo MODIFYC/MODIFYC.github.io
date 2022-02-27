@@ -224,14 +224,23 @@ If you'd like to preview the theme locally (for example, in the process of propo
 The theme contains a minimal test suite, to ensure a site with the theme would build successfully. To run the tests, simply run `script/cibuild`. You'll need to run `script/bootstrap` once before the test script will work.
 
 
-#
+# 정리
 
-* Gemfile
+### Gemfile
  - gem "kramdown-parser-gfm"
-* _config.yml
+ 
+### _config.yml
  - url: [본인 URL]
  - baseurl: ""
+ 
+```
+ $ bundle install
+ $ bundle add webrick
+ $ bundle exec jekyll serve
+```
 
-- $ bundle install
-- $ bundle add webrick
-- $ bundle exec jekyll serve
+```
+$ gem install jekyll-theme-cayman-blog
+$ gem env gemdir
+```
+- 나온 위치에서 "jekyll-theme-cayman-blog-0.0.9" 파일 복사해서 블로그 폴더에 붙여넣기
