@@ -7,5 +7,6 @@
 #
 layout: home
 ---
+![HAPI](/HAPI.png)
+### ✔ 스터디 기록용 블로그입니다.
 
-hi
