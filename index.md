@@ -9,6 +9,7 @@ layout: home
 ---
 
 <img src="/HAPI.png" width="450px" height="450px" alt="HAPI">
-##### ✔ 스터디 기록용 블로그
+<span style="color:skyblue">✔ 스터디 기록용 블로그</span>
+
 
 
