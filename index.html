@@ -1103,20 +1103,20 @@
         </p>
         <div class="hmetrics">
           <div class="hmetric">
-            <div class="hmetric-val">0.03$</div>
+            <div class="hmetric-val">$0.03</div>
             <div class="hmetric-label">월 운영 비용</div>
           </div>
           <div class="hmetric">
-            <div class="hmetric-val">0건</div>
-            <div class="hmetric-label">CloudWatch 에러 (현재)</div>
+            <div class="hmetric-val">6s → 284ms</div>
+            <div class="hmetric-label">콜드스타트 개선</div>
           </div>
           <div class="hmetric">
-            <div class="hmetric-val">2026~</div>
+            <div class="hmetric-val">0%</div>
+            <div class="hmetric-label">에러율</div>
+          </div>
+          <div class="hmetric">
+            <div class="hmetric-val">2026.02~</div>
             <div class="hmetric-label">운영 기간</div>
-          </div>
-          <div class="hmetric">
-            <div class="hmetric-val">서버리스</div>
-            <div class="hmetric-label">아키텍처</div>
           </div>
         </div>
         <div class="hlinks">
@@ -1399,7 +1399,7 @@
               <div class="pipe">
                 <div class="pstep">
                   <div class="psname">my_terraform/ 변경</div>
-                  <div class="psdesc">IAM 리소스 변경 감지</div>
+                  <div class="psdesc">IAM · 웜업 인프라 변경 감지</div>
                 </div>
                 <div class="pstep">
                   <div class="psname">terraform init</div>
@@ -1411,7 +1411,7 @@
                 </div>
                 <div class="pstep">
                   <div class="psname">main 머지: apply</div>
-                  <div class="psdesc">IAM 리소스 자동 적용</div>
+                  <div class="psdesc">변경 리소스 자동 적용</div>
                 </div>
               </div>
             </div>
@@ -1443,10 +1443,6 @@
                 <td>지인 베타 운영</td>
               </tr>
               <tr>
-                <td>일 요청량</td>
-                <td>10건 미만</td>
-              </tr>
-              <tr>
                 <td>월 비용</td>
                 <td>0.03$</td>
               </tr>
@@ -1471,23 +1467,7 @@
             </ul>
           </div>
 
-          <div class="card">
-            <div class="subh" style="margin-top:0">🐛 사용자 피드백 기반 버그 수정</div>
-            <div class="decision-flow">
-              <div class="df-step">
-                <div class="df-label">발견</div>
-                <div class="df-content">만렙 상태에서 밥 이벤트가 잘못 발생 — <strong>사용자 피드백으로 인지</strong></div>
-              </div>
-              <div class="df-step">
-                <div class="df-label">해결</div>
-                <div class="df-content">엔딩 상태 예외처리 추가 후 GitHub Actions로 자동 배포</div>
-              </div>
-              <div class="df-step">
-                <div class="df-label">의미</div>
-                <div class="df-content">피드백 → 수정 → 자동 배포 사이클 경험</div>
-              </div>
-            </div>
-          </div>
+
 
           <div class="card">
             <div class="subh" style="margin-top:0">🔧 유지보수 이력</div>
@@ -1506,8 +1486,13 @@
                   style="color:var(--blue);font-family:var(--mono);font-size:11px;min-width:60px;margin-top:2px">2026.03</span><span>Terraform
                   IaC + GitHub Actions CI/CD 자동화</span></li>
               <li style="display:flex;gap:10px;align-items:flex-start"><span
-                  style="color:var(--blue);font-family:var(--mono);font-size:11px;min-width:60px;margin-top:2px">2026.03</span><span>엔딩
-                  상태 예외처리 버그 수정</span></li>
+                  style="color:var(--blue);font-family:var(--mono);font-size:11px;min-width:60px;margin-top:2px">2026.03</span><span>부하
+                  테스트 중 KeyError 발견 후 예외처리 추가</span></li>
+              <li style="display:flex;gap:10px;align-items:flex-start">
+                <span
+                  style="color:var(--blue);font-family:var(--mono);font-size:11px;min-width:60px;margin-top:2px">2026.03</span>
+                <span>EventBridge 웜업 적용으로 Lambda 콜드스타트 개선</span>
+              </li>
             </ul>
           </div>
 
@@ -1673,21 +1658,40 @@
           </table>
           <img src="cloudwatch_2nd.png" alt="2차 테스트 CloudWatch 대시보드" class="aimg" style="margin-top:16px;">
 
-          <div class="subh">🔍 분석</div>
-          <div class="card-grid">
-            <div class="card" style="background:var(--blue-bg)">
-              <div style="font-size:12px;font-weight:700;color:var(--blue);font-family:var(--mono);margin-bottom:10px">
-                콜드 스타트 특성</div>
-              <p style="font-size:13px;color:var(--text-sub);line-height:1.8;">15분 유휴 후 첫 요청 최대 6s → 이후 16ms로 안정화. 서버리스
-                환경에서 콜드 스타트가 초기 지연에 영향을 미치지만 컨테이너 재사용으로 응답 속도가 빠르게 안정화됨을 확인.</p>
-            </div>
-            <div class="card" style="background:var(--blue-bg)">
-              <div style="font-size:12px;font-weight:700;color:var(--blue);font-family:var(--mono);margin-bottom:10px">
-                자동 스케일링 검증</div>
-              <p style="font-size:13px;color:var(--text-sub);line-height:1.8;">50명 동시 요청에서 Throttle 0건 발생. 별도 스케일링 설정 없이
-                Lambda가 자동 확장됨을 검증. 비즈니스 로직(하루 1회 제한, DB 쓰기)도 동시 요청에서 정상 동작 확인.</p>
-            </div>
+          <div class="rbox" style="margin-top:16px">
+            <div class="rbox-t">💡 콜드 스타트 특성 확인</div>
+            <p>15분 유휴 후 첫 요청 최대 6s → 이후 16ms로 안정화. 서버리스 환경에서 콜드 스타트가 초기 지연에 영향을 미치지만 컨테이너 재사용으로 응답 속도가 빠르게 안정화됨을 확인.</p>
           </div>
+
+          <div class="subh">📊 3차 테스트 결과 (EventBridge 웜업 적용 후)</div>
+          <table class="ops-table" style="margin-bottom:20px">
+            <tr>
+              <th>지표</th>
+              <th>웜업 전</th>
+              <th>웜업 후</th>
+            </tr>
+            <tr>
+              <td>첫 요청 응답시간</td>
+              <td>~6000ms ❌</td>
+              <td>&lt; 100ms ✅</td>
+            </tr>
+            <tr>
+              <td>p95 응답시간</td>
+              <td>73.12ms</td>
+              <td>78.63ms</td>
+            </tr>
+            <tr>
+              <td>최대 응답시간</td>
+              <td>—</td>
+              <td>284ms</td>
+            </tr>
+            <tr>
+              <td>에러율</td>
+              <td>0%</td>
+              <td>0% ✅</td>
+            </tr>
+          </table>
+          <img src="cloudwatch_3rd.png" alt="3차 테스트 CloudWatch 대시보드" class="aimg" style="margin-top:16px;">
 
         </div>
       </div>
@@ -1779,15 +1783,33 @@ terraform init -migrate-state</pre>
                   적용 전 확인.</p>
               </div>
             </div>
+            <div class="titem">
+              <div class="thead" onclick="tog(this)"><span class="tnum">06</span><span class="ttitle">Terraform
+                  depends_on 누락 — IAM 정책 적용 전 EventBridge 생성 시도</span><span class="tarrow">▼</span></div>
+              <div class="tbody">
+                <span class="tlabel ts">현상</span>
+                <p>terraform apply 시 <code>AccessDeniedException: events:PutRule</code> 에러. IAM 정책을 방금 추가했는데도 권한 없음.</p>
+                <span class="tlabel tc">원인</span>
+                <p>Terraform이 IAM 정책 attachment와 EventBridge rule을 병렬로 실행. 정책이 완전히 적용되기 전에 PutRule 호출.</p>
+                <span class="tlabel tf">해결</span>
+                <pre>resource "aws_cloudwatch_event_rule" "warmup" {
+  depends_on = [aws_iam_group_policy_attachment.deployer]
+}</pre>
+                <span class="tlabel tp">재발 방지</span>
+                <p>IAM 정책 변경과 해당 권한을 사용하는 리소스가 함께 추가될 때는 항상 <code>depends_on</code> 명시.</p>
+              </div>
+            </div>
+
 
           </div>
           <div class="div"></div>
 
           <div class="subh">💡 배운 점</div>
           <p style="font-size:14px;color:var(--text-sub);line-height:1.9;margin-bottom:20px;">
-            서버리스 아키텍처를 직접 설계하고 운영하면서 Lambda의 콜드 스타트 특성을 실제 챗봇 서비스에서 체감했습니다. 부하 테스트에서 측정한 최대 6s의 초기 지연이 실제 사용자 입장에서는 "응답이
-            없는 것처럼 느껴지는" 경험으로 이어진다는 점을 확인했습니다. 비용 효율성을 위해 서버리스를 선택했지만, 트래픽 패턴이 안정적으로 바뀐다면 EC2로의 마이그레이션을 통해 비용과 응답 안정성
-            사이의 트레이드오프를 직접 비교해보고 싶습니다.
+            부하 테스트에서 측정한 최대 6s의 콜드스타트 지연이 실제 사용자 입장에서는 "응답이 없는 것처럼 느껴지는" 경험으로 이어진다는 점을 직접 체감했습니다. 이를 해결하기 위해 Provisioned
+            Concurrency와 EventBridge 웜업 방식을 비교했고, Provisioned Concurrency는 인스턴스를 상시 유지해 확실하지만 유휴 시간에도 비용이 발생하는 반면, 웜업은
+            5분 간격으로 Lambda를 호출해 컨테이너를 살아있게 유지하는 방식으로 거의 무료에 가까워 웜업을 선택했습니다. 시간이 된다면 EC2로의 마이그레이션을 통해 비용과 응답 안정성 사이의
+            트레이드오프를 직접 비교해보고 싶습니다.
           </p>
 
           <div class="subh">🔧 개선사항</div>
