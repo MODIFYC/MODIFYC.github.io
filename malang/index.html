@@ -189,11 +189,11 @@
               </div>
               <div class="df-step">
                 <div class="df-label">이유</div>
-                <div class="df-content">유휴 시간 비용 제거 / 트래픽 급증 시 자동 스케일링 / 서버 관리 오버헤드 없음</div>
+                <div class="df-content">유휴 구간의 상시 인스턴스 비용 제거 / 요청량에 따른 자동 스케일링 / 서버 관리 오버헤드 최소화</div>
               </div>
               <div class="df-step">
                 <div class="df-label">결과</div>
-                <div class="df-content"><strong>월 비용 0.03$</strong> 달성. 토이 프로젝트에 최적화된 비용 구조</div>
+                <div class="df-content">간헐적 요청과 긴 유휴 구간이 반복되는 <strong>비정형 트래픽에 비용이 탄력적으로 연동되는 구조</strong>를 구현하고, 월 운영 비용 <strong>0.03$</strong> 달성</div>
               </div>
             </div>
           </div>
@@ -216,7 +216,7 @@
               </div>
               <div class="df-step">
                 <div class="df-label">이유</div>
-                <div class="df-content">스키마 변경 시 마이그레이션 불필요 / VPC 없이 Lambda와 직접 연동 가능 / 프리티어 내 무료</div>
+                <div class="df-content">유연한 스키마 변경 / 트래픽 급증 시 RDS 커넥션 풀 고갈 위험 없이 요청량에 따라 수평 확장 / Lambda와 관리형 API로 연동해 DB 서버 운영 부담 최소화</div>
               </div>
               <div class="df-step">
                 <div class="df-label">결과</div>
@@ -778,9 +778,10 @@ terraform init -migrate-state</pre>
 
           <div class="subh">🔧 개선사항</div>
           <p style="font-size:14px;color:var(--text-sub);line-height:1.9;">
-            현재 Logs와 Metrics는 CloudWatch로 수집 중이지만, 요청이 Lambda 내부에서 어느 구간에서 지연되는지 추적하는 Tracing이 없습니다. AWS X-Ray를 도입하면
-            Lambda → DynamoDB 각 구간별 응답시간을 추적할 수 있어 병목 구간을 특정할 수 있습니다.
-            또한 챗봇 게임 특성상 자동화 매크로 사용이 쉬운 구조입니다. X-Ray로 엔드포인트별 호출 패턴을 분석하고, 비정상적인 요청이 집중되는 지점에 매크로 방지 로직을 적용하고 싶습니다.
+            현재 Logs와 Metrics는 CloudWatch로 수집하고 있으나, 요청 단위의 병목을 식별할 분산 추적은 아직 적용하지 않았습니다.
+            다음 운영 개선 단계에서는 AWS X-Ray Active Tracing을 Lambda에 활성화하고 DynamoDB 호출을 서브세그먼트로 수집해,
+            엔드포인트별 지연시간과 오류 발생 구간을 서비스 맵에서 검증할 계획입니다. 대표 API의 정상·지연·오류 요청을 재현한 뒤
+            트레이스 상세 화면과 서비스 맵을 운영 증빙으로 남기고, 비정상 호출이 집중되는 엔드포인트에는 해당 데이터에 근거해 Rate Limiting과 매크로 방지 정책을 적용하겠습니다.
           </p>
         </div>
       </div>
