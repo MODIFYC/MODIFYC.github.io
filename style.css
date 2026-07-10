@@ -231,10 +231,10 @@ section:last-of-type {
 .hname-big {
   font-size: clamp(52px, 8vw, 80px);
   font-weight: 700;
-  letter-spacing: -3px;
+  letter-spacing: 3px;
   line-height: 1.0;
   color: var(--text);
-  margin-bottom: 10px
+  margin-bottom: 28px
 }
 
 .hname-big span {
@@ -242,16 +242,22 @@ section:last-of-type {
 }
 
 .hrole {
+  font-family: 'Noto Sans', sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: 'wdth' 100;
   font-size: 16px;
-  color: var(--text-sub);
-  margin-bottom: 24px
+  color: var(--blue);
+  margin-bottom: 22px
 }
 
 .hdesc {
-  font-size: 15px;
+  font-size: 12px;
   color: var(--text-sub);
-  max-width: 560px;
-  line-height: 1.9;
+  width: 50vw;
+  max-width: none;
+  white-space: nowrap;
+  line-height: 1.65;
   margin-bottom: 20px;
   font-weight: 400
 }
@@ -266,50 +272,58 @@ section:last-of-type {
 .hmetric {
   background: var(--surface);
   border-radius: 12px;
-  padding: 10px 18px;
-  backdrop-filter: blur(10px)
+  padding: 11px 19.8px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 6px 18px rgba(37, 99, 235, .12);
+  font-family: 'Noto Sans KR', sans-serif
 }
 
 .hmetric-val {
   font-size: 18px;
   font-weight: 700;
   color: var(--blue);
-  font-family: var(--mono)
+  font-family: 'Noto Sans KR', sans-serif
 }
 
 .hmetric-label {
   font-size: 11px;
   color: var(--text-muted);
-  font-family: var(--mono)
+  font-family: 'Noto Sans KR', sans-serif
 }
 
 .hlinks {
   display: flex;
   gap: 10px;
-  flex-wrap: wrap
+  flex-wrap: wrap;
+  margin-left: 2px
 }
 
 .hlink {
   display: inline-flex;
   align-items: center;
-  gap: 7px;
-  padding: 9px 18px;
+  gap: 6px;
+  padding: 7px 14px;
   border-radius: 10px;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 500;
   text-decoration: none;
   transition: all .25s;
-  font-family: var(--mono)
+  font-family: 'Noto Sans KR', sans-serif
+}
+
+.hlink svg {
+  width: 12px;
+  height: 12px
 }
 
 .hlink.pri {
-  background: var(--blue);
+  background: rgba(37, 99, 235, .9);
   color: #fff;
   box-shadow: 0 4px 14px rgba(37, 99, 235, .3)
 }
 
 .hlink.pri:hover {
-  background: var(--blue-light);
+  background: rgba(59, 130, 246, .9);
   transform: translateY(-1px)
 }
 
@@ -1105,6 +1119,11 @@ footer {
 }
 
 @media(max-width:900px) {
+  .hdesc {
+    width: 100%;
+    white-space: normal;
+  }
+
   .pcard-top {
     grid-template-columns: 1fr;
   }
