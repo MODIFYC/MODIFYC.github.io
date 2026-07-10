@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>침수사고 예방 시스템 — 최수정 Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+  <header>
+    <a href="../index.html" class="hname" style="text-decoration:none">← 최수정 Portfolio</a>
+    <nav class="hnav">
+      <a href="#compare-flood">Versions</a>
+      <a href="#ts-flood">Troubleshooting</a>
+      <a href="#links-flood">Links</a>
+    </nav>
+  </header>
+
+  <nav class="dots">
+    <div class="dot on" onclick="goTo('hero-flood')"></div>
+    <div class="dot" onclick="goTo('compare-flood')"></div>
+    <div class="dot" onclick="goTo('ts-flood')"></div>
+    <div class="dot" onclick="goTo('links-flood')"></div>
+  </nav>
+
+  <div class="wrap">
+
+    <!-- ===== HERO ===== -->
+    <section id="hero-flood">
+      <div class="fi">
+        <div class="htag">Capstone Project · IoT</div>
+        <h1 class="hname-big" style="font-size:clamp(40px,6vw,64px)">침수사고 예방 시스템</h1>
+        <div class="hrole">IoT 기반 침수사고 예방 시스템 &nbsp;·&nbsp; Arduino · React · Node.js</div>
+        <p class="hdesc">
+          지하차도 침수사고 예방을 목표로 아두이노 기반 차량 통제 및 지도 알림 시스템을 제작했습니다.<br>
+          팀장으로서 아두이노 센서 제어, 카카오 MAP API 연동, 실시간 데이터 처리 로직 설계를 주도했습니다.<br>
+          캡스톤 이후 실시간성 문제를 개선하여 WebSocket 기반 버전으로 발전시켰습니다.
+        </p>
+        <div class="hmetrics">
+          <div class="hmetric">
+            <div class="hmetric-val">🏆 대상</div>
+            <div class="hmetric-label">MADE IN SUNGSHIN 2023</div>
+          </div>
+          <div class="hmetric">
+            <div class="hmetric-val">팀장</div>
+            <div class="hmetric-label">2023.09 ~ 2023.12</div>
+          </div>
+          <div class="hmetric">
+            <div class="hmetric-val">2개 버전</div>
+            <div class="hmetric-label">캡스톤 · 개선판</div>
+          </div>
+          <div class="hmetric">
+            <div class="hmetric-val">HTTP → WS</div>
+            <div class="hmetric-label">실시간성 개선</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 버전 비교 ===== -->
+    <section id="compare-flood">
+      <div class="fi">
+        <div class="slabel">Versions</div>
+        <h2 class="stitle">캡스톤 vs 개선 버전</h2>
+        <div class="card">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+            <div>
+              <div class="subh" style="margin-top:0">캡스톤 (2023) — 팀 프로젝트 대상</div>
+              <div class="tags" style="margin-bottom:12px">
+                <span class="tag">Arduino</span><span class="tag">C++</span><span class="tag">React</span><span
+                  class="tag">Kakao MAP API</span><span class="tag">수위/유량 센서</span>
+              </div>
+              <ul
+                style="font-size:13px;color:var(--text-sub);list-style:none;display:flex;flex-direction:column;gap:6px">
+                <li>🌊 수위/유량 센서 → LED 단계적 경고 (RED→YELLOW→WHITE)</li>
+                <li>🗺️ 카카오 MAP API 침수 위험 지역 마커</li>
+                <li>📍 내 위치 기반 주변 침수 상황 확인</li>
+              </ul>
+            </div>
+            <div>
+              <div class="subh" style="margin-top:0">개선 버전 (2025) — 개인 프로젝트</div>
+              <div class="tags" style="margin-bottom:12px">
+                <span class="tag">Node.js</span><span class="tag">Express</span><span
+                  class="tag">Socket.io</span><span class="tag">MongoDB Atlas</span><span class="tag">HC-SR04</span>
+              </div>
+              <ul
+                style="font-size:13px;color:var(--text-sub);list-style:none;display:flex;flex-direction:column;gap:6px">
+                <li>📡 HTTP 폴링 → WebSocket으로 실시간 센서 스트리밍</li>
+                <li>🗄️ 임계치 이하 이벤트만 MongoDB Atlas에 기록</li>
+                <li>🔐 /admin 라우팅으로 거리 이력 관리자 확인</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 문제 해결 ===== -->
+    <section id="ts-flood">
+      <div class="fi">
+        <div class="slabel">Troubleshooting</div>
+        <h2 class="stitle">문제 해결</h2>
+        <div class="card">
+          <div class="titem open">
+            <div class="thead" onclick="tog(this)">
+              <span class="tnum">01</span>
+              <span class="ttitle">HTTP 폴링 → WebSocket — 실시간 센서 데이터 지연 해결</span>
+              <span class="tarrow">▼</span>
+            </div>
+            <div class="tbody">
+              <span class="tlabel ts">현상</span>
+              <p>초음파 센서 거리값이 라우팅 전환이나 새로고침을 해야만 갱신됨. 실시간 모니터링 불가.</p>
+              <span class="tlabel tc">원인</span>
+              <p>HTTP 요청-응답 방식은 클라이언트가 주기적으로 서버에 요청해야 최신값을 받을 수 있음. 아두이노에서 지속 측정되는 센서값을 실시간 반영 불가.</p>
+              <span class="tlabel tf">해결</span>
+              <p>Node.js + Socket.io로 WebSocket 양방향 통신 구현. 아두이노 → 시리얼 통신 → Node.js → Socket.io → 브라우저로 실시간 스트리밍. 10cm
+                이하
+                이벤트만 MongoDB Atlas에 기록.</p>
+              <div class="rbox">
+                <div class="rbox-t">✅ RESULT</div>
+                <p>새로고침 없이 초음파 센서 거리값 실시간 반영. /admin 페이지에서 최근 50개 이벤트 이력 조회 가능.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 링크 ===== -->
+    <section id="links-flood" style="padding-bottom:80px;">
+      <div class="fi">
+        <div class="slabel">Links</div>
+        <h2 class="stitle">링크</h2>
+        <div class="card">
+          <a href="https://www.sungshin.ac.kr/main_kor/10941/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGbWFpbl9rb3IlMkYzMTkyJTJGMTI3NTE3JTJGYXJ0Y2xWaWV3LmRvJTNG"
+            target="_blank" class="ncard">
+            <div style="font-size:22px;">📰</div>
+            <div>
+              <div class="ncard-t">성신여자대학교 공식 뉴스 — MADE IN SUNGSHIN 대상 수상</div>
+              <div class="ncard-s">sungshin.ac.kr · 2023</div>
+            </div>
+          </a>
+          <a href="https://github.com/MODIFYC/tunneling/tree/soojung" target="_blank" class="ncard">
+            <div style="font-size:22px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="#2563eb">
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
+              </svg></div>
+            <div>
+              <div class="ncard-t">GitHub — 캡스톤 원본 (soojung 브랜치)</div>
+              <div class="ncard-s">github.com/MODIFYC/tunneling</div>
+            </div>
+          </a>
+          <a href="https://github.com/MODIFYC/arduino_web_connect" target="_blank" class="ncard">
+            <div style="font-size:22px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="#2563eb">
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
+              </svg></div>
+            <div>
+              <div class="ncard-t">GitHub — WebSocket 개선 버전 (arduino_web_connect)</div>
+              <div class="ncard-s">github.com/MODIFYC/arduino_web_connect</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script>
+    function tog(h) { h.parentElement.classList.toggle('open') }
+    function goTo(id) { document.getElementById(id).scrollIntoView({ behavior: 'smooth' }) }
+
+    const secs = ['hero-flood', 'compare-flood', 'ts-flood', 'links-flood'];
+    const dots = document.querySelectorAll('.dot');
+    const obs = new IntersectionObserver(es => {
+      es.forEach(e => {
+        if (e.isIntersecting) {
+          dots.forEach(d => d.classList.remove('on'));
+          const i = secs.indexOf(e.target.id);
+          if (i !== -1) dots[i].classList.add('on');
+        }
+      });
+    }, { threshold: 0.25 });
+    secs.forEach(id => { const el = document.getElementById(id); if (el) obs.observe(el) });
+
+    const fiObs = new IntersectionObserver(es => {
+      es.forEach(e => { if (e.isIntersecting) e.target.classList.add('on') });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.fi').forEach(el => fiObs.observe(el));
+  </script>
+</body>
+
+</html>

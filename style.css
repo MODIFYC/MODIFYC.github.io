@@ -1016,7 +1016,196 @@ footer {
   color: var(--blue)
 }
 
+/* ===== WanderPool: 담당 범위 레전드 ===== */
+.scope-legend {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  font-size: 12px;
+  color: var(--text-sub);
+  font-family: var(--mono);
+}
+
+.scope-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.scope-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.scope-dot.lead {
+  background: var(--blue);
+  box-shadow: 0 0 0 3px var(--blue-bg);
+}
+
+.scope-dot.team {
+  background: var(--text-muted);
+  box-shadow: 0 0 0 3px rgba(156, 163, 175, .15);
+}
+
+.scope-tag {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 9px;
+  border-radius: 4px;
+  margin-left: 8px;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.scope-tag.lead {
+  background: var(--blue-bg);
+  border: 1px solid var(--border-strong);
+  color: var(--blue);
+}
+
+.scope-tag.team {
+  background: rgba(156, 163, 175, .14);
+  border: 1px solid rgba(156, 163, 175, .32);
+  color: var(--text-muted);
+}
+
+/* ===== WanderPool: 네트워크 CIDR 박스 ===== */
+.net-diagram {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  margin: 4px 0 22px;
+}
+
+.net-box {
+  width: 100%;
+  max-width: 460px;
+  border: 1px solid var(--border-strong);
+  border-radius: 14px;
+  padding: 16px 22px;
+  background: var(--blue-bg);
+}
+
+.net-box-title {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--blue);
+  letter-spacing: .5px;
+  margin-bottom: 10px;
+}
+
+.net-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  padding: 6px 0;
+  border-bottom: 1px dashed var(--border);
+}
+
+.net-row:last-child {
+  border-bottom: none;
+}
+
+.net-row-label {
+  color: var(--text-sub);
+}
+
+.net-row-cidr {
+  font-family: var(--mono);
+  color: var(--blue);
+  font-weight: 700;
+}
+
+.net-arrow {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--text-muted);
+  text-align: center;
+  padding: 4px 0;
+  line-height: 1.6;
+}
+
+/* ===== WanderPool: 이미지 업로드 자리 표시 ===== */
+.imgph {
+  width: 100%;
+  min-height: 200px;
+  border: 1px dashed var(--border-strong);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  font-size: 12px;
+  font-family: var(--mono);
+  background: rgba(37, 99, 235, .03);
+  margin-bottom: 8px;
+  text-align: center;
+  padding: 20px;
+  line-height: 1.7;
+}
+
+/* 서브페이지 뒤로가기 링크 */
+.backlink {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--blue);
+  text-decoration: none;
+  opacity: .75;
+  transition: opacity .2s;
+}
+
+.backlink:hover {
+  opacity: 1;
+}
+
+/* ===== 프로젝트 요약 카드: 썸네일 + 본문 ===== */
+.pcard-top {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 24px;
+  margin-bottom: 20px;
+}
+
+.pthumb {
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  aspect-ratio: 4/3;
+  background: #e8eeff;
+  box-shadow: 0 2px 12px rgba(37, 99, 235, .07);
+}
+
+.pthumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 프로젝트 요약 카드: 핵심 하이라이트 리스트 */
+.phighlights {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--text-sub);
+  line-height: 1.6;
+  margin: 4px 0 20px;
+}
+
 @media(max-width:900px) {
+  .pcard-top {
+    grid-template-columns: 1fr;
+  }
+
   header {
     padding: 0 20px
   }
