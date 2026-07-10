@@ -1,5 +1,5 @@
 :root {
-  --bg: #eef2ff;
+  --bg: #eaf3fb;
   --surface: rgba(255, 255, 255, 0.62);
   --surface-hover: rgba(255, 255, 255, 0.82);
   --border: rgba(100, 130, 255, 0.13);
@@ -56,6 +56,21 @@ body::after {
   background: radial-gradient(ellipse, rgba(37, 99, 235, .09) 0%, transparent 70%);
   pointer-events: none;
   z-index: 0
+}
+
+/* 마우스 커서를 따라다니는 작은 그라데이션 */
+.cursor-glow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(37, 99, 235, .65) 0%, rgba(37, 99, 235, .3) 45%, transparent 75%);
+  pointer-events: none;
+  z-index: 0;
+  transform: translate(-50%, -50%);
+  will-change: transform
 }
 
 /* 헤더 */
@@ -207,7 +222,6 @@ section:last-of-type {
   letter-spacing: 3px;
   text-transform: uppercase;
   background: var(--blue-bg);
-  border: 1px solid var(--border-strong);
   border-radius: 20px;
   padding: 5px 14px;
   margin-bottom: 28px;
@@ -224,7 +238,7 @@ section:last-of-type {
 }
 
 .hname-big span {
-  color: var(--blue)
+  color: var(--text)
 }
 
 .hrole {
@@ -251,7 +265,6 @@ section:last-of-type {
 
 .hmetric {
   background: var(--surface);
-  border: 1px solid var(--border-strong);
   border-radius: 12px;
   padding: 10px 18px;
   backdrop-filter: blur(10px)
@@ -302,14 +315,14 @@ section:last-of-type {
 
 .hlink.sec {
   background: var(--surface);
-  border: 1px solid var(--border-strong);
   color: var(--blue);
-  backdrop-filter: blur(10px)
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(37, 99, 235, .08)
 }
 
 .hlink.sec:hover {
   background: var(--blue-bg);
-  border-color: var(--blue)
+  box-shadow: 0 4px 16px rgba(37, 99, 235, .14)
 }
 
 /* 프로젝트 헤더 */
@@ -376,6 +389,13 @@ section:last-of-type {
   color: var(--text-muted);
   margin-top: 6px;
   font-family: var(--mono)
+}
+
+.shots-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 8px
 }
 
 /* 소제목 */
@@ -1016,123 +1036,6 @@ footer {
   color: var(--blue)
 }
 
-/* ===== WanderPool: 담당 범위 레전드 ===== */
-.scope-legend {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
-  font-size: 12px;
-  color: var(--text-sub);
-  font-family: var(--mono);
-}
-
-.scope-legend span {
-  display: inline-flex;
-  align-items: center;
-  gap: 7px;
-}
-
-.scope-dot {
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  display: inline-block;
-}
-
-.scope-dot.lead {
-  background: var(--blue);
-  box-shadow: 0 0 0 3px var(--blue-bg);
-}
-
-.scope-dot.team {
-  background: var(--text-muted);
-  box-shadow: 0 0 0 3px rgba(156, 163, 175, .15);
-}
-
-.scope-tag {
-  display: inline-block;
-  font-family: var(--mono);
-  font-size: 10px;
-  font-weight: 700;
-  padding: 2px 9px;
-  border-radius: 4px;
-  margin-left: 8px;
-  white-space: nowrap;
-  vertical-align: middle;
-}
-
-.scope-tag.lead {
-  background: var(--blue-bg);
-  border: 1px solid var(--border-strong);
-  color: var(--blue);
-}
-
-.scope-tag.team {
-  background: rgba(156, 163, 175, .14);
-  border: 1px solid rgba(156, 163, 175, .32);
-  color: var(--text-muted);
-}
-
-/* ===== WanderPool: 네트워크 CIDR 박스 ===== */
-.net-diagram {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2px;
-  margin: 4px 0 22px;
-}
-
-.net-box {
-  width: 100%;
-  max-width: 460px;
-  border: 1px solid var(--border-strong);
-  border-radius: 14px;
-  padding: 16px 22px;
-  background: var(--blue-bg);
-}
-
-.net-box-title {
-  font-family: var(--mono);
-  font-size: 11px;
-  font-weight: 700;
-  color: var(--blue);
-  letter-spacing: .5px;
-  margin-bottom: 10px;
-}
-
-.net-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 12px;
-  padding: 6px 0;
-  border-bottom: 1px dashed var(--border);
-}
-
-.net-row:last-child {
-  border-bottom: none;
-}
-
-.net-row-label {
-  color: var(--text-sub);
-}
-
-.net-row-cidr {
-  font-family: var(--mono);
-  color: var(--blue);
-  font-weight: 700;
-}
-
-.net-arrow {
-  font-family: var(--mono);
-  font-size: 11px;
-  color: var(--text-muted);
-  text-align: center;
-  padding: 4px 0;
-  line-height: 1.6;
-}
-
 /* ===== WanderPool: 이미지 업로드 자리 표시 ===== */
 .imgph {
   width: 100%;
@@ -1227,6 +1130,10 @@ footer {
   }
 
   .shots {
+    grid-template-columns: 1fr 1fr
+  }
+
+  .shots-4 {
     grid-template-columns: 1fr 1fr
   }
 

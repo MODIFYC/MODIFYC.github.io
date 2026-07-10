@@ -12,6 +12,8 @@
 
 <body>
 
+  <div class="cursor-glow"></div>
+
   <header>
     <a href="../index.html" class="hname" style="text-decoration:none">← 최수정 Portfolio</a>
     <nav class="hnav">
@@ -116,7 +118,7 @@
         <div class="slabel">Architecture</div>
         <h2 class="stitle">시스템 아키텍처</h2>
         <div class="card">
-          <img src="../malang_archi.png" alt="말랑이 AWS Architecture" class="aimg">
+          <img src="malang_archi.png" alt="말랑이 AWS Architecture" class="aimg">
           <p style="font-size:12px;color:var(--text-muted);text-align:center;font-family:var(--mono);">CI/CD 배포 흐름 ·
             운영
             흐름 · 모니터링 흐름 · IAM 최소권한 전략</p>
@@ -582,7 +584,7 @@
             </div>
           </div>
 
-          <img src="../cloudwatch_1st.png" alt="1차 테스트 CloudWatch 대시보드" class="aimg" style="margin-top:16px;">
+          <img src="cloudwatch_1st.png" alt="1차 테스트 CloudWatch 대시보드" class="aimg" style="margin-top:16px;">
 
           <div class="subh">📊 2차 테스트 결과 (버그 수정 후 — 쓰다듬기/똥치우기 집중)</div>
           <table class="ops-table" style="margin-bottom:20px">
@@ -612,7 +614,7 @@
               <td>미발생 ✅</td>
             </tr>
           </table>
-          <img src="../cloudwatch_2nd.png" alt="2차 테스트 CloudWatch 대시보드" class="aimg" style="margin-top:16px;">
+          <img src="cloudwatch_2nd.png" alt="2차 테스트 CloudWatch 대시보드" class="aimg" style="margin-top:16px;">
 
           <div class="rbox" style="margin-top:16px">
             <div class="rbox-t">💡 콜드 스타트 특성 확인</div>
@@ -648,7 +650,7 @@
               <td>0% ✅</td>
             </tr>
           </table>
-          <img src="../cloudwatch_3rd.png" alt="3차 테스트 CloudWatch 대시보드" class="aimg" style="margin-top:16px;">
+          <img src="cloudwatch_3rd.png" alt="3차 테스트 CloudWatch 대시보드" class="aimg" style="margin-top:16px;">
 
         </div>
       </div>
@@ -789,6 +791,12 @@ terraform init -migrate-state</pre>
   <script>
     function tog(h) { h.parentElement.classList.toggle('open') }
     function goTo(id) { document.getElementById(id).scrollIntoView({ behavior: 'smooth' }) }
+
+    const glow = document.querySelector('.cursor-glow');
+    document.addEventListener('mousemove', e => {
+      glow.style.left = e.clientX + 'px';
+      glow.style.top = e.clientY + 'px';
+    });
 
     const secs = ['hero-malang', 'preview-m', 'arch-m', 'infra-m', 'cicd-m', 'ops-m', 'load-test', 'ts-m'];
     const dots = document.querySelectorAll('.dot');

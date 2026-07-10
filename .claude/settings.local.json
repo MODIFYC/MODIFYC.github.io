@@ -36,7 +36,14 @@
       "Bash(wc:*)",
       "Bash(grep:*)",
       "Bash(find:*)",
-      "Bash(pkill -f \"http.server 8765\")"
+      "Bash(pkill -f \"http.server 8765\")",
+      "Bash(git -C \"c:\\\\Users\\\\User\\\\MODIFYC.github.io\" log --oneline -20)",
+      "Bash(mv \"malang_archi.png\" \"malang/malang_archi.png\")",
+      "Bash(mv \"malang-architecture.xml\" \"malang/malang-architecture.xml\")",
+      "Bash(mv \"cloudwatch_1st.png\" \"malang/cloudwatch_1st.png\")",
+      "Bash(mv \"cloudwatch_2nd.png\" \"malang/cloudwatch_2nd.png\")",
+      "Bash(mv \"cloudwatch_3rd.png\" \"malang/cloudwatch_3rd.png\")",
+      "Bash(git -C \"c:/Users/User/MODIFYC.github.io\" status)"
     ]
   }
 }

@@ -12,6 +12,8 @@
 
 <body>
 
+  <div class="cursor-glow"></div>
+
   <header>
     <a href="../index.html" class="hname" style="text-decoration:none">← 최수정 Portfolio</a>
     <nav class="hnav">
@@ -174,6 +176,12 @@
   <script>
     function tog(h) { h.parentElement.classList.toggle('open') }
     function goTo(id) { document.getElementById(id).scrollIntoView({ behavior: 'smooth' }) }
+
+    const glow = document.querySelector('.cursor-glow');
+    document.addEventListener('mousemove', e => {
+      glow.style.left = e.clientX + 'px';
+      glow.style.top = e.clientY + 'px';
+    });
 
     const secs = ['hero-flood', 'compare-flood', 'ts-flood', 'links-flood'];
     const dots = document.querySelectorAll('.dot');

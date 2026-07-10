@@ -12,6 +12,8 @@
 
 <body>
 
+  <div class="cursor-glow"></div>
+
   <header>
     <div class="hname">최수정 — Portfolio</div>
     <nav class="hnav">
@@ -70,7 +72,8 @@
             </svg>
             GitHub
           </a>
-          <a href="https://wanderpool.cloud" target="_blank" class="hlink pri">🚗 WanderPool</a>
+          <a href="https://www.miricanvas.com/v2/ko/design2/v/c449dec2-f27a-4bba-8deb-21aa1ef953fd" target="_blank"
+            class="hlink pri">🚗 WanderPool 발표자료</a>
           <a href="https://cmod-ify.tistory.com/category/Project" target="_blank" class="hlink sec">✏️ Blog</a>
         </div>
       </div>
@@ -87,11 +90,11 @@
               <div class="ptitle">🚗 WanderPool — 실시간 카풀 매칭 MSA 서비스</div>
               <div class="psub">Kubernetes · Kong Gateway · AWS EKS · 팀 프로젝트 (4인) · 2026.04 ~ 2026.06</div>
             </div>
-            <span class="pbadge">🏆 우수 프로젝트상</span>
+            <span class="award">🏆 현대오토에버 클라우드 스쿨 우수상</span>
           </div>
 
           <div class="pcard-top">
-            <div class="pthumb"><img src="overall.png" alt="WanderPool 전체 아키텍처"></div>
+            <div class="pthumb"><img src="wanderpool/overall.png" alt="WanderPool 전체 아키텍처"></div>
             <div>
               <p style="font-size:14px;color:var(--text-sub);line-height:1.9;margin-bottom:14px;">
                 현대오토에버 클라우드 스쿨 3기 4인 팀 프로젝트. 온프레미스 Kubernetes 클러스터(물리 서버 2대, VM 9대) 위에 4개
@@ -152,7 +155,7 @@
           </div>
 
           <div class="pcard-top">
-            <div class="pthumb"><img src="malang_archi.png" alt="말랑이 AWS 아키텍처"></div>
+            <div class="pthumb"><img src="malang/malang_archi.png" alt="말랑이 AWS 아키텍처"></div>
             <div>
               <p style="font-size:14px;color:var(--text-sub);line-height:1.9;margin-bottom:14px;">
                 카카오톡을 통해 자신만의 캐릭터 '말랑이'를 육성하는 게임형 챗봇 서비스입니다. 비정형 트래픽에 최적화된
@@ -208,12 +211,13 @@
               <div class="ptitle">⚡ Wattup — EV 충전소 예약 플랫폼</div>
               <div class="psub">Kubernetes · On-premise · 팀 프로젝트 (6인) · 2026.03 ~ 2026.04 (종료)</div>
             </div>
+            <span class="award">🏆 현대오토에버 클라우드 스쿨 우수상</span>
           </div>
 
           <div class="role-badge">🛠 내 역할: Kubernetes 클러스터 설계/구축 100% + 프론트엔드 개발 50%</div>
 
           <div class="pcard-top">
-            <div class="pthumb"><img src="wattup_archi.png" alt="Wattup 네트워크 아키텍처"></div>
+            <div class="pthumb"><img src="wattup/wattup_archi.png" alt="Wattup 네트워크 아키텍처"></div>
             <div>
               <p style="font-size:14px;color:var(--text-sub);line-height:1.9;margin-bottom:14px;">
                 전기차 충전소 실시간 예약 및 현황 관리 서비스. VirtualBox 기반 On-premise Kubernetes 클러스터를 설계·구축하고
@@ -324,7 +328,8 @@
       <div class="flinks">
         <a href="https://github.com/MODIFYC" target="_blank" class="flink">GitHub</a>
         <a href="https://cmod-ify.tistory.com/category/Project" target="_blank" class="flink">Blog</a>
-        <a href="https://wanderpool.cloud" target="_blank" class="flink">WanderPool</a>
+        <a href="https://www.miricanvas.com/v2/ko/design2/v/c449dec2-f27a-4bba-8deb-21aa1ef953fd" target="_blank"
+          class="flink">WanderPool</a>
         <a href="https://pf.kakao.com/_kRFRX" target="_blank" class="flink">말랑이</a>
       </div>
     </footer>
@@ -334,6 +339,12 @@
   <script>
     function tog(h) { h.parentElement.classList.toggle('open') }
     function goTo(id) { document.getElementById(id).scrollIntoView({ behavior: 'smooth' }) }
+
+    const glow = document.querySelector('.cursor-glow');
+    document.addEventListener('mousemove', e => {
+      glow.style.left = e.clientX + 'px';
+      glow.style.top = e.clientY + 'px';
+    });
 
     const secs = ['hero', 'wanderpool', 'malang', 'wattup', 'flood'];
     const dots = document.querySelectorAll('.dot');

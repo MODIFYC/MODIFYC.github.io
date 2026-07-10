@@ -12,6 +12,8 @@
 
 <body>
 
+  <div class="cursor-glow"></div>
+
   <header>
     <a href="../index.html" class="hname" style="text-decoration:none">← 최수정 Portfolio</a>
     <nav class="hnav">
@@ -119,7 +121,7 @@
         <div class="slabel">Architecture</div>
         <h2 class="stitle">네트워크 아키텍처</h2>
         <div class="card">
-          <img src="../wattup_archi.png" alt="Wattup Network Architecture" class="aimg">
+          <img src="wattup_archi.png" alt="Wattup Network Architecture" class="aimg">
         </div>
       </div>
     </section>
@@ -322,6 +324,12 @@ sudo netfilter-persistent save</pre>
   <script>
     function tog(h) { h.parentElement.classList.toggle('open') }
     function goTo(id) { document.getElementById(id).scrollIntoView({ behavior: 'smooth' }) }
+
+    const glow = document.querySelector('.cursor-glow');
+    document.addEventListener('mousemove', e => {
+      glow.style.left = e.clientX + 'px';
+      glow.style.top = e.clientY + 'px';
+    });
 
     const secs = ['hero-wattup', 'stack-wt', 'arch-wt', 'memory-wt', 'ts-wt', 'summary-wt'];
     const dots = document.querySelectorAll('.dot');
