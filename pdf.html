@@ -1,0 +1,1909 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>최수정 — Portfolio PDF</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="pdf-view">
+
+  <div class="cursor-glow"></div>
+
+  <header>
+    <a href="index.html" class="hname" title="원본 포트폴리오로 돌아가기">최수정 — Portfolio</a>
+    <nav class="hnav">
+      <a href="#wanderpool">WanderPool</a>
+      <a href="#wattup">Wattup</a>
+      <a href="#malang">말랑이</a>
+      <a href="#flood">침수사고</a>
+      <a href="#" class="pdf-action" id="pdfAction">PDF 저장 / 인쇄</a>
+    </nav>
+  </header>
+
+  <nav class="dots">
+    <div class="dot on" onclick="goTo('hero')"></div>
+    <div class="dot" onclick="goTo('wanderpool')"></div>
+    <div class="dot" onclick="goTo('malang')"></div>
+    <div class="dot" onclick="goTo('wattup')"></div>
+    <div class="dot" onclick="goTo('flood')"></div>
+  </nav>
+
+  <div class="wrap">
+
+    <!-- ===== HERO ===== -->
+    <section id="hero">
+      <div class="fi">
+        <h1 class="hname-big">최<span>수</span>정</h1>
+        <div class="hrole">Platform Engineering &nbsp;·&nbsp; Cloud &nbsp;·&nbsp; DevOps</div>
+        <p class="hdesc">
+          온프레미스와 AWS를 오가며 네트워크·인프라를 설계하고, CI/CD와 모니터링 파이프라인을 구축합니다.<br>
+          <b>Kubernetes 기반 MSA 인프라</b>설계부터 AWS 마이그레이션까지 직접 다루며 실 운영 서비스를 만들어왔습니다.<br>
+          <b>보안을 고려한 설계</b>와 자동화 기반 운영 효율화를 지향하며, 로그·메트릭을 AI로 분석해<br>
+          리포트로 전달하는 <b>모니터링 파이프라인</b>도 구축했습니다.
+        </p>
+        <div class="hmetrics">
+          <div class="hmetric">
+            <div class="hmetric-val">4</div>
+            <div class="hmetric-label">참여 프로젝트</div>
+          </div>
+          <div class="hmetric">
+            <div class="hmetric-val">2회</div>
+            <div class="hmetric-label">프로젝트 수상</div>
+          </div>
+          <div class="hmetric">
+            <div class="hmetric-val">2개</div>
+            <div class="hmetric-label">실 서비스 운영 경험</div>
+          </div>
+          <div class="hmetric">
+            <div class="hmetric-val">2026.02~</div>
+            <div class="hmetric-label">인프라 운영 경력</div>
+          </div>
+        </div>
+        <div class="hlinks">
+          <a href="https://github.com/MODIFYC" target="_blank" class="hlink pri">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
+            </svg>
+            GitHub
+          </a>
+          <a href="https://www.miricanvas.com/v2/ko/design2/v/c449dec2-f27a-4bba-8deb-21aa1ef953fd" target="_blank"
+            class="hlink pri">WanderPool 발표자료</a>
+          <a href="https://cmod-ify.tistory.com/category/Project" target="_blank" class="hlink sec">Blog</a>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="pdf-toc-page">
+      <div class="pdf-toc-kicker">PORTFOLIO CONTENTS</div>
+      <h2 class="pdf-toc-title">목차</h2>
+      <div class="pdf-toc-list">
+        <div class="pdf-toc-item">
+          <div class="pdf-toc-number">01</div>
+          <div><strong>WanderPool</strong><p>서비스 화면 · 아키텍처 · 기술 스택 · 네트워크 설계 · CI/CD · BFF · 기술 의사결정 · 보안 · AI Observability<br>AWS 마이그레이션 · DR · 트러블슈팅</p></div>
+        </div>
+        <div class="pdf-toc-item">
+          <div class="pdf-toc-number">02</div>
+          <div><strong>Wattup</strong><p>기술 스택 · 아키텍처 · 메모리 최적화 · 트러블슈팅 · 프로젝트 요약</p></div>
+        </div>
+        <div class="pdf-toc-item">
+          <div class="pdf-toc-number">03</div>
+          <div><strong>말랑이 메이커</strong><p>서비스 화면 · AWS 아키텍처 · 인프라 설계 · CI/CD · 운영 · 부하 테스트 · 트러블슈팅</p></div>
+        </div>
+        <div class="pdf-toc-item">
+          <div class="pdf-toc-number">04</div>
+          <div><strong>IoT 기반 침수사고 예방 시스템</strong><p>버전 비교 · 실시간 통신 개선 · 트러블슈팅</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== WANDERPOOL ===== -->
+    <section id="wanderpool" class="pdf-summary-page" data-detail="wanderpool/index.html">
+      <div class="fi">
+        <div class="slabel">Team Project · MSA</div>
+        <h2 class="stitle">WanderPool</h2>
+        <div class="card">
+          <div class="phead">
+            <div>
+              <div class="ptitle">WanderPool — 실시간 카풀 매칭 MSA 서비스</div>
+              <div class="psub">Kubernetes · Kong Gateway · AWS EKS · 팀 프로젝트 (4인) · 2026.04 ~ 2026.06</div>
+            </div>
+            <span class="award">현대오토에버 클라우드 스쿨 우수 프로젝트상</span>
+          </div>
+
+          <div class="pcard-top">
+            <div class="pthumb"><img src="wanderpool/overall.png" alt="WanderPool 전체 아키텍처"></div>
+            <div>
+              <p style="font-size:14px;color:var(--text-sub);line-height:1.9;margin-bottom:14px;">
+                현대오토에버 클라우드 스쿨 3기 4인 팀 프로젝트. 온프레미스 Kubernetes 클러스터(물리 서버 2대, VM 9대) 위에 4개
+                마이크로서비스를 구성하고, AWS EKS로 마이그레이션했습니다. 네트워크·인프라 설계, CI/CD 구축, 모니터링·로깅
+                AI 파이프라인, AWS 마이그레이션을 맡았습니다.
+              </p>
+              <div class="tags">
+                <span class="tag">Kubernetes</span><span class="tag">Kong Gateway</span><span
+                  class="tag">GitLab CI</span><span class="tag">AWS EKS</span><span class="tag">Lambda</span><span
+                  class="tag">Bedrock</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hmetrics" style="margin-bottom:16px">
+            <div class="hmetric">
+              <div class="hmetric-val">4 MSA</div>
+              <div class="hmetric-label">auth·member·party·map</div>
+            </div>
+            <div class="hmetric">
+              <div class="hmetric-val">VM 9대</div>
+              <div class="hmetric-label">물리 서버 2대</div>
+            </div>
+            <div class="hmetric">
+              <div class="hmetric-val">우수 프로젝트상</div>
+              <div class="hmetric-label">2026.06.30</div>
+            </div>
+            <div class="hmetric">
+              <div class="hmetric-val">25%</div>
+              <div class="hmetric-label">기여도</div>
+            </div>
+          </div>
+
+          <ul class="phighlights">
+            <li>Kong Gateway 단일 진입점 도입으로 서비스별 인증 로직 중복 제거</li>
+            <li>CIDR·S2S VPN 설계로 온프레미스  AWS 네트워크 연동</li>
+            <li>Lambda 기반 AI Observability 파이프라인으로 Slack 일일 리포트 자동화</li>
+            <li>온프레미스 → AWS EKS 마이그레이션 주도</li>
+          </ul>
+
+          <a href="wanderpool/index.html" class="hlink pri">자세히 보기 →</a>
+        </div>
+      </div>
+    </section>
+
+<section id="preview-wp" class="pdf-detail-page pdf-project-wanderpool">
+    <div class="pdf-detail-content">
+      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>WanderPool</strong><div class="pdf-chapter-tag">서비스 화면 · PREVIEW</div></div>
+      <h2 class="stitle">서비스 화면</h2>
+      <div class="fi on">
+        
+        
+        <div class="card">
+          <div class="shots-4">
+            <div>
+              <div class="shot"><img src="wanderpool/main.png" alt="홈 화면"></div>
+              <div class="shotlabel">홈 · 파티 등록</div>
+            </div>
+            <div>
+              <div class="shot"><img src="wanderpool/map.png" alt="실시간 위치 화면"></div>
+              <div class="shotlabel">실시간 위치 트래킹</div>
+            </div>
+            <div>
+              <div class="shot"><img src="wanderpool/party.png" alt="파티 조회 화면"></div>
+              <div class="shotlabel">파티 조회</div>
+            </div>
+            <div>
+              <div class="shot"><img src="wanderpool/my.png" alt="프로필 화면"></div>
+              <div class="shotlabel">프로필 · 포인트</div>
+            </div>
+          </div>
+        </div>
+      </div>
+        </div>
+</section>
+
+<section id="network-1" class="pdf-detail-page pdf-project-wanderpool">
+    <div class="pdf-detail-content">
+      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>WanderPool</strong><div class="pdf-chapter-tag">아키텍처 · ARCHITECTURE</div></div>
+      <h2 class="stitle">전체 시스템 아키텍처</h2>
+      <div class="fi on">
+        
+        
+        <div class="card" style="margin-bottom:24px">
+          <img src="wanderpool/overall.png" alt="WanderPool 전체 아키텍처" class="aimg">
+          <p style="font-size:12px;color:var(--text-muted);text-align:center;font-family:var(--mono);">
+            Kong API Gateway 단일 진입점 · Worker Node 2대 (auth/member/party/map ×2) · DB 서버 분리 · GitLab → Jenkins →
+            Harbor → ArgoCD · Prometheus/Grafana/ELK 모니터링
+          </p>
+        </div>
+      </div>
+        </div>
+</section>
+
+<section id="stack-wp" class="pdf-detail-page pdf-project-wanderpool">
+    <div class="pdf-detail-content">
+      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>WanderPool</strong><div class="pdf-chapter-tag">Tech Stack</div></div>
+      <h2 class="stitle">기술 스택</h2>
+      <div class="fi on">
+        
+        
+        <div class="card">
+          <div class="stack-grid">
+            <div class="stack-group">
+              <div class="stack-group-title">FE (FRONTEND)</div>
+              <div class="tags"><span class="tag">Next.js</span><span class="tag">Vercel</span><span
+                  class="tag">TypeScript</span></div>
+            </div>
+            <div class="stack-group">
+              <div class="stack-group-title">BE (BACKEND)</div>
+              <div class="tags"><span class="tag">Java</span><span class="tag">Spring Boot</span><span
+                  class="tag">gRPC</span></div>
+            </div>
+            <div class="stack-group">
+              <div class="stack-group-title">INFRA / NETWORK</div>
+              <div class="tags"><span class="tag">Kubernetes</span><span class="tag">kubeadm</span><span
+                  class="tag">Calico</span><span class="tag">AWS S2S VPN</span><span class="tag">strongSwan</span><span
+                  class="tag">Kong</span><span class="tag">Istio</span><span class="tag">NodePort</span><span
+                  class="tag">cert-manager</span><span class="tag">Cloudflare DNS</span></div>
+            </div>
+            <div class="stack-group">
+              <div class="stack-group-title">CLOUD (AWS)</div>
+              <div class="tags"><span class="tag">AWS EKS</span><span class="tag">Amazon ECR</span><span
+                  class="tag">Lambda</span><span class="tag">EventBridge</span><span class="tag">Bedrock</span><span
+                  class="tag">VPC</span><span class="tag">IRSA</span><span class="tag">ALB</span><span
+                  class="tag">ACM</span><span class="tag">Python</span></div>
+            </div>
+            <div class="stack-group">
+              <div class="stack-group-title">DATA / STORAGE</div>
+              <div class="tags"><span class="tag">MySQL</span><span class="tag">PostgreSQL</span><span
+                  class="tag">Redis</span><span class="tag">AWS S3</span><span class="tag">RDS</span><span
+                  class="tag">ElastiCache</span></div>
+            </div>
+            <div class="stack-group">
+              <div class="stack-group-title">CI / CD</div>
+              <div class="tags"><span class="tag">Jenkins</span><span class="tag">GitLab CI</span><span
+                  class="tag">Docker</span><span class="tag">Harbor</span><span class="tag">ArgoCD</span><span
+                  class="tag">kustomize</span><span class="tag">kubeconform</span><span
+                  class="tag">kube-score</span></div>
+            </div>
+            <div class="stack-group">
+              <div class="stack-group-title">OBSERVABILITY</div>
+              <div class="tags"><span class="tag">Prometheus</span><span class="tag">Grafana</span><span
+                  class="tag">AlertManager</span><span class="tag">Elasticsearch</span><span
+                  class="tag">Fluentd</span><span class="tag">Kibana</span><span class="tag">Kiali</span></div>
+            </div>
+            <div class="stack-group">
+              <div class="stack-group-title">COLLABORATION TOOL</div>
+              <div class="tags"><span class="tag">Jira</span><span class="tag">Slack</span><span
+                  class="tag">GitLab</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+        </div>
+</section>
+
+<section id="network-2" class="pdf-detail-page pdf-project-wanderpool">
+    <div class="pdf-detail-content">
+      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>WanderPool</strong><div class="pdf-chapter-tag">의사결정 · DECISION MAKING</div></div>
+      <h2 class="stitle">네트워크 설계 이유</h2>
+      <div class="fi on">
+        
+        
+        <!-- Network: HTTPS 외부 접근 경로 -->
+        <div class="card" style="margin-bottom:24px">
+          <div class="subh" style="margin-top:0">Network — HTTPS 외부 접근 경로</div>
+
+          <div class="pipe">
+            <div class="pstep">
+              <div class="psname">Vercel Frontend</div>
+              <div class="psdesc">사용자 브라우저 → HTTPS로 정적 배포된 프론트엔드 접근</div>
+            </div>
+            <div class="pstep">
+              <div class="psname">Cloudflare DNS</div>
+              <div class="psdesc">도메인 관리 및 DNS-01 챌린지 처리</div>
+            </div>
+            <div class="pstep">
+              <div class="psname">Kong Gateway</div>
+              <div class="psdesc">Ingress / HTTPS 전입점, 서비스별 라우팅</div>
+            </div>
+            <div class="pstep">
+              <div class="psname">Backend Services</div>
+              <div class="psdesc">auth · member · party · map</div>
+            </div>
+          </div>
+          <div class="info"> <strong>cert-manager</strong>: DNS-01 Challenge → TLS Secret 자동 생성</div>
+
+          <div class="subh">핵심 포인트</div>
+          <ul style="font-size:13px;color:var(--text-sub);line-height:1.9;list-style:none">
+            <li>① <strong style="color:var(--text)">Mixed Content 방지</strong>— Vercel HTTPS 프론트엔드에 API도 동일하게 HTTPS로 제공</li>
+            <li>② <strong style="color:var(--text)">DNS-01 선택</strong>— 포트 80 없이 도메인 소유권 검증 가능. 공유기가 80포트를 열 수 없는 제약을
+              우회</li>
+            <li>③ <strong style="color:var(--text)">TLS 자동화</strong>— cert-manager로 인증서 발급·갱신 자동화</li>
+          </ul>
+        </div>
+      </div>
+        </div>
+</section>
+
+<section id="network-3" class="pdf-detail-page pdf-project-wanderpool">
+    <div class="pdf-detail-content">
+      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>WanderPool</strong><div class="pdf-chapter-tag">의사결정 · DECISION MAKING</div></div>
+      <h2 class="stitle">네트워크 설계 이유</h2>
+      <div class="fi on">
+        
+        
+        <!-- Network: Kong Gateway -->
+        <div class="card">
+          <div class="subh" style="margin-top:0">Network — Kong API Gateway로 MSA 진입점 통합</div>
+
+          <div class="card-grid">
+            <div class="card" style="background:rgba(156,163,175,.08)">
+              <div
+                style="font-size:12px;font-weight:700;color:var(--text-muted);font-family:var(--mono);margin-bottom:10px">
+                BEFORE — 게이트웨이 도입 전</div>
+              <p style="font-size:13px;color:var(--text-sub);line-height:1.8;">클라이언트가 각 서비스로 직접 요청. 서비스마다 인증/인가 로직이
+                중복되고, 클라이언트가 보낸 헤더를 그대로 신뢰해야 하는 위험이 있었으며 진입점이 분산되어 있었습니다.</p>
+            </div>
+            <div class="card" style="background:var(--blue-bg)">
+              <div style="font-size:12px;font-weight:700;color:var(--blue);font-family:var(--mono);margin-bottom:10px">
+                AFTER — Kong 도입 후</div>
+              <p style="font-size:13px;color:var(--text-sub);line-height:1.8;">Kong Gateway를 단일 진입점으로 사용. Route를
+                Public(auth)/Protected(member·party·map)로 분리하고, Protected 요청은 JWT를 검증한 뒤 클라이언트 식별 헤더를 제거하고
+                검증된 Claim 기반 헤더로 교체합니다.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+        </div>
+</section>
+
+<section id="cicd-wp-1" class="pdf-detail-page pdf-project-wanderpool">
+    <div class="pdf-detail-content">
+      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>WanderPool</strong><div class="pdf-chapter-tag">CI/CD</div></div>
+      <h2 class="stitle">CI/CD Pipeline</h2>
+      <div class="fi on">
+        
+        
+        <div class="card"><img src="wanderpool/cicd.png" alt="WanderPool CI/CD Flow" class="aimg">
+          <p style="font-size:12px;color:var(--text-muted);text-align:center;font-family:var(--mono);">
+            FE: GitLab CI(TypeCheck·ESLint) → Vercel &nbsp;·&nbsp; BE: Jenkins(JaCoCo·SonarQube) → Harbor → GitOps
+            Repo → ArgoCD → Argo Rollouts Canary 배포
+          </p>
+        </div>
+      </div>
+        </div>
+</section>
+
+<section id="decisions-1" class="pdf-detail-page pdf-project-wanderpool">
+    <div class="pdf-detail-content">
+      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>WanderPool</strong><div class="pdf-chapter-tag">의사결정 · DECISION MAKING</div></div>
+      <h2 class="stitle">의사결정 기록</h2>
+      <div class="fi on">
+        
+        
+        <div class="card-grid">
+<!-- Kong vs Spring Cloud Gateway -->
+          <div class="card">
+            <div class="subh" style="margin-top:0">Kong vs Spring Cloud Gateway</div>
+            <div class="decision-flow">
+              <div class="df-step">
+                <div class="df-label">문제</div>
+                <div class="df-content">4개 마이크로서비스마다 인증 로직이 중복되고, 클라이언트가 보낸 헤더를 그대로 신뢰하는 구조</div>
+              </div>
+              <div class="df-step">
+                <div class="df-label">고민</div>
+                <div class="df-content"><strong>Spring Cloud Gateway</strong>vs <strong>Kong</strong></div>
+              </div>
+              <div class="df-step">
+                <div class="df-label">결정</div>
+                <div class="df-content"><strong>Kong 도입</strong></div>
+              </div>
+              <div class="df-step">
+                <div class="df-label">이유</div>
+                <div class="df-content">Spring Cloud Gateway는 게이트웨이 정책 변경에도 애플리케이션 재배포가 필요. Kong은 인증 정책을 Kubernetes
+                  리소스(KongPlugin CRD)로 선언해 GitOps로 관리 가능</div>
+              </div>
+              <div class="df-step">
+                <div class="df-label">결과</div>
+                <div class="df-content">인증을 게이트웨이에 중앙화, 서비스는 검증된 요청만 수신</div>
+              </div>
+            </div>
+          </div>
+<!-- MetalLB -->
+          <div class="card">
+            <div class="subh" style="margin-top:0">MetalLB 도입 검토 → 배제</div>
+            <div class="decision-flow">
+              <div class="df-step">
+                <div class="df-label">문제</div>
+                <div class="df-content">온프레미스 클러스터의 외부 진입 경로 필요</div>
+              </div>
+              <div class="df-step">
+                <div class="df-label">고민</div>
+                <div class="df-content"><strong>MetalLB(표준 방식)</strong>vs <strong>NodePort + Kong</strong></div>
+              </div>
+              <div class="df-step">
+                <div class="df-label">결정</div>
+                <div class="df-content"><strong>MetalLB 미도입</strong></div>
+              </div>
+              <div class="df-step">
+                <div class="df-label">이유</div>
+                <div class="df-content">VirtualBox NAT Network 구조에서 L2 모드의 ARP 브로드캐스트가 호스트에 도달하지 못함. 패킷 추적으로 원인
+                  규명</div>
+              </div>
+              <div class="df-step">
+                <div class="df-label">결과</div>
+                <div class="df-content">NodePort로 진입하고 Kong이 서비스별 라우팅 담당. <strong>표준이 항상 정답은 아니라는 것을 확인</strong></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+        </div>
+</section>
+
+<section id="decisions-2" class="pdf-detail-page pdf-project-wanderpool">
+    <div class="pdf-detail-content">
+      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>WanderPool</strong><div class="pdf-chapter-tag">의사결정 · DECISION MAKING</div></div>
+      <h2 class="stitle">의사결정 기록</h2>
+      <div class="fi on">
+        
+        
+        <div class="card-grid">
+<!-- GitLab CI vs Jenkins -->
+          <div class="card">
+            <div class="subh" style="margin-top:0">GitLab CI vs Jenkins</div>
+            <div class="decision-flow">
+              <div class="df-step">
+                <div class="df-label">문제</div>
+                <div class="df-content">빌드 성격이 다른 여러 파이프라인을 어떤 도구로 운영할 것인가</div>
+              </div>
+              <div class="df-step">
+                <div class="df-label">고민</div>
+                <div class="df-content">팀 전체 <strong>Jenkins 통일</strong>vs <strong>파이프라인별 분리</strong></div>
+              </div>
+              <div class="df-step">
+                <div class="df-label">결정</div>
+                <div class="df-content">백엔드는 <strong>Jenkins</strong>(팀원 담당), 프론트엔드·GitOps 저장소는 <strong>GitLab
+                    CI</strong>(본인 담당)</div>
+              </div>
+              <div class="df-step">
+                <div class="df-label">이유</div>
+                <div class="df-content">매니페스트 검증은 별도 빌드 서버가 아니라 코드가 있는 곳에서 병합 전에 끝나야 함. GitLab MR 이벤트(<code>merge_request_event</code>)에
+                  직접 연결해 <code>kustomize build</code>로 렌더링한 최종 매니페스트를 검증하도록 구성. <strong>kubeconform</strong>(<code>-strict</code>)은
+                  스키마·타입 오류를 잡아 실패 시 <strong>병합을 차단</strong>하고, <strong>kube-score</strong>는 베스트프랙티스를 점수로 리포트만 하는
+                  <strong>비차단 권고</strong>로 분리</div>
+              </div>
+              <div class="df-step">
+                <div class="df-label">결과</div>
+                <div class="df-content">도구 통일보다 파이프라인 성격에 맞춘 구성. 배포를 깨뜨리는 문제는 강제 차단, 개선 권고는 비차단으로 나눠 파이프라인이 과도하게 막히지
+                  않으면서도 품질 신호는 남도록 함</div>
+              </div>
+            </div>
+          </div>
+<!-- Lambda 역할 분리 -->
+          <div class="card">
+            <div class="subh" style="margin-top:0">Lambda 역할 분리 (수집 / 분석)</div>
+            <div class="decision-flow">
+              <div class="df-step">
+                <div class="df-label">문제</div>
+                <div class="df-content">관측 데이터 수집과 LLM 분석·전달을 한 함수에 둘 것인가</div>
+              </div>
+              <div class="df-step">
+                <div class="df-label">고민</div>
+                <div class="df-content"><strong>단일 Lambda</strong>vs <strong>역할별 분리</strong></div>
+              </div>
+              <div class="df-step">
+                <div class="df-label">결정</div>
+                <div class="df-content">수집 Lambda(VPC 내부) / 분석·보고 Lambda(VPC 외부)로 분리, <strong>S3를 경계</strong>로 사용</div>
+              </div>
+              <div class="df-step">
+                <div class="df-label">이유</div>
+                <div class="df-content">
+                  <ul style="margin:4px 0 0 16px;line-height:1.8">
+                    <li><strong style="color:var(--text)">관심사 분리</strong>— 수집(적재)과 분석·전달(LLM 호출·알림)은 책임이 다른 작업</li>
+                    <li><strong style="color:var(--text)">최소 노출</strong>— 수집은 사설망에만, 보고서는 외부 API(Bedrock·Slack)에만
+                      접근. 한 함수에 사설망과 인터넷을 동시에 열지 않음</li>
+                    <li><strong style="color:var(--text)">운영·비용 효율</strong>— 사설망 접근은 VPC 내부(S3 Gateway
+                      Endpoint), 외부 호출은 VPC 외부. 두 영역을 잇는 상시 NAT Gateway 불필요</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="df-step">
+                <div class="df-label">결과</div>
+                <div class="df-content">최소 권한 원칙 적용, NAT Gateway 비용 절감, 운영 단순화</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+        </div>
+</section>
+
+<section id="security" class="pdf-detail-page pdf-project-wanderpool">
+    <div class="pdf-detail-content">
+      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>WanderPool</strong><div class="pdf-chapter-tag">보안 · SECURITY</div></div>
+      <h2 class="stitle">소스코드와 이미지를 외부에 두지 않기</h2>
+      <div class="fi on">
+        
+        
+        <div class="card">
+          <table class="ops-table">
+            <tr>
+              <th>도구</th>
+              <th>역할</th>
+              <th>설명</th>
+            </tr>
+            <tr>
+              <td>GitLab</td>
+              <td>Self-hosted Git</td>
+              <td>소스코드·GitOps 매니페스트를 내부에서 관리, 팀 단위 접근 권한 통제</td>
+            </tr>
+            <tr>
+              <td>Jenkins</td>
+              <td>Internal CI</td>
+              <td>빌드·테스트·이미지 생성 자동화, Harbor Push까지 내부 파이프라인에서 수행 (팀원 담당)</td>
+            </tr>
+            <tr>
+              <td>Harbor</td>
+              <td>Private Registry</td>
+              <td>컨테이너 이미지를 내부에 저장, 외부 Registry 노출 최소화 (초기 설정은 팀원 담당)</td>
+            </tr>
+          </table>
+          <p style="font-size:12px;color:var(--text-muted);font-family:var(--mono);margin-top:14px;">
+            GitLab·Jenkins·Harbor 등 사내 도구 설치 자체는 팀 공동 작업으로 진행. 이후 GitOps 검증 파이프라인(CI/CD
+            섹션 참고)은 본인이 구축.
+          </p>
+        </div>
+      </div>
+        </div>
+</section>
+
+<section id="ops-ai-1" class="pdf-detail-page pdf-project-wanderpool">
+    <div class="pdf-detail-content">
+      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>WanderPool</strong><div class="pdf-chapter-tag">Operation</div></div>
+      <h2 class="stitle">AI Observability Pipeline</h2>
+      <div class="fi on">
+        
+        
+        <div class="card"><img src="wanderpool/aipipeline.png" alt="WanderPool AI Observability Pipeline" class="aimg">
+
+          <div class="pipe">
+            <div class="pstep">
+              <div class="psname">On-Premise 수집</div>
+              <div class="psdesc">Prometheus :9090(메트릭), Elasticsearch :9200(로그) — S2S VPN 경유</div>
+            </div>
+            <div class="pstep">
+              <div class="psname">수집 Lambda (VPC 내부)</div>
+              <div class="psdesc">메트릭/로그 수집 Lambda → S3 Gateway Endpoint로 S3 적재</div>
+            </div>
+            <div class="pstep">
+              <div class="psname">S3 Event Trigger</div>
+              <div class="psdesc">PutObject 이벤트로 분석 Lambda 트리거</div>
+            </div>
+            <div class="pstep">
+              <div class="psname">분석 보고 Lambda (VPC 외부)</div>
+              <div class="psdesc">Bedrock(Claude)으로 로그·메트릭 분석</div>
+            </div>
+            <div class="pstep">
+              <div class="psname">Slack 알림</div>
+              <div class="psdesc">#wanderpool-daily-report 채널로 매일 12시 리포트 전송</div>
+            </div>
+          </div>
+        </div>
+      </div>
+        </div>
+</section>
+
+<section id="ops-ai-2" class="pdf-detail-page pdf-project-wanderpool">
+    <div class="pdf-detail-content">
+      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>WanderPool</strong><div class="pdf-chapter-tag">Operation</div></div>
+      <h2 class="stitle">AI Observability Pipeline</h2>
+      <div class="fi on">
+        
+        
+        <div class="card"><div class="subh">어떤 데이터를 넣었는지</div>
+          <ul style="font-size:13px;color:var(--text-sub);line-height:1.9;list-style:none;margin-bottom:8px">
+            <li> <strong style="color:var(--text)">메트릭(Prometheus)</strong>— Pod 상태, 재시작 횟수, 요청량(req/s), CPU/Memory</li>
+            <li> <strong style="color:var(--text)">로그(Elasticsearch)</strong>— <code>error</code>필터링 로그를 네임스페이스별·Pod별로
+              집계</li>
+          </ul>
+
+          <div class="subh">프롬프트 설계 포인트</div>
+          <p style="font-size:14px;color:var(--text-sub);line-height:1.9;margin-bottom:8px;">
+            단순 요약이 아니라 <code>이상 감지 → 원인 추론 → 확인 명령어 제시</code>순서로 응답하도록 지시하고, 심각도를 <code>위험</code>/ <code>주의</code>
+            / <code>정상</code>으로 분류하도록 프롬프트에 명시했습니다.
+          </p>
+
+          <div class="subh">출력 결과의 의미</div>
+          <p style="font-size:14px;color:var(--text-sub);line-height:1.9;">
+            사람이 직접 대시보드를 보지 않아도 Slack으로 인프라 이상 여부를 확인할 수 있습니다. 단순 알림(AlertManager)과 달리 맥락 기반 해석이 포함되어 있어, 재시작
+            횟수나 에러 로그 급증이 발견되면 원인 후보와 확인 명령어까지 함께 전달됩니다.
+          </p>
+        </div>
+      </div>
+        </div>
+</section>
+
+<section id="migration" class="pdf-detail-page pdf-project-wanderpool">
+    <div class="pdf-detail-content">
+      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>WanderPool</strong><div class="pdf-chapter-tag">Cloud Migration</div></div>
+      <h2 class="stitle">온프레미스 → AWS 마이그레이션</h2>
+      <div class="fi on">
+        
+        
+        <div class="card">
+          <table class="ops-table">
+            <tr>
+              <th>영역</th>
+              <th>온프레미스</th>
+              <th>AWS</th>
+            </tr>
+            <tr>
+              <td>클러스터</td>
+              <td>kubeadm 자체 구축</td>
+              <td>EKS</td>
+            </tr>
+            <tr>
+              <td>데이터베이스</td>
+              <td>VM에 MySQL/PostgreSQL/Redis 직접 설치</td>
+              <td>RDS(MySQL/PostgreSQL) + ElastiCache(Redis)</td>
+            </tr>
+            <tr>
+              <td>이미지 레지스트리</td>
+              <td>Harbor</td>
+              <td>ECR (imagePullSecret 제거)</td>
+            </tr>
+            <tr>
+              <td>TLS</td>
+              <td>cert-manager + Cloudflare DNS-01</td>
+              <td>ALB + ACM</td>
+            </tr>
+            <tr>
+              <td>권한</td>
+              <td>ServiceAccount</td>
+              <td>IRSA (워크로드별 최소 권한)</td>
+            </tr>
+            <tr>
+              <td>네트워크</td>
+              <td>VM NAT + NodePort</td>
+              <td>VPC 3-tier</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+        </div>
+</section>
+
+<section id="dr-wp" class="pdf-detail-page pdf-project-wanderpool">
+    <div class="pdf-detail-content">
+      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>WanderPool</strong><div class="pdf-chapter-tag">Operation</div></div>
+      <h2 class="stitle">재해복구(DR) 계획 · 런북</h2>
+      <div class="fi on">
+        
+        
+        <div class="card">
+          <p style="font-size:14px;color:var(--text-sub);line-height:1.9;margin-bottom:20px;">
+            이미 구축된 시스템을 <strong>네트워크 · Kubernetes · DB · 외부 연동</strong>레이어별로 분리해, 각 계층에서
+            발생할 수 있는 장애 시나리오와 복구 절차를 설계·문서화했습니다. 직접 구현한 인프라를 새로 만든 것은 아니고,
+            이미 만들어진 시스템을 운영 관점에서 다시 들여다보며 대응 체계를 정리한 작업입니다.
+          </p>
+
+          <div class="subh" style="margin-top:0">장애 등급 정의</div>
+          <table class="ops-table" style="margin-bottom:20px">
+            <tr>
+              <th>등급</th>
+              <th>장애 범위</th>
+              <th>예시</th>
+            </tr>
+            <tr>
+              <td>L1</td>
+              <td>Pod 단위</td>
+              <td>특정 마이크로서비스(party, member 등) Pod CrashLoopBackOff</td>
+            </tr>
+            <tr>
+              <td>L2</td>
+              <td>Worker Node 단위</td>
+              <td>worker1 또는 worker2 다운</td>
+            </tr>
+            <tr>
+              <td>L3</td>
+              <td>Host PC 단위</td>
+              <td>K8s용 또는 DB용 Host PC 1대 전체 다운 (Host PC 2대를 K8s용·DB용으로 분리 운영 중)</td>
+            </tr>
+            <tr>
+              <td>L4</td>
+              <td>학원 네트워크·전원 전체 장애</td>
+              <td>정전, 네트워크 완전 단절 등 외부 도달 불가 상황</td>
+            </tr>
+          </table>
+
+          <p style="font-size:14px;color:var(--text-sub);line-height:1.9;">
+            L1은 K8s의 Probe 기반 자동 재시작과 ArgoCD GitOps 재배포에 더해, AlertManager 실시간 알림과 Lambda 기반
+            일일 Bedrock 요약(AI Observability Pipeline 참고)까지 이중으로 탐지되고 있습니다. L2는 Kong이 replica
+            2 + podAntiAffinity로 노드 분산 배치되어 있고 각 서비스도 HPA minReplicas 2가 기본값이라 단일 노드
+            장애에 대한 기본 대응력은 갖췄지만, 실제 노드 장애 재현 테스트까지는 하지 못했습니다. L3(Host PC 전체
+            장애)는 문서화 과정에서 GitOps 저장소와 컨테이너 레지스트리가 K8s 클러스터와 같은 호스트 위에 있어 단일
+            장애점이 된다는 구조적 취약점을 발견했고, 이 부분이 가장 큰 보강 대상으로 남아 있습니다.
+          </p>
+        </div>
+      </div>
+        </div>
+</section>
+
+<section id="ts-wp-1" class="pdf-detail-page pdf-project-wanderpool">
+    <div class="pdf-detail-content">
+      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>WanderPool</strong><div class="pdf-chapter-tag">Troubleshooting</div></div>
+      <h2 class="stitle">트러블슈팅</h2>
+      <div class="fi on">
+        
+        
+        <div class="twrap pdf-ts-grid">
+<div class="titem">
+              <div class="thead" onclick="tog(this)"><span class="tnum">01</span><span class="ttitle">MetalLB L2 모드
+                  미동작 — 외부 접근 불가</span><span class="tarrow">▼</span></div>
+              <div class="tbody">
+                <span class="tlabel ts">현상</span>
+                <p>MetalLB L2 모드로 서비스에 External IP를 할당했지만 외부에서 접근이 되지 않음.</p>
+                <span class="tlabel tc">원인</span>
+                <p>VirtualBox NAT Network 구조에서 L2 모드의 ARP 브로드캐스트가 호스트에 도달하지 못함.</p>
+                <span class="tlabel tf">해결</span>
+                <p>NodePort + Kong 구조로 전환. Kong이 서비스별 라우팅을 담당하도록 구성.</p>
+                <span class="tlabel tl">학습</span>
+                <p>표준 방식(MetalLB)이 항상 정답은 아니며, 네트워크 계층의 제약을 먼저 검증해야 한다는 것을 확인.</p>
+              </div>
+            </div>
+<div class="titem">
+              <div class="thead" onclick="tog(this)"><span class="tnum">02</span><span class="ttitle">AWS EKS 마이그레이션
+                  중 Pod 무한 증식 및 OOM</span><span class="tarrow">▼</span></div>
+              <div class="tbody">
+                <span class="tlabel ts">현상</span>
+                <p>마이그레이션 중 Pod 개수가 계속 늘어나며 노드에서 OOM 발생.</p>
+                <span class="tlabel tc">원인</span>
+                <p>ArgoCD sync 문제를 먼저 의심했으나, 실제 원인은 HPA의 replica 자가복원. Deployment의 replica 수를 줄여도 HPA가 계속 원래 값으로
+                  되돌림.</p>
+                <span class="tlabel tf">해결</span>
+                <p>HPA 설정(min/max replica, 목표 지표)을 먼저 확인·조정한 뒤 재배포.</p>
+                <span class="tlabel tl">학습</span>
+                <p>선언적 시스템에서는 증상만으로 판단하지 말고 어떤 컨트롤러(Deployment vs HPA vs ArgoCD)가 실제로 상태를 관리하는지 먼저 확인해야 한다.</p>
+              </div>
+            </div>
+<div class="titem">
+              <div class="thead" onclick="tog(this)"><span class="tnum">03</span><span class="ttitle">overlay 패치가 base
+                  ConfigMap의 OAuth 키를 덮어씀</span><span class="tarrow">▼</span></div>
+              <div class="tbody">
+                <span class="tlabel ts">현상</span>
+                <p>배포 후 OAuth 로그인 인증 실패.</p>
+                <span class="tlabel tc">원인</span>
+                <p>kustomize overlay 패치가 base ConfigMap 전체를 덮어쓰면서 사용 중이지 않던 OAuth provider 키까지 함께 활성화되어 충돌.</p>
+                <span class="tlabel tf">해결</span>
+                <p>실제 사용 중인 provider 값만 활성화하는 최소 변경으로 패치를 수정.</p>
+                <span class="tlabel tl">학습</span>
+                <p>overlay 패치는 필요한 필드만 최소한으로 건드려야 한다. ConfigMap 전체 치환은 예상치 못한 사이드 이펙트를 만든다.</p>
+              </div>
+            </div>
+        </div>
+      </div>
+        </div>
+</section>
+
+<section id="ts-wp-2" class="pdf-detail-page pdf-project-wanderpool">
+    <div class="pdf-detail-content">
+      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>WanderPool</strong><div class="pdf-chapter-tag">Troubleshooting</div></div>
+      <h2 class="stitle">트러블슈팅</h2>
+      <div class="fi on">
+        
+        
+        <div class="twrap pdf-ts-grid">
+<div class="titem">
+              <div class="thead" onclick="tog(this)"><span class="tnum">04</span><span class="ttitle">사설망 Harbor →
+                  ECR 이관 시 CloudShell 접근 불가</span><span class="tarrow">▼</span></div>
+              <div class="tbody">
+                <span class="tlabel ts">현상</span>
+                <p>기존 Harbor 이미지를 ECR로 옮기려는데 CloudShell로 접근이 안 됨.</p>
+                <span class="tlabel tc">원인</span>
+                <p>기존 S2S VPN이 구 VPC 기준으로 연결되어 있어 새 VPC의 CloudShell까지 도달할 경로가 없음.</p>
+                <span class="tlabel tf">해결</span>
+                <p>Harbor가 설치된 VM을 경유지로 삼아 임시 자격증명을 발급받아 이미지를 직접 push.</p>
+                <span class="tlabel tl">학습</span>
+                <p>네트워크 경로가 바뀌는 마이그레이션에서는 기존 연결을 그대로 재사용할 수 있다고 가정하면 안 되고, 항상 실제 경로를 먼저 확인해야 한다.</p>
+              </div>
+            </div>
+<div class="titem">
+              <div class="thead" onclick="tog(this)"><span class="tnum">05</span><span class="ttitle">DB 인증 3단 연쇄
+                  실패</span><span class="tarrow">▼</span></div>
+              <div class="tbody">
+                <span class="tlabel ts">현상</span>
+                <p>마이그레이션 후 서비스가 DB 인증에서 계속 실패.</p>
+                <span class="tlabel tc">원인</span>
+                <p>앱 전용 DB 사용자 미생성, 비밀번호 불일치, DB명(<code>wp_auth</code>) 불일치가 동시에 얽혀있었음.</p>
+                <span class="tlabel tf">해결</span>
+                <p>사용자·DB 생성, 권한 부여, 비밀번호 통일까지 단계적으로 원인을 하나씩 제거.</p>
+                <span class="tlabel tl">학습</span>
+                <p>연쇄된 문제는 한 번에 고치려 하지 말고 단계별로 하나씩 검증해야 실제 원인을 놓치지 않는다.</p>
+              </div>
+            </div>
+<div class="titem">
+              <div class="thead" onclick="tog(this)"><span class="tnum">06</span><span class="ttitle">Kong → 서비스
+                  502/503 (mTLS STRICT)</span><span class="tarrow">▼</span></div>
+              <div class="tbody">
+                <span class="tlabel ts">현상</span>
+                <p>검증 단계에서 Kong을 거친 요청이 서비스에서 502/503으로 실패.</p>
+                <span class="tlabel tc">원인</span>
+                <p>Istio mTLS STRICT 환경에서 서비스 메시 밖에 있는 Kong의 요청이 인증되지 않아 차단됨을 규명.</p>
+                <span class="tlabel tf">해결</span>
+                <p>검증 단계에서는 PERMISSIVE 모드로 전환. 운영 목표는 Kong을 서비스 메시 sidecar로 편입시키는 것.</p>
+                <span class="tlabel tl">학습</span>
+                <p>mTLS 같은 보안 정책은 메시 경계 밖 컴포넌트를 예외 없이 차단할 수 있다는 것을 확인. 경계에 걸친 컴포넌트는 설계 단계에서부터 별도로 고려해야
+                  한다.</p>
+              </div>
+            </div>
+        </div>
+      </div>
+        </div>
+</section>
+
+<section id="summary-wp" class="pdf-detail-page pdf-project-wanderpool">
+    <div class="pdf-detail-content">
+      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>WanderPool</strong><div class="pdf-chapter-tag">Retrospective</div></div>
+      <h2 class="stitle">배운 점 &amp; 개선사항</h2>
+      <div class="fi on">
+        
+        
+        <div class="card">
+          <div class="subh" style="margin-top:0">배운 점</div>
+          <p style="font-size:14px;color:var(--text-sub);line-height:1.9;margin-bottom:20px;">
+            온프레미스와 AWS를 연결하고 MSA를 마이그레이션하는 과정에서 개별 기술보다 네트워크 경로, 인증 경계, 배포 순서처럼 시스템 사이의 연결 조건이 안정성을 좌우한다는 점을 배웠습니다. 특히 장애를 애플리케이션 문제로 단정하지 않고 DNS, Gateway, Service Mesh, 데이터베이스까지 계층별로 확인하면서 관측 가능한 구조와 단계적인 검증 절차의 중요성을 체감했습니다.
+          </p>
+
+          <div class="subh">개선사항</div>
+          <p style="font-size:14px;color:var(--text-sub);line-height:1.9;">
+            다음 단계에서는 환경별 GitOps 구성을 더 명확히 분리하고 배포 전 스키마·정책 검증을 자동화해 설정 변경으로 인한 장애를 줄이고 싶습니다. 또한 RTO·RPO 기준에 맞춘 복구 훈련을 정기적으로 수행하고, AI Observability 리포트에 서비스별 SLO와 추세 데이터를 연결해 장애 발생 이후의 분석뿐 아니라 이상 징후를 선제적으로 판단할 수 있도록 개선할 계획입니다.
+          </p>
+        </div>
+      </div>
+        </div>
+</section>
+
+    <!-- ===== 말랑이 ===== -->
+    <section id="wattup" class="pdf-summary-page" data-detail="wattup/index.html">
+      <div class="fi">
+        <div class="slabel">Team Project · Kubernetes</div>
+        <h2 class="stitle">Wattup</h2>
+        <div class="card">
+          <div class="phead">
+            <div>
+              <div class="ptitle">Wattup — EV 충전소 예약 플랫폼</div>
+              <div class="psub">Kubernetes · On-premise · 팀 프로젝트 (5인) · 2026.02 ~ 2026.03 (종료)</div>
+            </div>
+            <span class="award">현대오토에버 클라우드 스쿨 우수 프로젝트상</span>
+          </div>
+
+          <div class="pcard-top">
+            <div class="pthumb"><img src="wattup/wattup_archi.png" alt="Wattup 네트워크 아키텍처"></div>
+            <div>
+              <p style="font-size:14px;color:var(--text-sub);line-height:1.9;margin-bottom:14px;">
+                전기차 충전소 실시간 예약 및 현황 관리 서비스. VirtualBox 기반 On-premise Kubernetes 클러스터를 설계·구축하고
+                프론트엔드 개발을 담당했습니다.
+              </p>
+              <div class="tags">
+                <span class="tag">Kubernetes</span><span class="tag">kubeadm</span><span
+                  class="tag">Calico</span><span class="tag">Tailscale VPN</span><span class="tag">React
+                  19</span><span class="tag">Kafka (KRaft)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hmetrics" style="margin-bottom:16px">
+            <div class="hmetric">
+              <div class="hmetric-val">100%</div>
+              <div class="hmetric-label">K8s 클러스터 설계/구축</div>
+            </div>
+            <div class="hmetric">
+              <div class="hmetric-val">50%</div>
+              <div class="hmetric-label">프론트엔드 개발</div>
+            </div>
+            <div class="hmetric">
+              <div class="hmetric-val">95%→76%</div>
+              <div class="hmetric-label">메모리 최적화</div>
+            </div>
+            <div class="hmetric">
+              <div class="hmetric-val">5인</div>
+              <div class="hmetric-label">팀 구성</div>
+            </div>
+          </div>
+
+          <ul class="phighlights">
+            <li>kubeadm으로 멀티 노드(master+worker 3개) 클러스터 직접 구축, EKS 대신 온프레미스 선택</li>
+            <li>Calico + Tailscale VPN 충돌 해결 (felixconfiguration 패치)</li>
+            <li>JVM 힙 설정으로 Kafka 메모리 사용량 95% → 76% 최적화</li>
+            <li>Vite 빌드타임 환경변수 구조 문제 해결</li>
+          </ul>
+
+          <a href="wattup/index.html" class="hlink pri">자세히 보기 →</a>
+        </div>
+      </div>
+    </section>
+
+<section id="stack-wt" class="pdf-detail-page pdf-project-wattup">
+    <div class="pdf-detail-content">
+      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>Wattup</strong><div class="pdf-chapter-tag">의사결정 · DECISION MAKING</div></div>
+      <h2 class="stitle">Tech Stack &amp; 왜 온프레미스인가</h2>
+      <div class="fi on">
+        
+        
+
+        <div class="card" style="margin-bottom:24px">
+          <div class="subh" style="margin-top:0">Tech Stack</div>
+          <div class="stack-grid">
+            <div class="stack-group">
+              <div class="stack-group-title">INFRA</div>
+              <div class="tags"><span class="tag">Kubernetes</span><span class="tag">kubeadm</span><span
+                  class="tag">Calico CNI</span><span class="tag">VirtualBox</span></div>
+            </div>
+            <div class="stack-group">
+              <div class="stack-group-title">NETWORK</div>
+              <div class="tags"><span class="tag">Tailscale VPN</span><span class="tag">OCI</span><span
+                  class="tag">Podman</span><span class="tag">iptables/nftables</span></div>
+            </div>
+            <div class="stack-group">
+              <div class="stack-group-title">FRONTEND</div>
+              <div class="tags"><span class="tag">React 19</span><span class="tag">TypeScript</span><span
+                  class="tag">Vite</span></div>
+            </div>
+            <div class="stack-group">
+              <div class="stack-group-title">BACKEND / DB</div>
+              <div class="tags"><span class="tag">Node.js/Express</span><span class="tag">PostgreSQL</span><span
+                  class="tag">MongoDB</span><span class="tag">Kafka (KRaft)</span><span class="tag">Debezium</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="subh" style="margin-top:0">왜 온프레미스? 왜 kubeadm?</div>
+          <div class="card-grid" style="margin-bottom:8px">
+            <div class="card" style="background:var(--blue-bg)">
+              <div
+                style="font-size:12px;font-weight:700;color:var(--blue);font-family:var(--mono);margin-bottom:10px">
+                ON-PREMISE vs EKS</div>
+              <p style="font-size:13px;color:var(--text-sub);line-height:1.8;">EKS 같은 관리형 서비스는 내부 동작을 추상화합니다.
+                스케줄링,
+                네트워킹, 스토리지를 직접 다뤄야 나중에 EKS도 제대로 쓸 수 있다고 판단했습니다. 또한 회사 환경에서는 비용 문제로 직접 구축하는 경우가 많습니다.</p>
+            </div>
+            <div class="card" style="background:var(--blue-bg)">
+              <div
+                style="font-size:12px;font-weight:700;color:var(--blue);font-family:var(--mono);margin-bottom:10px">
+                KUBEADM vs minikube</div>
+              <p style="font-size:13px;color:var(--text-sub);line-height:1.8;">minikube는 단일 노드 실습용입니다. kubeadm으로 멀티
+                노드(master + worker 3개) 클러스터를 직접 구성하여 노드 간 네트워킹, pod 스케줄링, CNI 동작을 실제 환경에 가깝게 경험했습니다.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+        </div>
+</section>
+
+<section id="arch-wt" class="pdf-detail-page pdf-project-wattup">
+    <div class="pdf-detail-content">
+      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>Wattup</strong><div class="pdf-chapter-tag">아키텍처 · ARCHITECTURE</div></div>
+      <h2 class="stitle">네트워크 아키텍처</h2>
+      <div class="fi on">
+        
+        
+        <div class="card">
+          <img src="wattup/wattup_archi.png" alt="Wattup Network Architecture" class="aimg">
+        </div>
+      </div>
+        </div>
+</section>
+
+<section id="memory-wt" class="pdf-detail-page pdf-project-wattup">
+    <div class="pdf-detail-content">
+      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>Wattup</strong><div class="pdf-chapter-tag">최적화 · OPTIMIZATION</div></div>
+      <h2 class="stitle">메모리 최적화 (95% → 76%)</h2>
+      <div class="fi on">
+        
+        
+        <div class="card">
+          <div class="mbars">
+            <div>
+              <div class="mlabel">최적화 전 — 95%</div>
+              <div class="mtrack">
+                <div class="mfill md" data-w="95">95%</div>
+              </div>
+            </div>
+            <div>
+              <div class="mlabel">Kafka 3→1 단일화 — 83%</div>
+              <div class="mtrack">
+                <div class="mfill mw" data-w="83">83%</div>
+              </div>
+            </div>
+            <div>
+              <div class="mlabel">JVM 힙 제한 (HEAP_OPTS) — 76% </div>
+              <div class="mtrack">
+                <div class="mfill mo" data-w="76">76%</div>
+              </div>
+            </div>
+          </div>
+          <div class="info"> <strong>교훈</strong>: JVM은 기본적으로 시스템 RAM의 1/4을 힙으로 설정. K8s의 <code>limits.memory</code>는
+            OOM killer 상한이고 JVM의 <code>-Xmx</code>는 힙 크기로 별개 동작. JVM 컨테이너는 반드시 <code>HEAP_OPTS</code>와
+            <code>limits.memory</code>를 함께 설정해야 함.
+          </div>
+        </div>
+      </div>
+        </div>
+</section>
+
+<section id="ts-wt-1" class="pdf-detail-page pdf-project-wattup">
+    <div class="pdf-detail-content">
+      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>Wattup</strong><div class="pdf-chapter-tag">Troubleshooting</div></div>
+      <h2 class="stitle">트러블슈팅</h2>
+      <div class="fi on">
+        
+        
+        <div class="twrap pdf-ts-grid">
+<div class="titem">
+              <div class="thead" onclick="tog(this)"><span class="tnum">01</span><span class="ttitle">PostgreSQL
+                  CrashLoopBackOff — securityContext 권한 오류</span><span class="tarrow">▼</span></div>
+              <div class="tbody">
+                <span class="tlabel ts">현상</span>
+                <p>PostgreSQL Pod가 볼륨에 접근하지 못하고 <code>CrashLoopBackOff</code> 상태를 반복했습니다.</p>
+                <span class="tlabel tc">원인</span>
+                <p><code>local-path-provisioner</code>가 PVC 디렉토리를 root 소유로 생성. <code>runAsUser: 999</code>를 함께 설정하면
+                  오히려
+                  권한이 없어짐.</p>
+                <span class="tlabel tf">해결</span>
+                <p>사용자와 그룹을 강제로 지정하던 설정을 제거하고, 볼륨 파일에 PostgreSQL 그룹 권한이 적용되도록 <code>fsGroup</code>만 지정해 정상적으로 데이터 디렉토리에 접근하도록 수정했습니다.</p>
+                <span class="tlabel tl">학습</span>
+                <p>컨테이너 실행 사용자뿐 아니라 볼륨을 생성하는 프로비저너의 소유권 방식까지 함께 확인해야 합니다. 이후 StatefulSet 배포 가이드에 <code>fsGroup</code> 적용 원칙을 명시했습니다.</p>
+              </div>
+            </div>
+<div class="titem">
+              <div class="thead" onclick="tog(this)"><span class="tnum">02</span><span class="ttitle">Kafka 데드락 —
+                  KRaft
+                  3-node 쿼럼 실패</span><span class="tarrow">▼</span></div>
+              <div class="tbody">
+                <span class="tlabel ts">현상</span>
+                <p>Kafka 첫 번째 Pod만 실행된 채 나머지 Pod가 준비되지 않아 클러스터 구성이 멈췄습니다.</p>
+                <span class="tlabel tc">원인</span>
+                <p>3-node KRaft는 과반수 노드가 동시에 떠야 리더 선출 가능. StatefulSet 기본 순차 실행으로 kafka-0 혼자 먼저 떠서 쿼럼 불가 → 데드락.</p>
+                <span class="tlabel tf">해결</span>
+                <p>Kafka Pod가 순차적으로 기다리지 않고 동시에 시작되도록 StatefulSet의 Pod 관리 정책을 병렬 방식으로 변경하고, 준비 상태 이전에도 노드끼리 주소를 찾을 수 있도록 Headless Service의 탐색 설정을 조정했습니다.</p>
+                <span class="tlabel tl">학습</span>
+                <p>분산 시스템의 배포 순서는 일반 애플리케이션과 달리 쿼럼 형성 조건을 먼저 고려해야 합니다. 이후 Kafka 배포 템플릿에 병렬 시작과 노드 탐색 설정을 기본값으로 반영했습니다.</p>
+              </div>
+            </div>
+<div class="titem">
+              <div class="thead" onclick="tog(this)"><span class="tnum">03</span><span class="ttitle">Calico +
+                  Tailscale
+                  충돌 — Pod 네트워크 전체 붕괴</span><span class="tarrow">▼</span></div>
+              <div class="tbody">
+                <span class="tlabel ts">현상</span>
+                <p>Tailscale 설치 후 Calico가 <code>tailscale0</code>을 노드 IP로 착각 → CoreDNS / kube-proxy /
+                  local-path-provisioner 연쇄 CrashLoop.</p>
+                <span class="tlabel tc">원인</span>
+                <p>Calico IP 자동 감지가 Tailscale VPN 인터페이스를 우선 선택. Pod 네트워크 라우팅 전체 붕괴.</p>
+                <span class="tlabel tf">해결</span>
+                <p>Calico가 실제 내부망 인터페이스만 노드 IP로 감지하도록 대상을 고정하고, Tailscale이 외부 라우트를 받아 CNI 경로를 변경하지 않도록 설정해 Pod 네트워크를 복구했습니다.</p>
+                <span class="tlabel tl">학습</span>
+                <p>한 노드에 CNI와 VPN 인터페이스가 함께 존재하면 자동 감지에 의존해서는 안 됩니다. 이후 VPN 설치 전에 Calico 인터페이스를 고정하고 설치 후 전체 노드의 CNI 상태를 확인하는 절차를 문서화했습니다.</p>
+              </div>
+            </div>
+        </div>
+      </div>
+        </div>
+</section>
+
+<section id="summary-wt" class="pdf-detail-page pdf-project-wattup">
+    <div class="pdf-detail-content">
+      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>Wattup</strong><div class="pdf-chapter-tag">Retrospective</div></div>
+      <h2 class="stitle">배운 점 &amp; 개선사항</h2>
+      <div class="fi on">
+        
+        
+        <div class="card">
+          <div class="subh" style="margin-top:0">배운 점</div>
+          <p style="font-size:14px;color:var(--text-sub);line-height:1.9;margin-bottom:20px;">
+            StatefulSet을 직접 다뤄보고 싶어서 PostgreSQL, Kafka, Debezium을 모두 Kubernetes 클러스터 내에 구성했습니다. 그러나 서비스 간 의존성이
+            깊어질수록 단일
+            장애 지점(SPOF)이 생기기 쉽고, 특히 Kafka 쿼럼 실패나 PostgreSQL securityContext 오류처럼 하나의 컴포넌트 문제가 전체 서비스에 영향을 미치는 상황을
+            경험했습니다.
+          </p>
+
+          <div class="subh">개선사항</div>
+          <p style="font-size:14px;color:var(--text-sub);line-height:1.9;margin-bottom:22px;">
+            가용성과 보안성을 높이기 위해 StatefulSet 사용을 지양하고, DB + Kafka + Debezium을 별도 VM에 구성한 뒤 Tailscale VPN으로 K8s 클러스터와
+            묶어 관리하는
+            방식으로 개선하고 싶습니다. 이렇게 하면 인프라 레이어와 애플리케이션 레이어가 분리되어 장애 격리와 독립적인 스케일링이 가능해집니다.
+          </p>
+          
+        </div>
+      </div>
+        </div>
+</section>
+
+    <!-- ===== 침수사고 ===== -->
+    <section id="malang" class="pdf-summary-page" data-detail="malang/index.html">
+      <div class="fi">
+        <div class="slabel">Personal Project · Serverless</div>
+        <h2 class="stitle">말랑이 메이커</h2>
+        <div class="card">
+          <div class="phead">
+            <div>
+              <div class="ptitle">말랑이 메이커 (MalangMaker)</div>
+              <div class="psub">AWS Serverless · KakaoTalk Chatbot · 개인 프로젝트 · 2026.02 ~ 2026.06 (서비스 종료)</div>
+            </div>
+            <span class="pbadge">서비스 종료</span>
+          </div>
+
+          <div class="pcard-top">
+            <div class="pthumb"><img src="malang/malang_archi.png" alt="말랑이 AWS 아키텍처"></div>
+            <div>
+              <p style="font-size:14px;color:var(--text-sub);line-height:1.9;margin-bottom:14px;">
+                카카오톡을 통해 자신만의 캐릭터 '말랑이'를 육성하는 게임형 챗봇 서비스입니다. 비정형 트래픽에 최적화된
+                서버리스 아키텍처로 설계해 2026.06까지 실제 운영했습니다.
+              </p>
+              <div class="tags">
+                <span class="tag">FastAPI</span><span class="tag">AWS Lambda</span><span
+                  class="tag">DynamoDB</span><span class="tag">Terraform</span><span
+                  class="tag">GitHub Actions</span><span class="tag">CloudWatch</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hmetrics" style="margin-bottom:16px">
+            <div class="hmetric">
+              <div class="hmetric-val">$0.03</div>
+              <div class="hmetric-label">월 운영 비용</div>
+            </div>
+            <div class="hmetric">
+              <div class="hmetric-val">6s → 284ms</div>
+              <div class="hmetric-label">콜드스타트 개선</div>
+            </div>
+            <div class="hmetric">
+              <div class="hmetric-val">0%</div>
+              <div class="hmetric-label">에러율</div>
+            </div>
+            <div class="hmetric">
+              <div class="hmetric-val">2026.02~06</div>
+              <div class="hmetric-label">서비스 운영 기간</div>
+            </div>
+          </div>
+
+          <ul class="phighlights">
+            <li>Lambda + DynamoDB 서버리스 구조로 월 운영비 $0.03 달성</li>
+            <li>k6 부하 테스트로 실제 운영 버그(KeyError) 발견 및 수정</li>
+            <li>EventBridge 웜업으로 콜드스타트 6s → 284ms 개선</li>
+            <li>Terraform IaC + IAM 최소권한 3그룹 분리로 배포 자동화</li>
+          </ul>
+
+          <a href="malang/index.html" class="hlink pri">자세히 보기 →</a>
+        </div>
+      </div>
+    </section>
+
+<section id="preview-m" class="pdf-detail-page pdf-project-malang">
+    <div class="pdf-detail-content">
+      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>말랑이 메이커</strong><div class="pdf-chapter-tag">서비스 화면 · PREVIEW</div></div>
+      <h2 class="stitle">서비스 화면</h2>
+      <div class="fi on">
+        
+        
+        <div class="card">
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px">
+            <div>
+              <div class="shot"><img
+                  src="https://github.com/user-attachments/assets/1cd8cfec-beea-498c-8be2-39d7597f7eb8"
+                  alt="가이드"></div>
+              <div class="shotlabel">밥주기</div>
+            </div>
+            <div>
+              <div class="shot"><img
+                  src="https://github.com/user-attachments/assets/0b461d9a-cd00-4a67-9aec-153398dae973"
+                  alt="랭킹"></div>
+              <div class="shotlabel">랭킹</div>
+            </div>
+            <div>
+              <div class="shot"><img
+                  src="https://github.com/user-attachments/assets/d43f528c-89a1-4234-a4e8-084dfe48fd47"
+                  alt="밥주기"></div>
+              <div class="shotlabel">가이드</div>
+            </div>
+          </div>
+        </div>
+      </div>
+        </div>
+</section>
+
+<section id="arch-m" class="pdf-detail-page pdf-project-malang">
+    <div class="pdf-detail-content">
+      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>말랑이 메이커</strong><div class="pdf-chapter-tag">아키텍처 · ARCHITECTURE</div></div>
+      <h2 class="stitle">시스템 아키텍처</h2>
+      <div class="fi on">
+        
+        
+        <div class="card">
+          <img src="malang/malang_archi.png" alt="말랑이 AWS Architecture" class="aimg">
+          <p style="font-size:12px;color:var(--text-muted);text-align:center;font-family:var(--mono);">CI/CD 배포 흐름 ·
+            운영
+            흐름 · 모니터링 흐름 · IAM 최소권한 전략</p>
+        </div>
+      </div>
+        </div>
+</section>
+
+<section id="infra-m-stack" class="pdf-detail-page pdf-project-malang">
+    <div class="pdf-detail-content">
+      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>말랑이 메이커</strong><div class="pdf-chapter-tag">의사결정 · DECISION MAKING</div></div>
+      <h2 class="stitle">테크 스택</h2>
+      <div class="fi on">
+        
+        
+        <div class="card" style="margin-bottom:24px">
+          <div class="subh" style="margin-top:0">Tech Stack</div>
+          <div class="stack-grid">
+            <div class="stack-group">
+              <div class="stack-group-title">BACKEND</div>
+              <div class="tags"><span class="tag">FastAPI</span><span class="tag">Python 3.10</span></div>
+            </div>
+            <div class="stack-group">
+              <div class="stack-group-title">COMPUTE</div>
+              <div class="tags"><span class="tag">AWS Lambda</span><span class="tag">API Gateway</span></div>
+            </div>
+            <div class="stack-group">
+              <div class="stack-group-title">DATABASE</div>
+              <div class="tags"><span class="tag">DynamoDB</span></div>
+            </div>
+            <div class="stack-group">
+              <div class="stack-group-title">CONTAINER</div>
+              <div class="tags"><span class="tag">Docker</span><span class="tag">ECR</span></div>
+            </div>
+            <div class="stack-group">
+              <div class="stack-group-title">IaC</div>
+              <div class="tags"><span class="tag">Terraform</span><span class="tag">AWS SAM</span><span
+                  class="tag">GitHub Actions</span></div>
+            </div>
+            <div class="stack-group">
+              <div class="stack-group-title">CI/CD</div>
+              <div class="tags"><span class="tag">GitHub Actions</span></div>
+            </div>
+            <div class="stack-group">
+              <div class="stack-group-title">MONITORING</div>
+              <div class="tags"><span class="tag">CloudWatch</span><span class="tag">SNS</span><span
+                  class="tag">Budgets</span><span class="tag">Slack</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+        </div>
+</section>
+
+<section id="infra-m-decisions-1" class="pdf-detail-page pdf-project-malang">
+    <div class="pdf-detail-content">
+      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>말랑이 메이커</strong><div class="pdf-chapter-tag">의사결정 · DECISION MAKING</div></div>
+      <h2 class="stitle">설계 이유</h2>
+      <div class="fi on">
+        
+        
+        <div class="card-grid">
+<div class="card">
+            <div class="subh" style="margin-top:0">Lambda vs EC2</div>
+            <div class="decision-flow">
+              <div class="df-step">
+                <div class="df-label">문제</div>
+                <div class="df-content">카카오 챗봇 특성상 트래픽이 특정 시간대에 집중되고 나머지 시간은 유휴 상태</div>
+              </div>
+              <div class="df-step">
+                <div class="df-label">고민</div>
+                <div class="df-content"><strong>EC2</strong>vs <strong>Lambda</strong></div>
+              </div>
+              <div class="df-step">
+                <div class="df-label">결정</div>
+                <div class="df-content"><strong>Lambda 선택</strong></div>
+              </div>
+              <div class="df-step">
+                <div class="df-label">이유</div>
+                <div class="df-content">유휴 구간의 상시 인스턴스 비용 제거 / 요청량에 따른 자동 스케일링 / 서버 관리 오버헤드 최소화</div>
+              </div>
+              <div class="df-step">
+                <div class="df-label">결과</div>
+                <div class="df-content">간헐적 요청과 긴 유휴 구간이 반복되는 <strong>비정형 트래픽에 비용이 탄력적으로 연동되는 구조</strong>를 구현하고, 월 운영 비용 <strong>0.03$</strong>달성</div>
+              </div>
+            </div>
+          </div>
+<div class="card">
+            <div class="subh" style="margin-top:0">DynamoDB vs RDS</div>
+            <div class="decision-flow">
+              <div class="df-step">
+                <div class="df-label">문제</div>
+                <div class="df-content">말랑이 캐릭터 데이터 구조가 레벨/진화 단계마다 유연하게 변화</div>
+              </div>
+              <div class="df-step">
+                <div class="df-label">고민</div>
+                <div class="df-content"><strong>RDS (MySQL)</strong>vs <strong>DynamoDB</strong></div>
+              </div>
+              <div class="df-step">
+                <div class="df-label">결정</div>
+                <div class="df-content"><strong>DynamoDB 선택</strong></div>
+              </div>
+              <div class="df-step">
+                <div class="df-label">이유</div>
+                <div class="df-content">유연한 스키마 변경 / 트래픽 급증 시 RDS 커넥션 풀 고갈 위험 없이 요청량에 따라 수평 확장 / Lambda와 관리형 API로 연동해 DB 서버 운영 부담 최소화</div>
+              </div>
+              <div class="df-step">
+                <div class="df-label">결과</div>
+                <div class="df-content">스키마 3회 변경에도 마이그레이션 없이 즉시 반영</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+        </div>
+</section>
+
+<section id="infra-m-decisions-2" class="pdf-detail-page pdf-project-malang">
+    <div class="pdf-detail-content">
+      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>말랑이 메이커</strong><div class="pdf-chapter-tag">의사결정 · DECISION MAKING</div></div>
+      <h2 class="stitle">설계 이유</h2>
+      <div class="fi on">
+        
+        
+        <div class="card-grid">
+<div class="card">
+            <div class="subh" style="margin-top:0">IAM 최소권한 전략</div>
+            <div class="decision-flow">
+              <div class="df-step">
+                <div class="df-label">문제</div>
+                <div class="df-content">배포 시 <strong>IAMFullAccess</strong>필요 → 배포 후 수동으로 ReadOnly로 변경해야 하는 비효율 발생.
+                  상시
+                  부여는 보안 리스크</div>
+              </div>
+              <div class="df-step">
+                <div class="df-label">고민</div>
+                <div class="df-content">권한을 하나로 통합 vs <strong>목적별로 분리</strong></div>
+              </div>
+              <div class="df-step">
+                <div class="df-label">결정</div>
+                <div class="df-content"><strong>목적별 3그룹 분리</strong>+ Terraform으로 IAM 코드화</div>
+              </div>
+              <div class="df-step">
+                <div class="df-label">이유</div>
+                <div class="df-content">최소권한 원칙(Least Privilege) 적용 / 역할별 접근 범위 명확화 / GitHub Actions에 배포 전용 키만 등록하여
+                  키 유출
+                  시 피해 최소화</div>
+              </div>
+              <div class="df-step">
+                <div class="df-label">결과</div>
+                <div class="df-content">수동 권한 변경 제거 → 운영 효율성 향상. <strong>RBAC 체계 확립</strong>. GitHub Actions에서
+                  malang-deployer만 사용하도록 고정</div>
+              </div>
+            </div>
+            <div class="igrid" style="margin-top:16px">
+              <div class="iitem">
+                <div class="iname">malang-dev</div>
+                <div class="irole">일반 개발</div>
+                <div class="iperms">IAMReadOnly</div>
+              </div>
+              <div class="iitem">
+                <div class="iname">malang-ops</div>
+                <div class="irole">운영/모니터링</div>
+                <div class="iperms">SNS+CW+Budgets</div>
+              </div>
+              <div class="iitem">
+                <div class="iname">malang-deployer</div>
+                <div class="irole">CI/CD 전용</div>
+                <div class="iperms">IAMFullAccess</div>
+              </div>
+            </div>
+          </div>
+<div class="card">
+            <div class="subh" style="margin-top:0">Terraform IaC 도입</div>
+            <div class="decision-flow">
+              <div class="df-step">
+                <div class="df-label">문제</div>
+                <div class="df-content">콘솔에서 수동으로 IAM 리소스 생성 → <strong>IAM drift 발생</strong>(콘솔과 코드 불일치)</div>
+              </div>
+              <div class="df-step">
+                <div class="df-label">고민</div>
+                <div class="df-content">수동 관리 유지 vs <strong>IaC 도입</strong></div>
+              </div>
+              <div class="df-step">
+                <div class="df-label">결정</div>
+                <div class="df-content">기존 IAM 리소스를 <code>terraform import</code>로 가져와 코드화.
+                  <code>terraform plan</code>으로 변경 사항 사전 검증 후 GitHub Actions에서 <code>apply</code>실행
+                </div>
+              </div>
+              <div class="df-step">
+                <div class="df-label">이유</div>
+                <div class="df-content">인프라 변경 이력을 코드로 추적 가능 / PR 단계에서 변경 사항 검토 가능 / 어떤 환경에서 실행해도 동일한 결과 보장</div>
+              </div>
+              <div class="df-step">
+                <div class="df-label">문제 발생</div>
+                <div class="df-content">GitHub Actions가 빈 state에서 시작 → <strong>EntityAlreadyExists</strong>충돌 발생</div>
+              </div>
+              <div class="df-step">
+                <div class="df-label">해결</div>
+                <div class="df-content"><strong>S3 Remote Backend</strong>도입으로 state 중앙 관리. 어떤 환경에서 실행해도 동일한 state
+                  참조
+                </div>
+              </div>
+              <div class="df-step">
+                <div class="df-label">결과</div>
+                <div class="df-content">환경 간 IAM 일관성 확보. PR 시 <code>terraform plan</code>자동 검증으로 적용 전 확인</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+        </div>
+</section>
+
+<section id="cicd-m" class="pdf-detail-page pdf-project-malang">
+    <div class="pdf-detail-content">
+      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>말랑이 메이커</strong><div class="pdf-chapter-tag">CI/CD Pipeline</div></div>
+      <h2 class="stitle">자동화 배포 파이프라인</h2>
+      <div class="fi on">
+        
+        
+        <div class="card">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px">
+            <div>
+              <div class="subh" style="margin-top:0">SAM 배포 — deploy.yaml</div>
+              <div class="pipe">
+                <div class="pstep">
+                  <div class="psname">GitHub Push</div>
+                  <div class="psdesc">main 브랜치 소스코드 변경 감지</div>
+                </div>
+                <div class="pstep">
+                  <div class="psname">SAM Build</div>
+                  <div class="psdesc">--use-container로 Docker 이미지 빌드</div>
+                </div>
+                <div class="pstep">
+                  <div class="psname">ECR Push</div>
+                  <div class="psdesc">빌드 이미지를 AWS ECR에 저장</div>
+                </div>
+                <div class="pstep">
+                  <div class="psname">SAM Deploy</div>
+                  <div class="psdesc">CloudFormation 스택 업데이트, Lambda 자동 교체</div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="subh" style="margin-top:0">Terraform — terraform.yaml</div>
+              <div class="pipe">
+                <div class="pstep">
+                  <div class="psname">my_terraform/ 변경</div>
+                  <div class="psdesc">IAM · 웜업 인프라 변경 감지</div>
+                </div>
+                <div class="pstep">
+                  <div class="psname">terraform init</div>
+                  <div class="psdesc">S3 Remote Backend에서 state 로드</div>
+                </div>
+                <div class="pstep">
+                  <div class="psname">PR: plan</div>
+                  <div class="psdesc">변경 사항 미리 확인 후 리뷰</div>
+                </div>
+                <div class="pstep">
+                  <div class="psname">main 머지: apply</div>
+                  <div class="psdesc">변경 리소스 자동 적용</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+        </div>
+</section>
+
+<section id="load-test-overview" class="pdf-detail-page pdf-project-malang">
+    <div class="pdf-detail-content">
+      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>말랑이 메이커</strong><div class="pdf-chapter-tag">Load Testing</div></div>
+      <h2 class="stitle">부하 테스트 · 목적과 시나리오</h2>
+      <div class="fi on">
+        
+        
+        <div class="card"><div class="subh" style="margin-top:0">테스트 목적</div>
+          <p style="font-size:14px;color:var(--text-sub);line-height:1.9;margin-bottom:20px;">서버리스 아키텍처의 특성상 트래픽 급증 및
+            콜드
+            스타트 상황에서의 안정성을 검증하기 위해 k6 기반 부하 테스트를 수행했습니다.</p>
+
+          <table class="ops-table" style="margin-bottom:28px">
+            <tr>
+              <th>측정 항목</th>
+              <th>측정 방법</th>
+              <th>기대값</th>
+            </tr>
+            <tr>
+              <td>평균 응답시간</td>
+              <td>k6 http_req_duration avg</td>
+              <td>200ms 이내</td>
+            </tr>
+            <tr>
+              <td>p95 응답시간</td>
+              <td>k6 p(95)</td>
+              <td>3,000ms 이내</td>
+            </tr>
+            <tr>
+              <td>에러율</td>
+              <td>k6 http_req_failed</td>
+              <td>5% 미만</td>
+            </tr>
+            <tr>
+              <td>콜드 스타트 지연</td>
+              <td>k6 max + CloudWatch Duration Max</td>
+              <td>측정값 확인</td>
+            </tr>
+            <tr>
+              <td>Lambda 자동 스케일링</td>
+              <td>CloudWatch Invocations</td>
+              <td>Throttle 미발생</td>
+            </tr>
+            <tr>
+              <td>DynamoDB 스로틀링</td>
+              <td>CloudWatch ConsumedWriteCapacity</td>
+              <td>임계치 미달</td>
+            </tr>
+          </table>
+
+          <div class="subh">테스트 시나리오</div>
+          <div class="pipe" style="margin-bottom:28px">
+            <div class="pstep">
+              <div class="psname">1단계</div>
+              <div class="psdesc">평상시 트래픽 유지 (2명) — 기준값 측정</div>
+            </div>
+            <div class="pstep">
+              <div class="psname">2단계</div>
+              <div class="psdesc">10초 만에 50명 동시 접속 폭증 → Lambda 자동 스케일링 검증</div>
+            </div>
+            <div class="pstep">
+              <div class="psname">3단계</div>
+              <div class="psdesc">15분 유휴 대기 → Lambda 컨테이너 종료 확인</div>
+            </div>
+            <div class="pstep">
+              <div class="psname">4단계</div>
+              <div class="psdesc">콜드 스타트 후 재폭증 → 콜드 스타트 + 동시 요청 조합 테스트</div>
+            </div>
+            <div class="pstep">
+              <div class="psname">5단계</div>
+              <div class="psdesc">10분간 지속 부하 → 안정성 및 메모리 누수 여부 확인</div>
+            </div>
+            <div class="pstep">
+              <div class="psname">6단계</div>
+              <div class="psdesc">쓰다듬기/똥치우기 집중 테스트 — 하루 1회 제한 로직 + DB 쓰기 동시 검증 (test_user 30명)</div>
+            </div>
+          </div>
+          <div class="info">총 테스트 시간: 약 33분 / 동시 사용자 최대 50명 / 총 34,532건 요청</div></div>
+      </div>
+        </div>
+</section>
+
+<section id="load-test-results" class="pdf-detail-page pdf-project-malang">
+    <div class="pdf-detail-content">
+      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>말랑이 메이커</strong><div class="pdf-chapter-tag">Load Testing</div></div>
+      <h2 class="stitle">부하 테스트 · 결과 비교</h2>
+      <div class="fi on">
+        
+        
+        <div class="card pdf-load-results">
+          <table class="ops-table pdf-load-table">
+            <thead><tr><th>지표</th><th>1차 종합</th><th>2차 쓰다듬기</th><th>2차 똥치우기</th><th>3차 웜업 후</th></tr></thead>
+            <tbody>
+          <tr><td>평균 응답</td><td>45ms</td><td>50ms</td><td>56ms</td><td>—</td></tr>
+          <tr><td>p95 응답</td><td>63.84ms</td><td>70ms</td><td>75ms</td><td>78.63ms</td></tr>
+          <tr><td>최대/첫 요청</td><td>1.52s</td><td>—</td><td>—</td><td>284ms / &lt;100ms</td></tr>
+          <tr><td>에러율</td><td>6.62%</td><td>0%</td><td>0%</td><td>0%</td></tr>
+          <tr><td>Throttle</td><td>0건</td><td>미발생</td><td>미발생</td><td>미발생</td></tr>
+            </tbody>
+          </table>
+          <div class="pdf-load-notes">
+        <div class="rbox"><div class="rbox-t">1차 테스트에서 버그 발견</div><p><code>KeyError: 'none'</code> 확인 후 사망 상태 체크 로직을 추가해 재배포했습니다.</p></div>
+        <div class="rbox"><div class="rbox-t">콜드 스타트 개선</div><p>15분 유휴 후 첫 요청 최대 6s에서 EventBridge 웜업 적용 후 100ms 미만, 최대 284ms로 개선했습니다.</p></div>
+          </div>
+        </div>
+      </div>
+        </div>
+</section>
+
+<section id="load-test-captures" class="pdf-detail-page pdf-project-malang">
+    <div class="pdf-detail-content">
+      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>말랑이 메이커</strong><div class="pdf-chapter-tag">Load Testing</div></div>
+      <h2 class="stitle">부하 테스트 · CloudWatch 결과</h2>
+      <div class="fi on">
+        
+        
+        <div class="pdf-load-shots">
+          <figure><img src="malang/cloudwatch_1st.png" alt="1차 테스트 CloudWatch 대시보드"><figcaption>1차 종합 시나리오</figcaption></figure>
+          <figure><img src="malang/cloudwatch_2nd.png" alt="2차 테스트 CloudWatch 대시보드"><figcaption>2차 버그 수정 후</figcaption></figure>
+          <figure><img src="malang/cloudwatch_3rd.png" alt="3차 테스트 CloudWatch 대시보드"><figcaption>3차 EventBridge 웜업 적용 후</figcaption></figure>
+        </div>
+        <div class="pdf-load-caption-list">
+          <p><strong>01 · 1차 종합</strong><span>에러율 6.62%에서 <code>KeyError: 'none'</code> 운영 버그를 발견했습니다.</span></p>
+          <p><strong>02 · 수정 후</strong><span>예외 처리 재배포 후 쓰다듬기·똥치우기 에러율 0%를 확인했습니다.</span></p>
+          <p><strong>03 · 웜업 적용</strong><span>첫 요청 6초를 100ms 미만으로, 최대 응답시간을 284ms로 개선했습니다.</span></p>
+        </div>
+      </div>
+        </div>
+</section>
+
+<section id="ts-m-1" class="pdf-detail-page pdf-project-malang">
+    <div class="pdf-detail-content">
+      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>말랑이 메이커</strong><div class="pdf-chapter-tag">Troubleshooting</div></div>
+      <h2 class="stitle">트러블슈팅</h2>
+      <div class="fi on">
+        
+        
+        <div class="twrap pdf-ts-grid">
+<div class="titem">
+              <div class="thead" onclick="tog(this)"><span class="tnum">01</span><span class="ttitle">Lambda 베이스 이미지
+                  —
+                  NetworkAccessForbidden (응답 없음)</span><span class="tarrow">▼</span></div>
+              <div class="tbody">
+                <span class="tlabel ts">현상</span>
+                <p>카카오톡 메시지를 보내도 응답이 없고 '네트워크 오류'만 표시. 503 에러 코드조차 뜨지 않음.</p>
+                <span class="tlabel tc">원인</span>
+                <p>일반 <code>python:3.10-slim</code>이미지 사용. Lambda는 전용 런타임이 필요하며 Init 단계 자체가 실패해 카카오 측이 연결 거부로 판단.</p>
+                <span class="tlabel tf">해결</span>
+                <pre>FROM public.ecr.aws/lambda/python:3.10</pre>
+                <span class="tlabel tp">재발 방지</span>
+                <p>Lambda 컨테이너 이미지는 반드시 <code>public.ecr.aws/lambda/</code>베이스 이미지 사용. GitHub Actions deploy.yaml에
+                  명시하여
+                  수동 배포 실수 방지.</p>
+              </div>
+            </div>
+<div class="titem">
+              <div class="thead" onclick="tog(this)"><span class="tnum">02</span><span
+                  class="ttitle">Runtime.ImportModuleError — Unable to import module 'main'</span><span
+                  class="tarrow">▼</span></div>
+              <div class="tbody">
+                <span class="tlabel tc">원인</span>
+                <p>기존 빌드 캐시(.aws-sam)가 오염된 상태로 올라간 것.</p>
+                <span class="tlabel tf">해결</span>
+                <pre>rmdir /s /q .aws-sam
+sam build --use-container
+sam deploy</pre>
+                <span class="tlabel tp">재발 방지</span>
+                <p>GitHub Actions에서 <code>sam build</code>를 자동화하여 로컬 캐시 문제 원천 제거. 수동 배포 프로세스 자체를 없앰.</p>
+              </div>
+            </div>
+<div class="titem">
+              <div class="thead" onclick="tog(this)"><span class="tnum">03</span><span class="ttitle">Terraform
+                  depends_on 누락 — IAM 정책 적용 전 EventBridge 생성 시도</span><span class="tarrow">▼</span></div>
+              <div class="tbody">
+                <span class="tlabel ts">현상</span>
+                <p>terraform apply 시 <code>AccessDeniedException: events:PutRule</code>에러. IAM 정책을 방금 추가했는데도 권한 없음.
+                </p>
+                <span class="tlabel tc">원인</span>
+                <p>Terraform이 IAM 정책 attachment와 EventBridge rule을 병렬로 실행. 정책이 완전히 적용되기 전에 PutRule 호출.</p>
+                <span class="tlabel tf">해결</span>
+                <pre>resource "aws_cloudwatch_event_rule" "warmup" {
+  depends_on = [aws_iam_group_policy_attachment.deployer]
+}</pre>
+                <span class="tlabel tp">재발 방지</span>
+                <p>IAM 정책 변경과 해당 권한을 사용하는 리소스가 함께 추가될 때는 항상 <code>depends_on</code>명시.</p>
+              </div>
+            </div>
+        </div>
+      </div>
+        </div>
+</section>
+
+<section id="summary-m" class="pdf-detail-page pdf-project-malang">
+    <div class="pdf-detail-content">
+      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>말랑이 메이커</strong><div class="pdf-chapter-tag">Retrospective</div></div>
+      <h2 class="stitle">배운 점 &amp; 개선사항</h2>
+      <div class="fi on">
+        
+        
+        <div class="card">
+          <div class="subh" style="margin-top:0">배운 점</div>
+          <p style="font-size:14px;color:var(--text-sub);line-height:1.9;margin-bottom:20px;">
+            부하 테스트에서 측정한 최대 6s의 콜드스타트 지연이 실제 사용자 입장에서는 응답이 없는 것처럼 느껴지는 경험으로 이어진다는 점을 직접 체감했습니다. 해결 방법을 찾는 과정에서
+            Provisioned Concurrency와 EventBridge 웜업을 비교했고, 비용 대비 효과를 고려해 웜업을 선택했습니다. 이 경험을 통해 서버리스 아키텍처는 비용 효율성과 응답
+            안정성
+            사이에 트레이드오프가 존재한다는 것을 체감했고, 트래픽 패턴이 안정적으로 바뀐다면 EC2 전환도 고려할 수 있다는 판단 기준을 갖게 되었습니다.
+          </p>
+
+          <div class="subh">개선사항</div>
+          <p style="font-size:14px;color:var(--text-sub);line-height:1.9;">
+            현재 Logs와 Metrics는 CloudWatch로 수집하고 있으나, 요청 단위의 병목을 식별할 분산 추적은 아직 적용하지 않았습니다.
+            다음 운영 개선 단계에서는 AWS X-Ray Active Tracing을 Lambda에 활성화하고 DynamoDB 호출을 서브세그먼트로 수집해,
+            엔드포인트별 지연시간과 오류 발생 구간을 서비스 맵에서 검증할 계획입니다. 대표 API의 정상·지연·오류 요청을 재현한 뒤
+            트레이스 상세 화면과 서비스 맵을 운영 증빙으로 남기고, 비정상 호출이 집중되는 엔드포인트에는 해당 데이터에 근거해 Rate Limiting과 매크로 방지 정책을 적용하겠습니다.
+          </p>
+        </div>
+      </div>
+        </div>
+</section>
+
+    <!-- ===== WATTUP ===== -->
+    <section id="flood" class="pdf-summary-page" data-detail="flood/index.html" style="padding-bottom:80px;">
+      <div class="fi">
+        <div class="slabel">Capstone Project</div>
+        <h2 class="stitle">침수사고 예방 시스템</h2>
+        <div class="card">
+          <div class="phead">
+            <div>
+              <div class="ptitle">IoT 기반 침수사고 예방 시스템</div>
+              <div class="psub">Arduino · React · Node.js · 팀장 · 2023.09 ~ 2023.12</div>
+            </div>
+            <span class="award">MADE IN SUNGSHIN 대상</span>
+          </div>
+
+          <div class="pcard-top">
+            <div class="pthumb"><img src="flood/iot.png" alt="IoT 침수사고 예방 시스템 하드웨어와 지도 화면"></div>
+            <div>
+              <p style="font-size:14px;color:var(--text-sub);line-height:1.9;margin-bottom:14px;">
+                지하차도 침수사고 예방을 목표로 아두이노 기반 차량 통제 및 지도 알림 시스템을 제작했습니다. 팀장으로서
+                아두이노 센서 제어, 카카오 MAP API 연동, 실시간 데이터 처리 로직 설계를 주도했습니다. 캡스톤 이후
+                실시간성 문제를 개선하여 WebSocket 기반 버전으로 발전시켰습니다.
+              </p>
+              <div class="tags">
+                <span class="tag">Arduino</span><span class="tag">React</span><span class="tag">Node.js</span><span
+                  class="tag">Socket.io</span><span class="tag">Kakao MAP API</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hmetrics" style="margin-bottom:16px">
+            <div class="hmetric">
+              <div class="hmetric-val">대상</div>
+              <div class="hmetric-label">MADE IN SUNGSHIN 2023</div>
+            </div>
+            <div class="hmetric">
+              <div class="hmetric-val">팀장</div>
+              <div class="hmetric-label">2023.09 ~ 2023.12</div>
+            </div>
+            <div class="hmetric">
+              <div class="hmetric-val">2개 버전</div>
+              <div class="hmetric-label">캡스톤 · 개선판</div>
+            </div>
+            <div class="hmetric">
+              <div class="hmetric-val">HTTP → WS</div>
+              <div class="hmetric-label">실시간성 개선</div>
+            </div>
+          </div>
+
+          <ul class="phighlights">
+            <li>수위/유량 센서 → LED 단계적 경고(RED→YELLOW→WHITE)로 실시간 위험 알림</li>
+            <li>카카오 MAP API로 침수 위험 지역 마커 및 주변 상황 확인</li>
+            <li>HTTP 폴링 → WebSocket 전환으로 실시간 센서 데이터 지연 해결</li>
+            <li>캡스톤 이후 Node.js + Socket.io 개인 프로젝트로 발전, /admin 라우팅으로 이력 관리</li>
+          </ul>
+
+          <a href="flood/index.html" class="hlink pri">자세히 보기 →</a>
+        </div>
+      </div>
+    </section>
+
+<section id="compare-flood" class="pdf-detail-page pdf-project-flood">
+    <div class="pdf-detail-content">
+      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>IoT 기반 침수사고 예방 시스템</strong><div class="pdf-chapter-tag">Versions</div></div>
+      <h2 class="stitle">캡스톤 vs 개선 버전</h2>
+      <div class="fi on">
+        
+        
+        <div class="card">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+            <div>
+              <div class="subh" style="margin-top:0">캡스톤 (2023) — 팀 프로젝트 대상</div>
+              <div class="tags" style="margin-bottom:12px">
+                <span class="tag">Arduino</span><span class="tag">C++</span><span class="tag">React</span><span
+                  class="tag">Kakao MAP API</span><span class="tag">수위/유량 센서</span>
+              </div>
+              <ul
+                style="font-size:13px;color:var(--text-sub);list-style:none;display:flex;flex-direction:column;gap:6px">
+                <li>수위/유량 센서 → LED 단계적 경고 (RED→YELLOW→WHITE)</li>
+                <li>카카오 MAP API 침수 위험 지역 마커</li>
+                <li>내 위치 기반 주변 침수 상황 확인</li>
+              </ul>
+            </div>
+            <div>
+              <div class="subh" style="margin-top:0">개선 버전 (2025) — 개인 프로젝트</div>
+              <div class="tags" style="margin-bottom:12px">
+                <span class="tag">Node.js</span><span class="tag">Express</span><span
+                  class="tag">Socket.io</span><span class="tag">MongoDB Atlas</span><span class="tag">HC-SR04</span>
+              </div>
+              <ul
+                style="font-size:13px;color:var(--text-sub);list-style:none;display:flex;flex-direction:column;gap:6px">
+                <li>HTTP 폴링 → WebSocket으로 실시간 센서 스트리밍</li>
+                <li>임계치 이하 이벤트만 MongoDB Atlas에 기록</li>
+                <li>/admin 라우팅으로 거리 이력 관리자 확인</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+        </div>
+</section>
+
+<section id="ts-flood" class="pdf-detail-page pdf-project-flood">
+    <div class="pdf-detail-content">
+      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>IoT 기반 침수사고 예방 시스템</strong><div class="pdf-chapter-tag">Troubleshooting</div></div>
+      <h2 class="stitle">문제 해결</h2>
+      <div class="fi on">
+        
+        
+        <div class="card">
+          <div class="titem open">
+            <div class="thead" onclick="tog(this)">
+              <span class="tnum">01</span>
+              <span class="ttitle">HTTP 폴링 → WebSocket — 실시간 센서 데이터 지연 해결</span>
+              <span class="tarrow">▼</span>
+            </div>
+            <div class="tbody">
+              <span class="tlabel ts">현상</span>
+              <p>초음파 센서 거리값이 라우팅 전환이나 새로고침을 해야만 갱신됨. 실시간 모니터링 불가.</p>
+              <span class="tlabel tc">원인</span>
+              <p>HTTP 요청-응답 방식은 클라이언트가 주기적으로 서버에 요청해야 최신값을 받을 수 있음. 아두이노에서 지속 측정되는 센서값을 실시간 반영 불가.</p>
+              <span class="tlabel tf">해결</span>
+              <p>Node.js + Socket.io로 WebSocket 양방향 통신 구현. 아두이노 → 시리얼 통신 → Node.js → Socket.io → 브라우저로 실시간 스트리밍. 10cm
+                이하
+                이벤트만 MongoDB Atlas에 기록.</p>
+              <div class="rbox">
+                <div class="rbox-t">RESULT</div>
+                <p>새로고침 없이 초음파 센서 거리값 실시간 반영. /admin 페이지에서 최근 50개 이벤트 이력 조회 가능.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+        </div>
+</section>
+
+    <footer>
+      <div class="fname">최수정 — Choi Soojung</div>
+      <div class="flinks">
+        <a href="https://github.com/MODIFYC" target="_blank" class="flink">GitHub</a>
+        <a href="https://cmod-ify.tistory.com/category/Project" target="_blank" class="flink">Blog</a>
+        <a href="https://www.miricanvas.com/v2/ko/design2/v/c449dec2-f27a-4bba-8deb-21aa1ef953fd" target="_blank"
+          class="flink">WanderPool</a>
+        <a href="https://pf.kakao.com/_kRFRX" target="_blank" class="flink">말랑이</a>
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+    function fitPdfDetailPages() {
+      document.querySelectorAll('.pdf-detail-page').forEach(page => {
+        const wrapper = page.querySelector('.pdf-detail-content');
+        const content = wrapper.querySelector('.fi');
+        content.style.zoom = 1;
+        void content.offsetHeight;
+        const styles = getComputedStyle(page);
+        const fixedHeaderHeight = [...wrapper.children]
+          .filter(element => element !== content && !element.classList.contains('pdf-chapter-tag'))
+          .reduce((height, element) => height + element.getBoundingClientRect().height + parseFloat(getComputedStyle(element).marginBottom || 0), 0);
+        const availableHeight = page.clientHeight - parseFloat(styles.paddingTop) - parseFloat(styles.paddingBottom) - fixedHeaderHeight;
+        const fitRatio = availableHeight / content.scrollHeight;
+        const scale = fitRatio < 1 ? fitRatio * .96 : 1;
+        content.style.zoom = Number.isFinite(scale) && scale > 0 ? scale : 1;
+      });
+    }
+    addEventListener('load', fitPdfDetailPages);
+    if (document.fonts?.ready) document.fonts.ready.then(fitPdfDetailPages);
+    document.getElementById('pdfAction').addEventListener('click', e => { e.preventDefault(); window.print(); });
+    function tog(h) { h.parentElement.classList.toggle('open') }
+    function goTo(id) { document.getElementById(id).scrollIntoView({ behavior: 'smooth' }) }
+
+    const glow = document.querySelector('.cursor-glow');
+    document.addEventListener('mousemove', e =>{
+      glow.style.left = e.clientX + 'px';
+      glow.style.top = e.clientY + 'px';
+    });
+
+    const secs = ['hero', 'wanderpool', 'malang', 'wattup', 'flood'];
+    const dots = document.querySelectorAll('.dot');
+    const obs = new IntersectionObserver(es =>{
+      es.forEach(e =>{
+        if (e.isIntersecting) {
+          dots.forEach(d =>d.classList.remove('on'));
+          const i = secs.indexOf(e.target.id);
+          if (i !== -1) dots[i].classList.add('on');
+        }
+      });
+    }, { threshold: 0.25 });
+    secs.forEach(id =>{ const el = document.getElementById(id); if (el) obs.observe(el) });
+
+    const fiObs = new IntersectionObserver(es =>{
+      es.forEach(e =>{ if (e.isIntersecting) e.target.classList.add('on') });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.fi').forEach(el =>fiObs.observe(el));
+  </script>
+</body>
+
+</html>

@@ -35,6 +35,7 @@
     <div class="dot" onclick="goTo('ops-m')"></div>
     <div class="dot" onclick="goTo('load-test')"></div>
     <div class="dot" onclick="goTo('ts-m')"></div>
+    <div class="dot" onclick="goTo('summary-m')"></div>
   </nav>
 
   <div class="wrap">
@@ -76,8 +77,8 @@
             </svg>
             GitHub MalangMaker
           </a>
-          <a href="https://pf.kakao.com/_kRFRX" target="_blank" class="hlink pri">💬 말랑이 채널 (서비스 종료)</a>
-          <a href="https://cmod-ify.tistory.com/category/Project" target="_blank" class="hlink sec">✏️ Blog</a>
+          <a href="https://pf.kakao.com/_kRFRX" target="_blank" class="hlink pri">말랑이 채널 (서비스 종료)</a>
+          <a href="https://cmod-ify.tistory.com/category/Project" target="_blank" class="hlink sec">Blog</a>
         </div>
       </div>
     </section>
@@ -93,19 +94,19 @@
               <div class="shot"><img
                   src="https://github.com/user-attachments/assets/1cd8cfec-beea-498c-8be2-39d7597f7eb8"
                   alt="가이드"></div>
-              <div class="shotlabel">🧶 밥주기</div>
+              <div class="shotlabel">밥주기</div>
             </div>
             <div>
               <div class="shot"><img
                   src="https://github.com/user-attachments/assets/0b461d9a-cd00-4a67-9aec-153398dae973"
                   alt="랭킹"></div>
-              <div class="shotlabel">🏆 랭킹</div>
+              <div class="shotlabel">랭킹</div>
             </div>
             <div>
               <div class="shot"><img
                   src="https://github.com/user-attachments/assets/d43f528c-89a1-4234-a4e8-084dfe48fd47"
                   alt="밥주기"></div>
-              <div class="shotlabel">📜 가이드</div>
+              <div class="shotlabel">가이드</div>
             </div>
           </div>
         </div>
@@ -173,7 +174,7 @@
 
           <!-- Lambda vs EC2 -->
           <div class="card">
-            <div class="subh" style="margin-top:0">⚡ Lambda vs EC2</div>
+            <div class="subh" style="margin-top:0">Lambda vs EC2</div>
             <div class="decision-flow">
               <div class="df-step">
                 <div class="df-label">문제</div>
@@ -181,7 +182,7 @@
               </div>
               <div class="df-step">
                 <div class="df-label">고민</div>
-                <div class="df-content"><strong>EC2</strong> vs <strong>Lambda</strong></div>
+                <div class="df-content"><strong>EC2</strong>vs <strong>Lambda</strong></div>
               </div>
               <div class="df-step">
                 <div class="df-label">결정</div>
@@ -193,14 +194,14 @@
               </div>
               <div class="df-step">
                 <div class="df-label">결과</div>
-                <div class="df-content">간헐적 요청과 긴 유휴 구간이 반복되는 <strong>비정형 트래픽에 비용이 탄력적으로 연동되는 구조</strong>를 구현하고, 월 운영 비용 <strong>0.03$</strong> 달성</div>
+                <div class="df-content">간헐적 요청과 긴 유휴 구간이 반복되는 <strong>비정형 트래픽에 비용이 탄력적으로 연동되는 구조</strong>를 구현하고, 월 운영 비용 <strong>0.03$</strong>달성</div>
               </div>
             </div>
           </div>
 
           <!-- DynamoDB vs RDS -->
           <div class="card">
-            <div class="subh" style="margin-top:0">🗃️ DynamoDB vs RDS</div>
+            <div class="subh" style="margin-top:0">DynamoDB vs RDS</div>
             <div class="decision-flow">
               <div class="df-step">
                 <div class="df-label">문제</div>
@@ -208,7 +209,7 @@
               </div>
               <div class="df-step">
                 <div class="df-label">고민</div>
-                <div class="df-content"><strong>RDS (MySQL)</strong> vs <strong>DynamoDB</strong></div>
+                <div class="df-content"><strong>RDS (MySQL)</strong>vs <strong>DynamoDB</strong></div>
               </div>
               <div class="df-step">
                 <div class="df-label">결정</div>
@@ -227,11 +228,11 @@
 
           <!-- IAM 최소권한 -->
           <div class="card">
-            <div class="subh" style="margin-top:0">🔐 IAM 최소권한 전략</div>
+            <div class="subh" style="margin-top:0">IAM 최소권한 전략</div>
             <div class="decision-flow">
               <div class="df-step">
                 <div class="df-label">문제</div>
-                <div class="df-content">배포 시 <strong>IAMFullAccess</strong> 필요 → 배포 후 수동으로 ReadOnly로 변경해야 하는 비효율 발생.
+                <div class="df-content">배포 시 <strong>IAMFullAccess</strong>필요 → 배포 후 수동으로 ReadOnly로 변경해야 하는 비효율 발생.
                   상시
                   부여는 보안 리스크</div>
               </div>
@@ -241,7 +242,7 @@
               </div>
               <div class="df-step">
                 <div class="df-label">결정</div>
-                <div class="df-content"><strong>목적별 3그룹 분리</strong> + Terraform으로 IAM 코드화</div>
+                <div class="df-content"><strong>목적별 3그룹 분리</strong>+ Terraform으로 IAM 코드화</div>
               </div>
               <div class="df-step">
                 <div class="df-label">이유</div>
@@ -276,11 +277,11 @@
 
           <!-- Terraform -->
           <div class="card">
-            <div class="subh" style="margin-top:0">📦 Terraform IaC 도입</div>
+            <div class="subh" style="margin-top:0">Terraform IaC 도입</div>
             <div class="decision-flow">
               <div class="df-step">
                 <div class="df-label">문제</div>
-                <div class="df-content">콘솔에서 수동으로 IAM 리소스 생성 → <strong>IAM drift 발생</strong> (콘솔과 코드 불일치)</div>
+                <div class="df-content">콘솔에서 수동으로 IAM 리소스 생성 → <strong>IAM drift 발생</strong>(콘솔과 코드 불일치)</div>
               </div>
               <div class="df-step">
                 <div class="df-label">고민</div>
@@ -289,7 +290,7 @@
               <div class="df-step">
                 <div class="df-label">결정</div>
                 <div class="df-content">기존 IAM 리소스를 <code>terraform import</code>로 가져와 코드화.
-                  <code>terraform plan</code>으로 변경 사항 사전 검증 후 GitHub Actions에서 <code>apply</code> 실행
+                  <code>terraform plan</code>으로 변경 사항 사전 검증 후 GitHub Actions에서 <code>apply</code>실행
                 </div>
               </div>
               <div class="df-step">
@@ -298,17 +299,17 @@
               </div>
               <div class="df-step">
                 <div class="df-label">문제 발생</div>
-                <div class="df-content">GitHub Actions가 빈 state에서 시작 → <strong>EntityAlreadyExists</strong> 충돌 발생</div>
+                <div class="df-content">GitHub Actions가 빈 state에서 시작 → <strong>EntityAlreadyExists</strong>충돌 발생</div>
               </div>
               <div class="df-step">
                 <div class="df-label">해결</div>
-                <div class="df-content"><strong>S3 Remote Backend</strong> 도입으로 state 중앙 관리. 어떤 환경에서 실행해도 동일한 state
+                <div class="df-content"><strong>S3 Remote Backend</strong>도입으로 state 중앙 관리. 어떤 환경에서 실행해도 동일한 state
                   참조
                 </div>
               </div>
               <div class="df-step">
                 <div class="df-label">결과</div>
-                <div class="df-content">환경 간 IAM 일관성 확보. PR 시 <code>terraform plan</code> 자동 검증으로 적용 전 확인</div>
+                <div class="df-content">환경 간 IAM 일관성 확보. PR 시 <code>terraform plan</code>자동 검증으로 적용 전 확인</div>
               </div>
             </div>
           </div>
@@ -379,7 +380,7 @@
 
         <div class="card-grid">
           <div class="card">
-            <div class="subh" style="margin-top:0">📊 운영 현황</div>
+            <div class="subh" style="margin-top:0">운영 현황</div>
             <table class="ops-table">
               <tr>
                 <th>항목</th>
@@ -405,7 +406,7 @@
           </div>
 
           <div class="card">
-            <div class="subh" style="margin-top:0">📈 모니터링 구성</div>
+            <div class="subh" style="margin-top:0">모니터링 구성</div>
             <div class="mflow" style="margin-bottom:16px">
               <span class="mnode">CloudWatch</span><span class="marrow">→</span><span class="mnode">SNS</span><span
                 class="marrow">→</span><span class="mnode">Lambda</span><span class="marrow">→</span><span
@@ -413,16 +414,16 @@
             </div>
             <ul
               style="font-size:13px;color:var(--text-sub);list-style:none;display:flex;flex-direction:column;gap:8px">
-              <li>✅ <strong>CloudWatch</strong>: Lambda 실행 로그 수집 · 에러/5XX 알람</li>
-              <li>✅ <strong>SNS + Slack</strong>: 비용 초과 시 실시간 알림</li>
-              <li>✅ <strong>AWS Budgets</strong>: 월별 비용 임계값 0.03$ / 80% 설정</li>
+              <li> <strong>CloudWatch</strong>: Lambda 실행 로그 수집 · 에러/5XX 알람</li>
+              <li> <strong>SNS + Slack</strong>: 비용 초과 시 실시간 알림</li>
+              <li> <strong>AWS Budgets</strong>: 월별 비용 임계값 0.03$ / 80% 설정</li>
             </ul>
           </div>
 
 
 
           <div class="card">
-            <div class="subh" style="margin-top:0">🔧 유지보수 이력</div>
+            <div class="subh" style="margin-top:0">유지보수 이력</div>
             <ul
               style="font-size:13px;color:var(--text-sub);list-style:none;display:flex;flex-direction:column;gap:10px">
               <li style="display:flex;gap:10px;align-items:flex-start"><span
@@ -464,7 +465,7 @@
         <h2 class="stitle">부하 테스트</h2>
         <div class="card">
 
-          <div class="subh" style="margin-top:0">🎯 테스트 목적</div>
+          <div class="subh" style="margin-top:0">테스트 목적</div>
           <p style="font-size:14px;color:var(--text-sub);line-height:1.9;margin-bottom:20px;">서버리스 아키텍처의 특성상 트래픽 급증 및
             콜드
             스타트 상황에서의 안정성을 검증하기 위해 k6 기반 부하 테스트를 수행했습니다.</p>
@@ -507,7 +508,7 @@
             </tr>
           </table>
 
-          <div class="subh">📋 테스트 시나리오</div>
+          <div class="subh">테스트 시나리오</div>
           <div class="pipe" style="margin-bottom:28px">
             <div class="pstep">
               <div class="psname">1단계</div>
@@ -534,9 +535,9 @@
               <div class="psdesc">쓰다듬기/똥치우기 집중 테스트 — 하루 1회 제한 로직 + DB 쓰기 동시 검증 (test_user 30명)</div>
             </div>
           </div>
-          <div class="info">⏱ 총 테스트 시간: 약 33분 / 동시 사용자 최대 50명 / 총 34,532건 요청</div>
+          <div class="info">총 테스트 시간: 약 33분 / 동시 사용자 최대 50명 / 총 34,532건 요청</div>
 
-          <div class="subh">📊 1차 테스트 결과 (종합 시나리오)</div>
+          <div class="subh">1차 테스트 결과 (종합 시나리오)</div>
           <div class="card-grid" style="margin-bottom:20px">
             <div>
               <table class="ops-table">
@@ -546,11 +547,11 @@
                 </tr>
                 <tr>
                   <td>평균 응답시간</td>
-                  <td>45ms ✅</td>
+                  <td>45ms </td>
                 </tr>
                 <tr>
                   <td>p95 응답시간</td>
-                  <td>63.84ms ✅</td>
+                  <td>63.84ms </td>
                 </tr>
                 <tr>
                   <td>최대 응답시간</td>
@@ -558,27 +559,27 @@
                 </tr>
                 <tr>
                   <td>에러율</td>
-                  <td>6.62% ❌ → 버그 발견</td>
+                  <td>6.62%  → 버그 발견</td>
                 </tr>
                 <tr>
                   <td>Lambda Errors</td>
-                  <td>0건 ✅</td>
+                  <td>0건 </td>
                 </tr>
                 <tr>
                   <td>Lambda Throttles</td>
-                  <td>0건 ✅</td>
+                  <td>0건 </td>
                 </tr>
               </table>
             </div>
             <div style="display:flex;flex-direction:column;gap:8px">
               <div class="rbox" style="margin-top:0">
-                <div class="rbox-t">🐛 버그 발견</div>
-                <p>CloudWatch Logs 필터링으로 <code>KeyError: 'none'</code> 확인. <br>사망 상태(<code>health: 0</code>) 말랑이의
+                <div class="rbox-t">버그 발견</div>
+                <p>CloudWatch Logs 필터링으로 <code>KeyError: 'none'</code>확인. <br>사망 상태(<code>health: 0</code>) 말랑이의
                   <code>type</code>이 <code>"none"</code>으로 저장된 유저에 대해 쓰다듬기 예외처리 누락.
                 </p>
               </div>
               <div class="rbox">
-                <div class="rbox-t">✅ 수정</div>
+                <div class="rbox-t">수정</div>
                 <p>사망 상태 체크 로직 추가 후 재배포. 부하 테스트로 실제 운영 버그를 발견하고 수정하는 사이클 경험.</p>
               </div>
             </div>
@@ -586,7 +587,7 @@
 
           <img src="cloudwatch_1st.png" alt="1차 테스트 CloudWatch 대시보드" class="aimg" style="margin-top:16px;">
 
-          <div class="subh">📊 2차 테스트 결과 (버그 수정 후 — 쓰다듬기/똥치우기 집중)</div>
+          <div class="subh">2차 테스트 결과 (버그 수정 후 — 쓰다듬기/똥치우기 집중)</div>
           <table class="ops-table" style="margin-bottom:20px">
             <tr>
               <th>지표</th>
@@ -595,34 +596,34 @@
             </tr>
             <tr>
               <td>평균 응답시간</td>
-              <td>50ms ✅</td>
-              <td>56ms ✅</td>
+              <td>50ms </td>
+              <td>56ms </td>
             </tr>
             <tr>
               <td>p95 응답시간</td>
-              <td>70ms ✅</td>
-              <td>75ms ✅</td>
+              <td>70ms </td>
+              <td>75ms </td>
             </tr>
             <tr>
               <td>에러율</td>
-              <td>0% ✅</td>
-              <td>0% ✅</td>
+              <td>0% </td>
+              <td>0% </td>
             </tr>
             <tr>
               <td>Lambda Throttles</td>
-              <td>미발생 ✅</td>
-              <td>미발생 ✅</td>
+              <td>미발생 </td>
+              <td>미발생 </td>
             </tr>
           </table>
           <img src="cloudwatch_2nd.png" alt="2차 테스트 CloudWatch 대시보드" class="aimg" style="margin-top:16px;">
 
           <div class="rbox" style="margin-top:16px">
-            <div class="rbox-t">💡 콜드 스타트 특성 확인</div>
+            <div class="rbox-t">콜드 스타트 특성 확인</div>
             <p>15분 유휴 후 첫 요청 최대 6s → 이후 16ms로 안정화. 서버리스 환경에서 콜드 스타트가 초기 지연에 영향을 미치지만 컨테이너 재사용으로 응답 속도가 빠르게 안정화됨을
               확인.</p>
           </div>
 
-          <div class="subh">📊 3차 테스트 결과 (EventBridge 웜업 적용 후)</div>
+          <div class="subh">3차 테스트 결과 (EventBridge 웜업 적용 후)</div>
           <table class="ops-table" style="margin-bottom:20px">
             <tr>
               <th>지표</th>
@@ -631,8 +632,8 @@
             </tr>
             <tr>
               <td>첫 요청 응답시간</td>
-              <td>~6000ms ❌</td>
-              <td>&lt; 100ms ✅</td>
+              <td>~6000ms </td>
+              <td>&lt; 100ms </td>
             </tr>
             <tr>
               <td>p95 응답시간</td>
@@ -647,7 +648,7 @@
             <tr>
               <td>에러율</td>
               <td>0%</td>
-              <td>0% ✅</td>
+              <td>0% </td>
             </tr>
           </table>
           <img src="cloudwatch_3rd.png" alt="3차 테스트 CloudWatch 대시보드" class="aimg" style="margin-top:16px;">
@@ -660,7 +661,7 @@
     <section id="ts-m" style="padding-bottom:80px;">
       <div class="fi">
         <div class="slabel">Troubleshooting</div>
-        <h2 class="stitle">트러블슈팅 및 배운 점</h2>
+        <h2 class="stitle">트러블슈팅</h2>
         <div class="card">
           <div class="twrap">
 
@@ -672,11 +673,11 @@
                 <span class="tlabel ts">현상</span>
                 <p>카카오톡 메시지를 보내도 응답이 없고 '네트워크 오류'만 표시. 503 에러 코드조차 뜨지 않음.</p>
                 <span class="tlabel tc">원인</span>
-                <p>일반 <code>python:3.10-slim</code> 이미지 사용. Lambda는 전용 런타임이 필요하며 Init 단계 자체가 실패해 카카오 측이 연결 거부로 판단.</p>
+                <p>일반 <code>python:3.10-slim</code>이미지 사용. Lambda는 전용 런타임이 필요하며 Init 단계 자체가 실패해 카카오 측이 연결 거부로 판단.</p>
                 <span class="tlabel tf">해결</span>
                 <pre>FROM public.ecr.aws/lambda/python:3.10</pre>
                 <span class="tlabel tp">재발 방지</span>
-                <p>Lambda 컨테이너 이미지는 반드시 <code>public.ecr.aws/lambda/</code> 베이스 이미지 사용. GitHub Actions deploy.yaml에
+                <p>Lambda 컨테이너 이미지는 반드시 <code>public.ecr.aws/lambda/</code>베이스 이미지 사용. GitHub Actions deploy.yaml에
                   명시하여
                   수동 배포 실수 방지.</p>
               </div>
@@ -722,7 +723,7 @@ sam deploy</pre>
                 <pre>Variables:
   MY_APP_REGION: ap-northeast-2</pre>
                 <span class="tlabel tp">재발 방지</span>
-                <p>Lambda 예약 환경 변수 목록 숙지. <code>AWS_</code> 접두사 환경변수 사용 시 공식 문서 확인 습관화.</p>
+                <p>Lambda 예약 환경 변수 목록 숙지. <code>AWS_</code>접두사 환경변수 사용 시 공식 문서 확인 습관화.</p>
               </div>
             </div>
 
@@ -731,7 +732,7 @@ sam deploy</pre>
                   Backend — EntityAlreadyExists 충돌</span><span class="tarrow">▼</span></div>
               <div class="tbody">
                 <span class="tlabel ts">현상</span>
-                <p>GitHub Actions에서 <code>terraform apply</code> 시 IAM 유저/그룹 전부 EntityAlreadyExists 에러.</p>
+                <p>GitHub Actions에서 <code>terraform apply</code>시 IAM 유저/그룹 전부 EntityAlreadyExists 에러.</p>
                 <span class="tlabel tc">원인</span>
                 <p>로컬 <code>terraform.tfstate</code>가 .gitignore로 미업로드. Actions가 빈 state에서 시작해 기존 리소스를 새로 만들려다 충돌.</p>
                 <span class="tlabel tf">해결</span>
@@ -741,7 +742,7 @@ sam deploy</pre>
 }
 terraform init -migrate-state</pre>
                 <span class="tlabel tp">재발 방지</span>
-                <p>S3 Remote Backend로 state를 중앙 관리. 어떤 환경에서 실행해도 동일한 state 참조. PR 시 <code>terraform plan</code> 자동
+                <p>S3 Remote Backend로 state를 중앙 관리. 어떤 환경에서 실행해도 동일한 state 참조. PR 시 <code>terraform plan</code>자동
                   검증으로
                   적용 전 확인.</p>
               </div>
@@ -751,7 +752,7 @@ terraform init -migrate-state</pre>
                   depends_on 누락 — IAM 정책 적용 전 EventBridge 생성 시도</span><span class="tarrow">▼</span></div>
               <div class="tbody">
                 <span class="tlabel ts">현상</span>
-                <p>terraform apply 시 <code>AccessDeniedException: events:PutRule</code> 에러. IAM 정책을 방금 추가했는데도 권한 없음.
+                <p>terraform apply 시 <code>AccessDeniedException: events:PutRule</code>에러. IAM 정책을 방금 추가했는데도 권한 없음.
                 </p>
                 <span class="tlabel tc">원인</span>
                 <p>Terraform이 IAM 정책 attachment와 EventBridge rule을 병렬로 실행. 정책이 완전히 적용되기 전에 PutRule 호출.</p>
@@ -760,15 +761,21 @@ terraform init -migrate-state</pre>
   depends_on = [aws_iam_group_policy_attachment.deployer]
 }</pre>
                 <span class="tlabel tp">재발 방지</span>
-                <p>IAM 정책 변경과 해당 권한을 사용하는 리소스가 함께 추가될 때는 항상 <code>depends_on</code> 명시.</p>
+                <p>IAM 정책 변경과 해당 권한을 사용하는 리소스가 함께 추가될 때는 항상 <code>depends_on</code>명시.</p>
               </div>
             </div>
-
-
           </div>
-          <div class="div"></div>
+        </div>
+      </div>
+    </section>
 
-          <div class="subh">💡 배운 점</div>
+    <!-- ===== 배운 점 / 개선사항 ===== -->
+    <section id="summary-m" style="padding-bottom:80px;">
+      <div class="fi">
+        <div class="slabel">Retrospective</div>
+        <h2 class="stitle">배운 점 &amp; 개선사항</h2>
+        <div class="card">
+          <div class="subh" style="margin-top:0">배운 점</div>
           <p style="font-size:14px;color:var(--text-sub);line-height:1.9;margin-bottom:20px;">
             부하 테스트에서 측정한 최대 6s의 콜드스타트 지연이 실제 사용자 입장에서는 응답이 없는 것처럼 느껴지는 경험으로 이어진다는 점을 직접 체감했습니다. 해결 방법을 찾는 과정에서
             Provisioned Concurrency와 EventBridge 웜업을 비교했고, 비용 대비 효과를 고려해 웜업을 선택했습니다. 이 경험을 통해 서버리스 아키텍처는 비용 효율성과 응답
@@ -776,7 +783,7 @@ terraform init -migrate-state</pre>
             사이에 트레이드오프가 존재한다는 것을 체감했고, 트래픽 패턴이 안정적으로 바뀐다면 EC2 전환도 고려할 수 있다는 판단 기준을 갖게 되었습니다.
           </p>
 
-          <div class="subh">🔧 개선사항</div>
+          <div class="subh">개선사항</div>
           <p style="font-size:14px;color:var(--text-sub);line-height:1.9;">
             현재 Logs와 Metrics는 CloudWatch로 수집하고 있으나, 요청 단위의 병목을 식별할 분산 추적은 아직 적용하지 않았습니다.
             다음 운영 개선 단계에서는 AWS X-Ray Active Tracing을 Lambda에 활성화하고 DynamoDB 호출을 서브세그먼트로 수집해,
@@ -794,28 +801,28 @@ terraform init -migrate-state</pre>
     function goTo(id) { document.getElementById(id).scrollIntoView({ behavior: 'smooth' }) }
 
     const glow = document.querySelector('.cursor-glow');
-    document.addEventListener('mousemove', e => {
+    document.addEventListener('mousemove', e =>{
       glow.style.left = e.clientX + 'px';
       glow.style.top = e.clientY + 'px';
     });
 
-    const secs = ['hero-malang', 'preview-m', 'arch-m', 'infra-m', 'cicd-m', 'ops-m', 'load-test', 'ts-m'];
+    const secs = ['hero-malang', 'preview-m', 'arch-m', 'infra-m', 'cicd-m', 'ops-m', 'load-test', 'ts-m', 'summary-m'];
     const dots = document.querySelectorAll('.dot');
-    const obs = new IntersectionObserver(es => {
-      es.forEach(e => {
+    const obs = new IntersectionObserver(es =>{
+      es.forEach(e =>{
         if (e.isIntersecting) {
-          dots.forEach(d => d.classList.remove('on'));
+          dots.forEach(d =>d.classList.remove('on'));
           const i = secs.indexOf(e.target.id);
           if (i !== -1) dots[i].classList.add('on');
         }
       });
     }, { threshold: 0.25 });
-    secs.forEach(id => { const el = document.getElementById(id); if (el) obs.observe(el) });
+    secs.forEach(id =>{ const el = document.getElementById(id); if (el) obs.observe(el) });
 
-    const fiObs = new IntersectionObserver(es => {
-      es.forEach(e => { if (e.isIntersecting) e.target.classList.add('on') });
+    const fiObs = new IntersectionObserver(es =>{
+      es.forEach(e =>{ if (e.isIntersecting) e.target.classList.add('on') });
     }, { threshold: 0.08 });
-    document.querySelectorAll('.fi').forEach(el => fiObs.observe(el));
+    document.querySelectorAll('.fi').forEach(el =>fiObs.observe(el));
   </script>
 </body>
 

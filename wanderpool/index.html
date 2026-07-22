@@ -42,6 +42,7 @@
     <div class="dot" onclick="goTo('migration')"></div>
     <div class="dot" onclick="goTo('dr-wp')"></div>
     <div class="dot" onclick="goTo('stack-wp')"></div>
+    <div class="dot" onclick="goTo('summary-wp')"></div>
     <div class="dot" onclick="goTo('links-wp')"></div>
   </nav>
 
@@ -69,7 +70,7 @@
             <div class="hmetric-label">물리 서버 2대 · 온프레미스 K8s</div>
           </div>
           <div class="hmetric">
-            <div class="hmetric-val">🏆 우수 프로젝트상</div>
+            <div class="hmetric-val">우수 프로젝트상</div>
             <div class="hmetric-label">2026.06.30</div>
           </div>
           <div class="hmetric">
@@ -89,19 +90,19 @@
           <div class="shots-4">
             <div>
               <div class="shot"><img src="main.png" alt="홈 화면"></div>
-              <div class="shotlabel">🏠 홈 · 파티 등록</div>
+              <div class="shotlabel">홈 · 파티 등록</div>
             </div>
             <div>
               <div class="shot"><img src="map.png" alt="실시간 위치 화면"></div>
-              <div class="shotlabel">🗺️ 실시간 위치 트래킹</div>
+              <div class="shotlabel">실시간 위치 트래킹</div>
             </div>
             <div>
               <div class="shot"><img src="party.png" alt="파티 조회 화면"></div>
-              <div class="shotlabel">🚗 파티 조회</div>
+              <div class="shotlabel">파티 조회</div>
             </div>
             <div>
               <div class="shot"><img src="my.png" alt="프로필 화면"></div>
-              <div class="shotlabel">👤 프로필 · 포인트</div>
+              <div class="shotlabel">프로필 · 포인트</div>
             </div>
           </div>
         </div>
@@ -143,14 +144,14 @@
               <div class="psdesc">auth · member · party · map</div>
             </div>
           </div>
-          <div class="info">🔐 <strong>cert-manager</strong>: DNS-01 Challenge → TLS Secret 자동 생성</div>
+          <div class="info"> <strong>cert-manager</strong>: DNS-01 Challenge → TLS Secret 자동 생성</div>
 
           <div class="subh">핵심 포인트</div>
           <ul style="font-size:13px;color:var(--text-sub);line-height:1.9;list-style:none">
-            <li>① <strong style="color:var(--text)">Mixed Content 방지</strong> — Vercel HTTPS 프론트엔드에 API도 동일하게 HTTPS로 제공</li>
-            <li>② <strong style="color:var(--text)">DNS-01 선택</strong> — 포트 80 없이 도메인 소유권 검증 가능. 공유기가 80포트를 열 수 없는 제약을
+            <li>① <strong style="color:var(--text)">Mixed Content 방지</strong>— Vercel HTTPS 프론트엔드에 API도 동일하게 HTTPS로 제공</li>
+            <li>② <strong style="color:var(--text)">DNS-01 선택</strong>— 포트 80 없이 도메인 소유권 검증 가능. 공유기가 80포트를 열 수 없는 제약을
               우회</li>
-            <li>③ <strong style="color:var(--text)">TLS 자동화</strong> — cert-manager로 인증서 발급·갱신 자동화</li>
+            <li>③ <strong style="color:var(--text)">TLS 자동화</strong>— cert-manager로 인증서 발급·갱신 자동화</li>
           </ul>
         </div>
 
@@ -192,10 +193,10 @@
 
           <div class="subh">역할 분리</div>
           <ul style="font-size:13px;color:var(--text-sub);line-height:1.9;list-style:none">
-            <li>🟢 <strong style="color:var(--text)">프론트엔드 & GitOps (본인 담당)</strong> — GitLab CI에서 MR 시점에
+            <li> <strong style="color:var(--text)">프론트엔드 & GitOps (본인 담당)</strong>— GitLab CI에서 MR 시점에
               TypeCheck·ESLint 검증 후 Vercel 배포, GitOps 저장소는 kubeconform·kube-score로 매니페스트 검증. 코드·매니페스트
               검증이 병합 전에 끝나도록 구성</li>
-            <li>🟣 <strong style="color:var(--text)">백엔드 (팀원 담당)</strong> — Jenkins가 코드 품질(JaCoCo·SonarQube) 검사 후
+            <li> <strong style="color:var(--text)">백엔드 (팀원 담당)</strong>— Jenkins가 코드 품질(JaCoCo·SonarQube) 검사 후
               Harbor에 이미지 Push, GitOps 저장소 이미지 태그 갱신 → ArgoCD가 감지해 Argo Rollouts로 Canary 배포</li>
           </ul>
         </div>
@@ -227,9 +228,9 @@
           </p>
 
           <ul style="font-size:13px;color:var(--text-sub);line-height:1.9;list-style:none">
-            <li>🔐 <strong style="color:var(--text)">HttpOnly 쿠키</strong> — 토큰을 HttpOnly 쿠키로 관리해 XSS로 인한 토큰 탈취
+            <li> <strong style="color:var(--text)">HttpOnly 쿠키</strong>— 토큰을 HttpOnly 쿠키로 관리해 XSS로 인한 토큰 탈취
               방어</li>
-            <li>🧩 <strong style="color:var(--text)">환경변수 분리</strong> — 서버 전용 변수와 <code>NEXT_PUBLIC_*</code> 클라이언트
+            <li> <strong style="color:var(--text)">환경변수 분리</strong>— 서버 전용 변수와 <code>NEXT_PUBLIC_*</code>클라이언트
               노출 변수를 명확히 구분해 민감한 값이 번들에 섞여 들어가지 않도록 관리</li>
           </ul>
         </div>
@@ -246,7 +247,7 @@
 
           <!-- Kong vs Spring Cloud Gateway -->
           <div class="card">
-            <div class="subh" style="margin-top:0">🌐 Kong vs Spring Cloud Gateway</div>
+            <div class="subh" style="margin-top:0">Kong vs Spring Cloud Gateway</div>
             <div class="decision-flow">
               <div class="df-step">
                 <div class="df-label">문제</div>
@@ -254,7 +255,7 @@
               </div>
               <div class="df-step">
                 <div class="df-label">고민</div>
-                <div class="df-content"><strong>Spring Cloud Gateway</strong> vs <strong>Kong</strong></div>
+                <div class="df-content"><strong>Spring Cloud Gateway</strong>vs <strong>Kong</strong></div>
               </div>
               <div class="df-step">
                 <div class="df-label">결정</div>
@@ -274,7 +275,7 @@
 
           <!-- MetalLB -->
           <div class="card">
-            <div class="subh" style="margin-top:0">🔌 MetalLB 도입 검토 → 배제</div>
+            <div class="subh" style="margin-top:0">MetalLB 도입 검토 → 배제</div>
             <div class="decision-flow">
               <div class="df-step">
                 <div class="df-label">문제</div>
@@ -282,7 +283,7 @@
               </div>
               <div class="df-step">
                 <div class="df-label">고민</div>
-                <div class="df-content"><strong>MetalLB(표준 방식)</strong> vs <strong>NodePort + Kong</strong></div>
+                <div class="df-content"><strong>MetalLB(표준 방식)</strong>vs <strong>NodePort + Kong</strong></div>
               </div>
               <div class="df-step">
                 <div class="df-label">결정</div>
@@ -302,7 +303,7 @@
 
           <!-- GitLab CI vs Jenkins -->
           <div class="card">
-            <div class="subh" style="margin-top:0">🔧 GitLab CI vs Jenkins</div>
+            <div class="subh" style="margin-top:0">GitLab CI vs Jenkins</div>
             <div class="decision-flow">
               <div class="df-step">
                 <div class="df-label">문제</div>
@@ -310,7 +311,7 @@
               </div>
               <div class="df-step">
                 <div class="df-label">고민</div>
-                <div class="df-content">팀 전체 <strong>Jenkins 통일</strong> vs <strong>파이프라인별 분리</strong></div>
+                <div class="df-content">팀 전체 <strong>Jenkins 통일</strong>vs <strong>파이프라인별 분리</strong></div>
               </div>
               <div class="df-step">
                 <div class="df-label">결정</div>
@@ -334,7 +335,7 @@
 
           <!-- Lambda 역할 분리 -->
           <div class="card">
-            <div class="subh" style="margin-top:0">⚡ Lambda 역할 분리 (수집 / 분석)</div>
+            <div class="subh" style="margin-top:0">Lambda 역할 분리 (수집 / 분석)</div>
             <div class="decision-flow">
               <div class="df-step">
                 <div class="df-label">문제</div>
@@ -342,7 +343,7 @@
               </div>
               <div class="df-step">
                 <div class="df-label">고민</div>
-                <div class="df-content"><strong>단일 Lambda</strong> vs <strong>역할별 분리</strong></div>
+                <div class="df-content"><strong>단일 Lambda</strong>vs <strong>역할별 분리</strong></div>
               </div>
               <div class="df-step">
                 <div class="df-label">결정</div>
@@ -352,10 +353,10 @@
                 <div class="df-label">이유</div>
                 <div class="df-content">
                   <ul style="margin:4px 0 0 16px;line-height:1.8">
-                    <li><strong style="color:var(--text)">관심사 분리</strong> — 수집(적재)과 분석·전달(LLM 호출·알림)은 책임이 다른 작업</li>
-                    <li><strong style="color:var(--text)">최소 노출</strong> — 수집은 사설망에만, 보고서는 외부 API(Bedrock·Slack)에만
+                    <li><strong style="color:var(--text)">관심사 분리</strong>— 수집(적재)과 분석·전달(LLM 호출·알림)은 책임이 다른 작업</li>
+                    <li><strong style="color:var(--text)">최소 노출</strong>— 수집은 사설망에만, 보고서는 외부 API(Bedrock·Slack)에만
                       접근. 한 함수에 사설망과 인터넷을 동시에 열지 않음</li>
-                    <li><strong style="color:var(--text)">운영·비용 효율</strong> — 사설망 접근은 VPC 내부(S3 Gateway
+                    <li><strong style="color:var(--text)">운영·비용 효율</strong>— 사설망 접근은 VPC 내부(S3 Gateway
                       Endpoint), 외부 호출은 VPC 외부. 두 영역을 잇는 상시 NAT Gateway 불필요</li>
                   </ul>
                 </div>
@@ -441,14 +442,14 @@
 
           <div class="subh">어떤 데이터를 넣었는지</div>
           <ul style="font-size:13px;color:var(--text-sub);line-height:1.9;list-style:none;margin-bottom:8px">
-            <li>📊 <strong style="color:var(--text)">메트릭(Prometheus)</strong> — Pod 상태, 재시작 횟수, 요청량(req/s), CPU/Memory</li>
-            <li>📄 <strong style="color:var(--text)">로그(Elasticsearch)</strong> — <code>error</code> 필터링 로그를 네임스페이스별·Pod별로
+            <li> <strong style="color:var(--text)">메트릭(Prometheus)</strong>— Pod 상태, 재시작 횟수, 요청량(req/s), CPU/Memory</li>
+            <li> <strong style="color:var(--text)">로그(Elasticsearch)</strong>— <code>error</code>필터링 로그를 네임스페이스별·Pod별로
               집계</li>
           </ul>
 
           <div class="subh">프롬프트 설계 포인트</div>
           <p style="font-size:14px;color:var(--text-sub);line-height:1.9;margin-bottom:8px;">
-            단순 요약이 아니라 <code>이상 감지 → 원인 추론 → 확인 명령어 제시</code> 순서로 응답하도록 지시하고, 심각도를 <code>위험</code> / <code>주의</code>
+            단순 요약이 아니라 <code>이상 감지 → 원인 추론 → 확인 명령어 제시</code>순서로 응답하도록 지시하고, 심각도를 <code>위험</code>/ <code>주의</code>
             / <code>정상</code>으로 분류하도록 프롬프트에 명시했습니다.
           </p>
 
@@ -665,7 +666,7 @@
         <h2 class="stitle">재해복구(DR) 계획 · 런북</h2>
         <div class="card">
           <p style="font-size:14px;color:var(--text-sub);line-height:1.9;margin-bottom:20px;">
-            이미 구축된 시스템을 <strong>네트워크 · Kubernetes · DB · 외부 연동</strong> 레이어별로 분리해, 각 계층에서
+            이미 구축된 시스템을 <strong>네트워크 · Kubernetes · DB · 외부 연동</strong>레이어별로 분리해, 각 계층에서
             발생할 수 있는 장애 시나리오와 복구 절차를 설계·문서화했습니다. 직접 구현한 인프라를 새로 만든 것은 아니고,
             이미 만들어진 시스템을 운영 관점에서 다시 들여다보며 대응 체계를 정리한 작업입니다.
           </p>
@@ -717,8 +718,6 @@
         <div class="slabel">Tech Stack</div>
         <h2 class="stitle">기술 스택</h2>
         <div class="card">
-          <p style="font-size:12px;color:var(--text-muted);font-family:var(--mono);margin-bottom:16px;">팀 전체 스킬셋
-            기준입니다.</p>
           <div class="stack-grid">
             <div class="stack-group">
               <div class="stack-group-title">FE (FRONTEND)</div>
@@ -773,6 +772,25 @@
       </div>
     </section>
 
+    <!-- ===== 배운 점 / 개선사항 ===== -->
+    <section id="summary-wp" style="padding-bottom:80px;">
+      <div class="fi">
+        <div class="slabel">Retrospective</div>
+        <h2 class="stitle">배운 점 &amp; 개선사항</h2>
+        <div class="card">
+          <div class="subh" style="margin-top:0">배운 점</div>
+          <p style="font-size:14px;color:var(--text-sub);line-height:1.9;margin-bottom:20px;">
+            온프레미스와 AWS를 연결하고 MSA를 마이그레이션하는 과정에서 개별 기술보다 네트워크 경로, 인증 경계, 배포 순서처럼 시스템 사이의 연결 조건이 안정성을 좌우한다는 점을 배웠습니다. 특히 장애를 애플리케이션 문제로 단정하지 않고 DNS, Gateway, Service Mesh, 데이터베이스까지 계층별로 확인하면서 관측 가능한 구조와 단계적인 검증 절차의 중요성을 체감했습니다.
+          </p>
+
+          <div class="subh">개선사항</div>
+          <p style="font-size:14px;color:var(--text-sub);line-height:1.9;">
+            다음 단계에서는 환경별 GitOps 구성을 더 명확히 분리하고 배포 전 스키마·정책 검증을 자동화해 설정 변경으로 인한 장애를 줄이고 싶습니다. 또한 RTO·RPO 기준에 맞춘 복구 훈련을 정기적으로 수행하고, AI Observability 리포트에 서비스별 SLO와 추세 데이터를 연결해 장애 발생 이후의 분석뿐 아니라 이상 징후를 선제적으로 판단할 수 있도록 개선할 계획입니다.
+          </p>
+        </div>
+      </div>
+    </section>
+
     <!-- ===== 링크 ===== -->
     <section id="links-wp" style="padding-bottom:80px;">
       <div class="fi">
@@ -781,7 +799,7 @@
         <div class="card">
           <a href="https://www.miricanvas.com/v2/ko/design2/v/c449dec2-f27a-4bba-8deb-21aa1ef953fd" target="_blank"
             class="ncard">
-            <div style="font-size:22px;">📑</div>
+            <div style="font-size:22px;"></div>
             <div>
               <div class="ncard-t">WanderPool — 최종 발표자료</div>
               <div class="ncard-s">miricanvas.com</div>
@@ -808,28 +826,28 @@
     function goTo(id) { document.getElementById(id).scrollIntoView({ behavior: 'smooth' }) }
 
     const glow = document.querySelector('.cursor-glow');
-    document.addEventListener('mousemove', e => {
+    document.addEventListener('mousemove', e =>{
       glow.style.left = e.clientX + 'px';
       glow.style.top = e.clientY + 'px';
     });
 
-    const secs = ['hero-wp', 'preview-wp', 'network', 'cicd-wp', 'fe-bff', 'decisions', 'security', 'ops-ai', 'ts-wp', 'migration', 'dr-wp', 'stack-wp', 'links-wp'];
+    const secs = ['hero-wp', 'preview-wp', 'network', 'cicd-wp', 'fe-bff', 'decisions', 'security', 'ops-ai', 'ts-wp', 'migration', 'dr-wp', 'stack-wp', 'summary-wp', 'links-wp'];
     const dots = document.querySelectorAll('.dot');
-    const obs = new IntersectionObserver(es => {
-      es.forEach(e => {
+    const obs = new IntersectionObserver(es =>{
+      es.forEach(e =>{
         if (e.isIntersecting) {
-          dots.forEach(d => d.classList.remove('on'));
+          dots.forEach(d =>d.classList.remove('on'));
           const i = secs.indexOf(e.target.id);
           if (i !== -1) dots[i].classList.add('on');
         }
       });
     }, { threshold: 0.25 });
-    secs.forEach(id => { const el = document.getElementById(id); if (el) obs.observe(el) });
+    secs.forEach(id =>{ const el = document.getElementById(id); if (el) obs.observe(el) });
 
-    const fiObs = new IntersectionObserver(es => {
-      es.forEach(e => { if (e.isIntersecting) e.target.classList.add('on') });
+    const fiObs = new IntersectionObserver(es =>{
+      es.forEach(e =>{ if (e.isIntersecting) e.target.classList.add('on') });
     }, { threshold: 0.08 });
-    document.querySelectorAll('.fi').forEach(el => fiObs.observe(el));
+    document.querySelectorAll('.fi').forEach(el =>fiObs.observe(el));
   </script>
 </body>
 

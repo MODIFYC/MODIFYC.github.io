@@ -45,7 +45,7 @@
         </p>
         <div class="hmetrics">
           <div class="hmetric">
-            <div class="hmetric-val">🏆 대상</div>
+            <div class="hmetric-val">대상</div>
             <div class="hmetric-label">MADE IN SUNGSHIN 2023</div>
           </div>
           <div class="hmetric">
@@ -79,9 +79,9 @@
               </div>
               <ul
                 style="font-size:13px;color:var(--text-sub);list-style:none;display:flex;flex-direction:column;gap:6px">
-                <li>🌊 수위/유량 센서 → LED 단계적 경고 (RED→YELLOW→WHITE)</li>
-                <li>🗺️ 카카오 MAP API 침수 위험 지역 마커</li>
-                <li>📍 내 위치 기반 주변 침수 상황 확인</li>
+                <li>수위/유량 센서 → LED 단계적 경고 (RED→YELLOW→WHITE)</li>
+                <li>카카오 MAP API 침수 위험 지역 마커</li>
+                <li>내 위치 기반 주변 침수 상황 확인</li>
               </ul>
             </div>
             <div>
@@ -92,9 +92,9 @@
               </div>
               <ul
                 style="font-size:13px;color:var(--text-sub);list-style:none;display:flex;flex-direction:column;gap:6px">
-                <li>📡 HTTP 폴링 → WebSocket으로 실시간 센서 스트리밍</li>
-                <li>🗄️ 임계치 이하 이벤트만 MongoDB Atlas에 기록</li>
-                <li>🔐 /admin 라우팅으로 거리 이력 관리자 확인</li>
+                <li>HTTP 폴링 → WebSocket으로 실시간 센서 스트리밍</li>
+                <li>임계치 이하 이벤트만 MongoDB Atlas에 기록</li>
+                <li>/admin 라우팅으로 거리 이력 관리자 확인</li>
               </ul>
             </div>
           </div>
@@ -124,7 +124,7 @@
                 이하
                 이벤트만 MongoDB Atlas에 기록.</p>
               <div class="rbox">
-                <div class="rbox-t">✅ RESULT</div>
+                <div class="rbox-t">RESULT</div>
                 <p>새로고침 없이 초음파 센서 거리값 실시간 반영. /admin 페이지에서 최근 50개 이벤트 이력 조회 가능.</p>
               </div>
             </div>
@@ -141,7 +141,7 @@
         <div class="card">
           <a href="https://www.sungshin.ac.kr/main_kor/10941/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGbWFpbl9rb3IlMkYzMTkyJTJGMTI3NTE3JTJGYXJ0Y2xWaWV3LmRvJTNG"
             target="_blank" class="ncard">
-            <div style="font-size:22px;">📰</div>
+            <div style="font-size:22px;"></div>
             <div>
               <div class="ncard-t">성신여자대학교 공식 뉴스 — MADE IN SUNGSHIN 대상 수상</div>
               <div class="ncard-s">sungshin.ac.kr · 2023</div>
@@ -178,28 +178,28 @@
     function goTo(id) { document.getElementById(id).scrollIntoView({ behavior: 'smooth' }) }
 
     const glow = document.querySelector('.cursor-glow');
-    document.addEventListener('mousemove', e => {
+    document.addEventListener('mousemove', e =>{
       glow.style.left = e.clientX + 'px';
       glow.style.top = e.clientY + 'px';
     });
 
     const secs = ['hero-flood', 'compare-flood', 'ts-flood', 'links-flood'];
     const dots = document.querySelectorAll('.dot');
-    const obs = new IntersectionObserver(es => {
-      es.forEach(e => {
+    const obs = new IntersectionObserver(es =>{
+      es.forEach(e =>{
         if (e.isIntersecting) {
-          dots.forEach(d => d.classList.remove('on'));
+          dots.forEach(d =>d.classList.remove('on'));
           const i = secs.indexOf(e.target.id);
           if (i !== -1) dots[i].classList.add('on');
         }
       });
     }, { threshold: 0.25 });
-    secs.forEach(id => { const el = document.getElementById(id); if (el) obs.observe(el) });
+    secs.forEach(id =>{ const el = document.getElementById(id); if (el) obs.observe(el) });
 
-    const fiObs = new IntersectionObserver(es => {
-      es.forEach(e => { if (e.isIntersecting) e.target.classList.add('on') });
+    const fiObs = new IntersectionObserver(es =>{
+      es.forEach(e =>{ if (e.isIntersecting) e.target.classList.add('on') });
     }, { threshold: 0.08 });
-    document.querySelectorAll('.fi').forEach(el => fiObs.observe(el));
+    document.querySelectorAll('.fi').forEach(el =>fiObs.observe(el));
   </script>
 </body>
 
