@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>최수정 — Portfolio</title>
+  <title>최수정 Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
@@ -15,7 +15,7 @@
   <div class="cursor-glow"></div>
 
   <header>
-    <div class="hname">최수정 — Portfolio</div>
+    <div class="hname">최수정 Portfolio</div>
     <nav class="hnav">
       <a href="#wanderpool">WanderPool</a>
       <a href="#wattup">Wattup</a>
@@ -28,8 +28,8 @@
   <nav class="dots">
     <div class="dot on" onclick="goTo('hero')"></div>
     <div class="dot" onclick="goTo('wanderpool')"></div>
-    <div class="dot" onclick="goTo('malang')"></div>
     <div class="dot" onclick="goTo('wattup')"></div>
+    <div class="dot" onclick="goTo('malang')"></div>
     <div class="dot" onclick="goTo('flood')"></div>
   </nav>
 
@@ -60,7 +60,7 @@
             <div class="hmetric-label">실 서비스 운영 경험</div>
           </div>
           <div class="hmetric">
-            <div class="hmetric-val">2026.02~</div>
+            <div class="hmetric-val">2026.02~06</div>
             <div class="hmetric-label">인프라 운영 경력</div>
           </div>
         </div>
@@ -87,7 +87,7 @@
         <div class="card">
           <div class="phead">
             <div>
-              <div class="ptitle">WanderPool — 실시간 카풀 매칭 MSA 서비스</div>
+              <div class="ptitle">WanderPool 실시간 카풀 매칭 MSA 서비스</div>
               <div class="psub">Kubernetes · Kong Gateway · AWS EKS · 팀 프로젝트 (4인) · 2026.04 ~ 2026.06</div>
             </div>
             <span class="award">현대오토에버 클라우드 스쿨 우수 프로젝트상</span>
@@ -111,20 +111,20 @@
 
           <div class="hmetrics" style="margin-bottom:16px">
             <div class="hmetric">
-              <div class="hmetric-val">4 MSA</div>
-              <div class="hmetric-label">auth·member·party·map</div>
+              <div class="hmetric-val">4인 팀</div>
+              <div class="hmetric-label">프로젝트 형태</div>
             </div>
             <div class="hmetric">
-              <div class="hmetric-val">VM 9대</div>
-              <div class="hmetric-label">물리 서버 2대</div>
+              <div class="hmetric-val">Infra·Frontend</div>
+              <div class="hmetric-label">담당 역할</div>
+            </div>
+            <div class="hmetric">
+              <div class="hmetric-val">On-prem→EKS</div>
+              <div class="hmetric-label">핵심 기술 성과</div>
             </div>
             <div class="hmetric">
               <div class="hmetric-val">우수 프로젝트상</div>
-              <div class="hmetric-label">2026.06.30</div>
-            </div>
-            <div class="hmetric">
-              <div class="hmetric-val">25%</div>
-              <div class="hmetric-label">기여도</div>
+              <div class="hmetric-label">프로젝트 성과</div>
             </div>
           </div>
 
@@ -141,6 +141,66 @@
     </section>
 
     <!-- ===== 말랑이 ===== -->
+    <section id="wattup" class="pdf-summary-page" data-detail="wattup/index.html">
+      <div class="fi">
+        <div class="slabel">Team Project · Kubernetes</div>
+        <h2 class="stitle">Wattup</h2>
+        <div class="card">
+          <div class="phead">
+            <div>
+              <div class="ptitle">Wattup EV 충전소 예약 플랫폼</div>
+              <div class="psub">Kubernetes · On-premise · 팀 프로젝트 (5인) · 2026.02 ~ 2026.03 (종료)</div>
+            </div>
+            <span class="award">현대오토에버 클라우드 스쿨 우수 프로젝트상</span>
+          </div>
+
+          <div class="pcard-top">
+            <div class="pthumb"><img src="wattup/wattup_archi.png" alt="Wattup 네트워크 아키텍처"></div>
+            <div>
+              <p style="font-size:14px;color:var(--text-sub);line-height:1.9;margin-bottom:14px;">
+                전기차 충전소 실시간 예약 및 현황 관리 서비스. VirtualBox 기반 On-premise Kubernetes 클러스터를 설계·구축하고
+                프론트엔드 개발을 담당했습니다.
+              </p>
+              <div class="tags">
+                <span class="tag">Kubernetes</span><span class="tag">kubeadm</span><span
+                  class="tag">Calico</span><span class="tag">Tailscale VPN</span><span class="tag">React
+                  19</span><span class="tag">Kafka (KRaft)</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hmetrics" style="margin-bottom:16px">
+            <div class="hmetric">
+              <div class="hmetric-val">5인 팀</div>
+              <div class="hmetric-label">프로젝트 형태</div>
+            </div>
+            <div class="hmetric">
+              <div class="hmetric-val">K8s·Frontend</div>
+              <div class="hmetric-label">담당 역할</div>
+            </div>
+            <div class="hmetric">
+              <div class="hmetric-val"><span class="hmetric-prefix">메모리 사용량</span>95%→76%</div>
+              <div class="hmetric-label">핵심 기술 성과</div>
+            </div>
+            <div class="hmetric">
+              <div class="hmetric-val">우수 프로젝트상</div>
+              <div class="hmetric-label">프로젝트 성과</div>
+            </div>
+          </div>
+
+          <ul class="phighlights">
+            <li>kubeadm으로 멀티 노드(master+worker 3개) 클러스터 직접 구축, EKS 대신 온프레미스 선택</li>
+            <li>Calico + Tailscale VPN 충돌 해결 (felixconfiguration 패치)</li>
+            <li>JVM 힙 설정으로 Kafka 메모리 사용량 95% → 76% 최적화</li>
+            <li>Vite 빌드타임 환경변수 구조 문제 해결</li>
+          </ul>
+
+          <a href="wattup/index.html" class="hlink pri">자세히 보기 →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 침수사고 ===== -->
     <section id="malang" class="pdf-summary-page" data-detail="malang/index.html">
       <div class="fi">
         <div class="slabel">Personal Project · Serverless</div>
@@ -171,20 +231,20 @@
 
           <div class="hmetrics" style="margin-bottom:16px">
             <div class="hmetric">
-              <div class="hmetric-val">$0.03</div>
-              <div class="hmetric-label">월 운영 비용</div>
+              <div class="hmetric-val">개인 프로젝트</div>
+              <div class="hmetric-label">프로젝트 형태</div>
             </div>
             <div class="hmetric">
-              <div class="hmetric-val">6s → 284ms</div>
-              <div class="hmetric-label">콜드스타트 개선</div>
+              <div class="hmetric-val">Backend·Infra</div>
+              <div class="hmetric-label">담당 역할</div>
             </div>
             <div class="hmetric">
-              <div class="hmetric-val">0%</div>
-              <div class="hmetric-label">에러율</div>
+              <div class="hmetric-val"><span class="hmetric-prefix">콜드스타트</span>6s→284ms</div>
+              <div class="hmetric-label">핵심 기술 성과</div>
             </div>
             <div class="hmetric">
-              <div class="hmetric-val">2026.02~06</div>
-              <div class="hmetric-label">서비스 운영 기간</div>
+              <div class="hmetric-val">실서비스 운영</div>
+              <div class="hmetric-label">프로젝트 성과</div>
             </div>
           </div>
 
@@ -201,66 +261,6 @@
     </section>
 
     <!-- ===== WATTUP ===== -->
-    <section id="wattup" class="pdf-summary-page" data-detail="wattup/index.html">
-      <div class="fi">
-        <div class="slabel">Team Project · Kubernetes</div>
-        <h2 class="stitle">Wattup</h2>
-        <div class="card">
-          <div class="phead">
-            <div>
-              <div class="ptitle">Wattup — EV 충전소 예약 플랫폼</div>
-              <div class="psub">Kubernetes · On-premise · 팀 프로젝트 (5인) · 2026.02 ~ 2026.03 (종료)</div>
-            </div>
-            <span class="award">현대오토에버 클라우드 스쿨 우수 프로젝트상</span>
-          </div>
-
-          <div class="pcard-top">
-            <div class="pthumb"><img src="wattup/wattup_archi.png" alt="Wattup 네트워크 아키텍처"></div>
-            <div>
-              <p style="font-size:14px;color:var(--text-sub);line-height:1.9;margin-bottom:14px;">
-                전기차 충전소 실시간 예약 및 현황 관리 서비스. VirtualBox 기반 On-premise Kubernetes 클러스터를 설계·구축하고
-                프론트엔드 개발을 담당했습니다.
-              </p>
-              <div class="tags">
-                <span class="tag">Kubernetes</span><span class="tag">kubeadm</span><span
-                  class="tag">Calico</span><span class="tag">Tailscale VPN</span><span class="tag">React
-                  19</span><span class="tag">Kafka (KRaft)</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="hmetrics" style="margin-bottom:16px">
-            <div class="hmetric">
-              <div class="hmetric-val">100%</div>
-              <div class="hmetric-label">K8s 클러스터 설계/구축</div>
-            </div>
-            <div class="hmetric">
-              <div class="hmetric-val">50%</div>
-              <div class="hmetric-label">프론트엔드 개발</div>
-            </div>
-            <div class="hmetric">
-              <div class="hmetric-val">95%→76%</div>
-              <div class="hmetric-label">메모리 최적화</div>
-            </div>
-            <div class="hmetric">
-              <div class="hmetric-val">5인</div>
-              <div class="hmetric-label">팀 구성</div>
-            </div>
-          </div>
-
-          <ul class="phighlights">
-            <li>kubeadm으로 멀티 노드(master+worker 3개) 클러스터 직접 구축, EKS 대신 온프레미스 선택</li>
-            <li>Calico + Tailscale VPN 충돌 해결 (felixconfiguration 패치)</li>
-            <li>JVM 힙 설정으로 Kafka 메모리 사용량 95% → 76% 최적화</li>
-            <li>Vite 빌드타임 환경변수 구조 문제 해결</li>
-          </ul>
-
-          <a href="wattup/index.html" class="hlink pri">자세히 보기 →</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== 침수사고 ===== -->
     <section id="flood" class="pdf-summary-page" data-detail="flood/index.html" style="padding-bottom:80px;">
       <div class="fi">
         <div class="slabel">Capstone Project</div>
@@ -291,20 +291,20 @@
 
           <div class="hmetrics" style="margin-bottom:16px">
             <div class="hmetric">
+              <div class="hmetric-val">팀 프로젝트</div>
+              <div class="hmetric-label">프로젝트 형태</div>
+            </div>
+            <div class="hmetric">
+              <div class="hmetric-val">IoT·Full Stack</div>
+              <div class="hmetric-label">담당 역할</div>
+            </div>
+            <div class="hmetric">
+              <div class="hmetric-val">HTTP→WS</div>
+              <div class="hmetric-label">핵심 기술 성과</div>
+            </div>
+            <div class="hmetric">
               <div class="hmetric-val">대상</div>
-              <div class="hmetric-label">MADE IN SUNGSHIN 2023</div>
-            </div>
-            <div class="hmetric">
-              <div class="hmetric-val">팀장</div>
-              <div class="hmetric-label">2023.09 ~ 2023.12</div>
-            </div>
-            <div class="hmetric">
-              <div class="hmetric-val">2개 버전</div>
-              <div class="hmetric-label">캡스톤 · 개선판</div>
-            </div>
-            <div class="hmetric">
-              <div class="hmetric-val">HTTP → WS</div>
-              <div class="hmetric-label">실시간성 개선</div>
+              <div class="hmetric-label">프로젝트 성과</div>
             </div>
           </div>
 
@@ -321,7 +321,7 @@
     </section>
 
     <footer>
-      <div class="fname">최수정 — Choi Soojung</div>
+      <div class="fname">최수정 Choi Soojung</div>
       <div class="flinks">
         <a href="https://github.com/MODIFYC" target="_blank" class="flink">GitHub</a>
         <a href="https://cmod-ify.tistory.com/category/Project" target="_blank" class="flink">Blog</a>
@@ -343,7 +343,7 @@
       glow.style.top = e.clientY + 'px';
     });
 
-    const secs = ['hero', 'wanderpool', 'malang', 'wattup', 'flood'];
+    const secs = ['hero', 'wanderpool', 'wattup', 'malang', 'flood'];
     const dots = document.querySelectorAll('.dot');
     const obs = new IntersectionObserver(es =>{
       es.forEach(e =>{

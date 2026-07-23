@@ -18,19 +18,37 @@ const tableOfContents = `
       <div class="pdf-toc-list">
         <div class="pdf-toc-item">
           <div class="pdf-toc-number">01</div>
-          <div><strong>WanderPool</strong><p>서비스 화면 · 아키텍처 · 기술 스택 · 네트워크 설계 · CI/CD · BFF · 기술 의사결정 · 보안 · AI Observability<br>AWS 마이그레이션 · DR · 트러블슈팅</p></div>
+          <div><strong>WanderPool</strong><p class="pdf-toc-details">
+            <span class="pdf-toc-line"><b>구성</b><span>서비스 화면 · 전체 시스템 아키텍처 · 기술 스택</span></span>
+            <span class="pdf-toc-line"><b>의사결정</b><span>네트워크 기술 의사결정 · CI/CD · 기술 의사결정 기록 · 보안 의사결정 기록</span></span>
+            <span class="pdf-toc-line"><b>운영</b><span>AI Observability Pipeline · 재해복구(DR) · AWS 마이그레이션</span></span>
+            <span class="pdf-toc-line"><b>문제 해결·회고</b><span>트러블슈팅 · 배운 점 및 개선사항</span></span>
+          </p></div>
         </div>
         <div class="pdf-toc-item">
           <div class="pdf-toc-number">02</div>
-          <div><strong>말랑이 메이커</strong><p>서비스 화면 · AWS 아키텍처 · 인프라 설계 · CI/CD · 운영 · 부하 테스트 · 트러블슈팅</p></div>
+          <div><strong>말랑이 메이커</strong><p class="pdf-toc-details">
+            <span class="pdf-toc-line"><b>구성</b><span>서비스 화면 · 시스템 아키텍처 · 기술 스택</span></span>
+            <span class="pdf-toc-line"><b>의사결정</b><span>인프라 기술 의사결정 · CI/CD</span></span>
+            <span class="pdf-toc-line"><b>검증</b><span>부하 테스트</span></span>
+            <span class="pdf-toc-line"><b>문제 해결·회고</b><span>트러블슈팅 · 배운 점 및 개선사항</span></span>
+          </p></div>
         </div>
         <div class="pdf-toc-item">
           <div class="pdf-toc-number">03</div>
-          <div><strong>Wattup</strong><p>기술 스택 · 아키텍처 · 메모리 최적화 · 트러블슈팅 · 프로젝트 요약</p></div>
+          <div><strong>Wattup</strong><p class="pdf-toc-details">
+            <span class="pdf-toc-line"><b>구성</b><span>기술 스택 · 네트워크 아키텍처</span></span>
+            <span class="pdf-toc-line"><b>의사결정</b><span>온프레미스·kubeadm 구축 기술 의사결정</span></span>
+            <span class="pdf-toc-line"><b>최적화</b><span>메모리 최적화</span></span>
+            <span class="pdf-toc-line"><b>문제 해결·회고</b><span>트러블슈팅 · 배운 점 및 개선사항</span></span>
+          </p></div>
         </div>
         <div class="pdf-toc-item">
           <div class="pdf-toc-number">04</div>
-          <div><strong>IoT 기반 침수사고 예방 시스템</strong><p>버전 비교 · 실시간 통신 개선 · 트러블슈팅</p></div>
+          <div><strong>IoT 기반 침수사고<br>예방 시스템</strong><p class="pdf-toc-details">
+            <span class="pdf-toc-line"><b>버전 변화</b><span>캡스톤 버전 · 개선 버전</span></span>
+            <span class="pdf-toc-line"><b>문제 해결</b><span>실시간 통신 개선 · 트러블슈팅</span></span>
+          </p></div>
         </div>
       </div>
     </section>`;
@@ -70,9 +88,18 @@ function formatChapterLabel(labelHtml) {
     Security: '보안 · SECURITY',
     Architecture: '아키텍처 · ARCHITECTURE',
     Preview: '서비스 화면 · PREVIEW',
-    'Decision Making': '의사결정 · DECISION MAKING',
+    'Decision Making': '기술 의사결정 · DECISION MAKING',
     Operations: '운영 · OPERATIONS',
+    Operation: '운영 · OPERATIONS',
     Optimization: '최적화 · OPTIMIZATION',
+    'CI/CD': 'CI/CD · PIPELINE',
+    'CI/CD Pipeline': 'CI/CD · PIPELINE',
+    Troubleshooting: '트러블슈팅 · TROUBLESHOOTING',
+    Retrospective: '회고 · RETROSPECTIVE',
+    'Tech Stack': '기술 스택 · TECH STACK',
+    'Cloud Migration': '클라우드 마이그레이션 · CLOUD MIGRATION',
+    'Load Testing': '부하 테스트 · LOAD TESTING',
+    Versions: '버전 비교 · VERSIONS',
   };
   return labels[raw] || raw;
 }
@@ -91,7 +118,7 @@ function splitLargeArchitectureSection(section) {
   return parts.map((part, index) => {
     const pageOpening = opening.replace('id="network"', `id="network-${index + 1}"`);
     const pageLabel = index === 0 ? label : '<div class="slabel">Decision Making</div>';
-    const pageTitle = index === 0 ? title : '<h2 class="stitle">네트워크 설계 이유</h2>';
+    const pageTitle = index === 0 ? title : '<h2 class="stitle">네트워크 기술 의사결정</h2>';
     return `${pageOpening}\n      <div class="fi">\n        ${pageLabel}\n        ${pageTitle}\n        ${part.trim()}\n      </div>\n    </section>`;
   });
 }
@@ -171,8 +198,8 @@ function splitMalangInfraSection(section) {
 
   const stackPage = `${opening.replace('id="infra-m"', 'id="infra-m-stack"')}
       <div class="fi">
-        ${label}
-        <h2 class="stitle">테크 스택</h2>
+        <div class="slabel">Tech Stack</div>
+        <h2 class="stitle">기술 스택</h2>
         ${cards[0]}
       </div>
     </section>`;
@@ -181,7 +208,7 @@ function splitMalangInfraSection(section) {
   const decisionPages = [decisionCards.slice(0, 2), decisionCards.slice(2, 4)].map((group, index) => `${opening.replace('id="infra-m"', `id="infra-m-decisions-${index + 1}"`)}
       <div class="fi">
         ${label}
-        <h2 class="stitle">설계 이유</h2>
+        <h2 class="stitle">인프라 기술 의사결정</h2>
         <div class="card-grid">
 ${group.join('\n')}
         </div>
@@ -215,9 +242,9 @@ function splitLoadTestSection(section) {
           <table class="ops-table pdf-load-table">
             <thead><tr><th>지표</th><th>1차 종합</th><th>2차 쓰다듬기</th><th>2차 똥치우기</th><th>3차 웜업 후</th></tr></thead>
             <tbody>
-          <tr><td>평균 응답</td><td>45ms</td><td>50ms</td><td>56ms</td><td>—</td></tr>
+          <tr><td>평균 응답</td><td>45ms</td><td>50ms</td><td>56ms</td><td> </td></tr>
           <tr><td>p95 응답</td><td>63.84ms</td><td>70ms</td><td>75ms</td><td>78.63ms</td></tr>
-          <tr><td>최대/첫 요청</td><td>1.52s</td><td>—</td><td>—</td><td>284ms / &lt;100ms</td></tr>
+          <tr><td>최대/첫 요청</td><td>1.52s</td><td> </td><td> </td><td>284ms / &lt;100ms</td></tr>
           <tr><td>에러율</td><td>6.62%</td><td>0%</td><td>0%</td><td>0%</td></tr>
           <tr><td>Throttle</td><td>0건</td><td>미발생</td><td>미발생</td><td>미발생</td></tr>
             </tbody>
@@ -376,10 +403,26 @@ function moveWanderpoolTroubleshootingLast(sections) {
   if (troubleshootingIndex < 0) return result;
 
   const [troubleshootingPage] = result.splice(troubleshootingIndex, 1);
+  const migrationIndex = result.findIndex(section => /id="migration"/.test(section));
+  const anchorIndex = migrationIndex >= 0
+    ? migrationIndex
+    : result.findIndex(section => /id="dr-wp"/.test(section));
+  if (anchorIndex < 0) return sections;
+
+  result.splice(anchorIndex + 1, 0, troubleshootingPage);
+  return result;
+}
+
+function moveWanderpoolMigrationAfterDr(sections) {
+  const result = [...sections];
+  const migrationIndex = result.findIndex(section => /id="migration"/.test(section));
+  if (migrationIndex < 0) return result;
+
+  const [migrationPage] = result.splice(migrationIndex, 1);
   const drIndex = result.findIndex(section => /id="dr-wp"/.test(section));
   if (drIndex < 0) return sections;
 
-  result.splice(drIndex + 1, 0, troubleshootingPage);
+  result.splice(drIndex + 1, 0, migrationPage);
   return result;
 }
 
@@ -396,7 +439,8 @@ for (const project of projects) {
     .flatMap(splitLargeArchitectureSection)
     .flatMap(splitCicdImageSection);
   const orderedSections = moveWanderpoolStackAfterArchitecture(preparedSections);
-  const finalOrderedSections = moveWanderpoolTroubleshootingLast(orderedSections);
+  const migrationOrderedSections = moveWanderpoolMigrationAfterDr(orderedSections);
+  const finalOrderedSections = moveWanderpoolTroubleshootingLast(migrationOrderedSections);
   const pagedSections = finalOrderedSections
     .flatMap(splitDecisionSection)
     .flatMap(splitObservabilitySection)
@@ -439,8 +483,8 @@ if (malangStart >= 0 && wattupStart > malangStart && floodStart > wattupStart) {
 
 output = output
   .replace('<body>', '<body class="pdf-view">')
-  .replace('<title>최수정 — Portfolio</title>', '<title>최수정 — Portfolio PDF</title>')
-  .replace('<div class="hname">최수정 — Portfolio</div>', '<a href="index.html" class="hname" title="원본 포트폴리오로 돌아가기">최수정 — Portfolio</a>')
+  .replace('<title>최수정 Portfolio</title>', '<title>최수정 Portfolio PDF</title>')
+  .replace('<div class="hname">최수정 Portfolio</div>', '<a href="index.html" class="hname" title="원본 포트폴리오로 돌아가기">최수정 Portfolio</a>')
   .replace(/(<section id="hero">[\s\S]*?<\/section>)/, `$1\n\n${orderedTableOfContents}`)
   .replace('<a href="pdf.html" class="pdf-action">PDF로 저장</a>', '<a href="#" class="pdf-action" id="pdfAction">PDF 저장 / 인쇄</a>')
   .replace('  <script>\n    function tog', `  <script>
@@ -464,5 +508,12 @@ output = output
     if (document.fonts?.ready) document.fonts.ready.then(fitPdfDetailPages);
     document.getElementById('pdfAction').addEventListener('click', e => { e.preventDefault(); window.print(); });
     function tog`);
+
+let pdfPageNumber = 0;
+output = output.replace(
+  /<section\b[^>]*class="[^"]*\b(?:pdf-summary-page|pdf-detail-page)\b[^"]*"[^>]*>/g,
+  openingTag => `${openingTag}\n    <div class="pdf-page-number">${++pdfPageNumber}</div>`
+);
+output = output.replace(/[ \t]+$/gm, '');
 
 fs.writeFileSync(path.join(root, 'pdf.html'), output, 'utf8');

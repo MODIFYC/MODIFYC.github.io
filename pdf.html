@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>최수정 — Portfolio PDF</title>
+  <title>최수정 Portfolio PDF</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;700&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
@@ -15,7 +15,7 @@
   <div class="cursor-glow"></div>
 
   <header>
-    <a href="index.html" class="hname" title="원본 포트폴리오로 돌아가기">최수정 — Portfolio</a>
+    <a href="index.html" class="hname" title="원본 포트폴리오로 돌아가기">최수정 Portfolio</a>
     <nav class="hnav">
       <a href="#wanderpool">WanderPool</a>
       <a href="#wattup">Wattup</a>
@@ -28,8 +28,8 @@
   <nav class="dots">
     <div class="dot on" onclick="goTo('hero')"></div>
     <div class="dot" onclick="goTo('wanderpool')"></div>
-    <div class="dot" onclick="goTo('malang')"></div>
     <div class="dot" onclick="goTo('wattup')"></div>
+    <div class="dot" onclick="goTo('malang')"></div>
     <div class="dot" onclick="goTo('flood')"></div>
   </nav>
 
@@ -60,7 +60,7 @@
             <div class="hmetric-label">실 서비스 운영 경험</div>
           </div>
           <div class="hmetric">
-            <div class="hmetric-val">2026.02~</div>
+            <div class="hmetric-val">2026.02~06</div>
             <div class="hmetric-label">인프라 운영 경력</div>
           </div>
         </div>
@@ -86,32 +86,51 @@
       <div class="pdf-toc-list">
         <div class="pdf-toc-item">
           <div class="pdf-toc-number">01</div>
-          <div><strong>WanderPool</strong><p>서비스 화면 · 아키텍처 · 기술 스택 · 네트워크 설계 · CI/CD · BFF · 기술 의사결정 · 보안 · AI Observability<br>AWS 마이그레이션 · DR · 트러블슈팅</p></div>
+          <div><strong>WanderPool</strong><p class="pdf-toc-details">
+            <span class="pdf-toc-line"><b>구성</b><span>서비스 화면 · 전체 시스템 아키텍처 · 기술 스택</span></span>
+            <span class="pdf-toc-line"><b>의사결정</b><span>네트워크 기술 의사결정 · CI/CD · 기술 의사결정 기록 · 보안 의사결정 기록</span></span>
+            <span class="pdf-toc-line"><b>운영</b><span>AI Observability Pipeline · 재해복구(DR) · AWS 마이그레이션</span></span>
+            <span class="pdf-toc-line"><b>문제 해결·회고</b><span>트러블슈팅 · 배운 점 및 개선사항</span></span>
+          </p></div>
         </div>
         <div class="pdf-toc-item">
           <div class="pdf-toc-number">02</div>
-          <div><strong>Wattup</strong><p>기술 스택 · 아키텍처 · 메모리 최적화 · 트러블슈팅 · 프로젝트 요약</p></div>
+          <div><strong>Wattup</strong><p class="pdf-toc-details">
+            <span class="pdf-toc-line"><b>구성</b><span>기술 스택 · 네트워크 아키텍처</span></span>
+            <span class="pdf-toc-line"><b>의사결정</b><span>온프레미스·kubeadm 구축 기술 의사결정</span></span>
+            <span class="pdf-toc-line"><b>최적화</b><span>메모리 최적화</span></span>
+            <span class="pdf-toc-line"><b>문제 해결·회고</b><span>트러블슈팅 · 배운 점 및 개선사항</span></span>
+          </p></div>
         </div>
         <div class="pdf-toc-item">
           <div class="pdf-toc-number">03</div>
-          <div><strong>말랑이 메이커</strong><p>서비스 화면 · AWS 아키텍처 · 인프라 설계 · CI/CD · 운영 · 부하 테스트 · 트러블슈팅</p></div>
+          <div><strong>말랑이 메이커</strong><p class="pdf-toc-details">
+            <span class="pdf-toc-line"><b>구성</b><span>서비스 화면 · 시스템 아키텍처 · 기술 스택</span></span>
+            <span class="pdf-toc-line"><b>의사결정</b><span>인프라 기술 의사결정 · CI/CD</span></span>
+            <span class="pdf-toc-line"><b>검증</b><span>부하 테스트</span></span>
+            <span class="pdf-toc-line"><b>문제 해결·회고</b><span>트러블슈팅 · 배운 점 및 개선사항</span></span>
+          </p></div>
         </div>
         <div class="pdf-toc-item">
           <div class="pdf-toc-number">04</div>
-          <div><strong>IoT 기반 침수사고 예방 시스템</strong><p>버전 비교 · 실시간 통신 개선 · 트러블슈팅</p></div>
+          <div><strong>IoT 기반 침수사고<br>예방 시스템</strong><p class="pdf-toc-details">
+            <span class="pdf-toc-line"><b>버전 변화</b><span>캡스톤 버전 · 개선 버전</span></span>
+            <span class="pdf-toc-line"><b>문제 해결</b><span>실시간 통신 개선 · 트러블슈팅</span></span>
+          </p></div>
         </div>
       </div>
     </section>
 
     <!-- ===== WANDERPOOL ===== -->
     <section id="wanderpool" class="pdf-summary-page" data-detail="wanderpool/index.html">
+    <div class="pdf-page-number">1</div>
       <div class="fi">
         <div class="slabel">Team Project · MSA</div>
         <h2 class="stitle">WanderPool</h2>
         <div class="card">
           <div class="phead">
             <div>
-              <div class="ptitle">WanderPool — 실시간 카풀 매칭 MSA 서비스</div>
+              <div class="ptitle">WanderPool 실시간 카풀 매칭 MSA 서비스</div>
               <div class="psub">Kubernetes · Kong Gateway · AWS EKS · 팀 프로젝트 (4인) · 2026.04 ~ 2026.06</div>
             </div>
             <span class="award">현대오토에버 클라우드 스쿨 우수 프로젝트상</span>
@@ -135,20 +154,20 @@
 
           <div class="hmetrics" style="margin-bottom:16px">
             <div class="hmetric">
-              <div class="hmetric-val">4 MSA</div>
-              <div class="hmetric-label">auth·member·party·map</div>
+              <div class="hmetric-val">4인 팀</div>
+              <div class="hmetric-label">프로젝트 형태</div>
             </div>
             <div class="hmetric">
-              <div class="hmetric-val">VM 9대</div>
-              <div class="hmetric-label">물리 서버 2대</div>
+              <div class="hmetric-val">Infra·Frontend</div>
+              <div class="hmetric-label">담당 역할</div>
+            </div>
+            <div class="hmetric">
+              <div class="hmetric-val">On-prem→EKS</div>
+              <div class="hmetric-label">핵심 기술 성과</div>
             </div>
             <div class="hmetric">
               <div class="hmetric-val">우수 프로젝트상</div>
-              <div class="hmetric-label">2026.06.30</div>
-            </div>
-            <div class="hmetric">
-              <div class="hmetric-val">25%</div>
-              <div class="hmetric-label">기여도</div>
+              <div class="hmetric-label">프로젝트 성과</div>
             </div>
           </div>
 
@@ -165,12 +184,13 @@
     </section>
 
 <section id="preview-wp" class="pdf-detail-page pdf-project-wanderpool">
+    <div class="pdf-page-number">2</div>
     <div class="pdf-detail-content">
       <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>WanderPool</strong><div class="pdf-chapter-tag">서비스 화면 · PREVIEW</div></div>
       <h2 class="stitle">서비스 화면</h2>
       <div class="fi on">
-        
-        
+
+
         <div class="card">
           <div class="shots-4">
             <div>
@@ -196,12 +216,13 @@
 </section>
 
 <section id="network-1" class="pdf-detail-page pdf-project-wanderpool">
+    <div class="pdf-page-number">3</div>
     <div class="pdf-detail-content">
       <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>WanderPool</strong><div class="pdf-chapter-tag">아키텍처 · ARCHITECTURE</div></div>
       <h2 class="stitle">전체 시스템 아키텍처</h2>
       <div class="fi on">
-        
-        
+
+
         <div class="card" style="margin-bottom:24px">
           <img src="wanderpool/overall.png" alt="WanderPool 전체 아키텍처" class="aimg">
           <p style="font-size:12px;color:var(--text-muted);text-align:center;font-family:var(--mono);">
@@ -214,12 +235,13 @@
 </section>
 
 <section id="stack-wp" class="pdf-detail-page pdf-project-wanderpool">
+    <div class="pdf-page-number">4</div>
     <div class="pdf-detail-content">
-      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>WanderPool</strong><div class="pdf-chapter-tag">Tech Stack</div></div>
+      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>WanderPool</strong><div class="pdf-chapter-tag">기술 스택 · TECH STACK</div></div>
       <h2 class="stitle">기술 스택</h2>
       <div class="fi on">
-        
-        
+
+
         <div class="card">
           <div class="stack-grid">
             <div class="stack-group">
@@ -277,15 +299,16 @@
 </section>
 
 <section id="network-2" class="pdf-detail-page pdf-project-wanderpool">
+    <div class="pdf-page-number">5</div>
     <div class="pdf-detail-content">
-      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>WanderPool</strong><div class="pdf-chapter-tag">의사결정 · DECISION MAKING</div></div>
-      <h2 class="stitle">네트워크 설계 이유</h2>
+      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>WanderPool</strong><div class="pdf-chapter-tag">기술 의사결정 · DECISION MAKING</div></div>
+      <h2 class="stitle">네트워크 기술 의사결정</h2>
       <div class="fi on">
-        
-        
+
+
         <!-- Network: HTTPS 외부 접근 경로 -->
         <div class="card" style="margin-bottom:24px">
-          <div class="subh" style="margin-top:0">Network — HTTPS 외부 접근 경로</div>
+          <div class="subh" style="margin-top:0">Network HTTPS 외부 접근 경로</div>
 
           <div class="pipe">
             <div class="pstep">
@@ -309,10 +332,10 @@
 
           <div class="subh">핵심 포인트</div>
           <ul style="font-size:13px;color:var(--text-sub);line-height:1.9;list-style:none">
-            <li>① <strong style="color:var(--text)">Mixed Content 방지</strong>— Vercel HTTPS 프론트엔드에 API도 동일하게 HTTPS로 제공</li>
-            <li>② <strong style="color:var(--text)">DNS-01 선택</strong>— 포트 80 없이 도메인 소유권 검증 가능. 공유기가 80포트를 열 수 없는 제약을
+            <li>① <strong style="color:var(--text)">Mixed Content 방지</strong> Vercel HTTPS 프론트엔드에 API도 동일하게 HTTPS로 제공</li>
+            <li>② <strong style="color:var(--text)">DNS-01 선택</strong> 포트 80 없이 도메인 소유권 검증 가능. 공유기가 80포트를 열 수 없는 제약을
               우회</li>
-            <li>③ <strong style="color:var(--text)">TLS 자동화</strong>— cert-manager로 인증서 발급·갱신 자동화</li>
+            <li>③ <strong style="color:var(--text)">TLS 자동화</strong> cert-manager로 인증서 발급·갱신 자동화</li>
           </ul>
         </div>
       </div>
@@ -320,27 +343,28 @@
 </section>
 
 <section id="network-3" class="pdf-detail-page pdf-project-wanderpool">
+    <div class="pdf-page-number">6</div>
     <div class="pdf-detail-content">
-      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>WanderPool</strong><div class="pdf-chapter-tag">의사결정 · DECISION MAKING</div></div>
-      <h2 class="stitle">네트워크 설계 이유</h2>
+      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>WanderPool</strong><div class="pdf-chapter-tag">기술 의사결정 · DECISION MAKING</div></div>
+      <h2 class="stitle">네트워크 기술 의사결정</h2>
       <div class="fi on">
-        
-        
+
+
         <!-- Network: Kong Gateway -->
         <div class="card">
-          <div class="subh" style="margin-top:0">Network — Kong API Gateway로 MSA 진입점 통합</div>
+          <div class="subh" style="margin-top:0">Network Kong API Gateway로 MSA 진입점 통합</div>
 
           <div class="card-grid">
             <div class="card" style="background:rgba(156,163,175,.08)">
               <div
                 style="font-size:12px;font-weight:700;color:var(--text-muted);font-family:var(--mono);margin-bottom:10px">
-                BEFORE — 게이트웨이 도입 전</div>
+                BEFORE 게이트웨이 도입 전</div>
               <p style="font-size:13px;color:var(--text-sub);line-height:1.8;">클라이언트가 각 서비스로 직접 요청. 서비스마다 인증/인가 로직이
                 중복되고, 클라이언트가 보낸 헤더를 그대로 신뢰해야 하는 위험이 있었으며 진입점이 분산되어 있었습니다.</p>
             </div>
             <div class="card" style="background:var(--blue-bg)">
               <div style="font-size:12px;font-weight:700;color:var(--blue);font-family:var(--mono);margin-bottom:10px">
-                AFTER — Kong 도입 후</div>
+                AFTER Kong 도입 후</div>
               <p style="font-size:13px;color:var(--text-sub);line-height:1.8;">Kong Gateway를 단일 진입점으로 사용. Route를
                 Public(auth)/Protected(member·party·map)로 분리하고, Protected 요청은 JWT를 검증한 뒤 클라이언트 식별 헤더를 제거하고
                 검증된 Claim 기반 헤더로 교체합니다.</p>
@@ -352,12 +376,13 @@
 </section>
 
 <section id="cicd-wp-1" class="pdf-detail-page pdf-project-wanderpool">
+    <div class="pdf-page-number">7</div>
     <div class="pdf-detail-content">
-      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>WanderPool</strong><div class="pdf-chapter-tag">CI/CD</div></div>
+      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>WanderPool</strong><div class="pdf-chapter-tag">CI/CD · PIPELINE</div></div>
       <h2 class="stitle">CI/CD Pipeline</h2>
       <div class="fi on">
-        
-        
+
+
         <div class="card"><img src="wanderpool/cicd.png" alt="WanderPool CI/CD Flow" class="aimg">
           <p style="font-size:12px;color:var(--text-muted);text-align:center;font-family:var(--mono);">
             FE: GitLab CI(TypeCheck·ESLint) → Vercel &nbsp;·&nbsp; BE: Jenkins(JaCoCo·SonarQube) → Harbor → GitOps
@@ -369,12 +394,13 @@
 </section>
 
 <section id="decisions-1" class="pdf-detail-page pdf-project-wanderpool">
+    <div class="pdf-page-number">8</div>
     <div class="pdf-detail-content">
-      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>WanderPool</strong><div class="pdf-chapter-tag">의사결정 · DECISION MAKING</div></div>
-      <h2 class="stitle">의사결정 기록</h2>
+      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>WanderPool</strong><div class="pdf-chapter-tag">기술 의사결정 · DECISION MAKING</div></div>
+      <h2 class="stitle">기술 의사결정 기록</h2>
       <div class="fi on">
-        
-        
+
+
         <div class="card-grid">
 <!-- Kong vs Spring Cloud Gateway -->
           <div class="card">
@@ -436,12 +462,13 @@
 </section>
 
 <section id="decisions-2" class="pdf-detail-page pdf-project-wanderpool">
+    <div class="pdf-page-number">9</div>
     <div class="pdf-detail-content">
-      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>WanderPool</strong><div class="pdf-chapter-tag">의사결정 · DECISION MAKING</div></div>
-      <h2 class="stitle">의사결정 기록</h2>
+      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>WanderPool</strong><div class="pdf-chapter-tag">기술 의사결정 · DECISION MAKING</div></div>
+      <h2 class="stitle">기술 의사결정 기록</h2>
       <div class="fi on">
-        
-        
+
+
         <div class="card-grid">
 <!-- GitLab CI vs Jenkins -->
           <div class="card">
@@ -494,10 +521,10 @@
                 <div class="df-label">이유</div>
                 <div class="df-content">
                   <ul style="margin:4px 0 0 16px;line-height:1.8">
-                    <li><strong style="color:var(--text)">관심사 분리</strong>— 수집(적재)과 분석·전달(LLM 호출·알림)은 책임이 다른 작업</li>
-                    <li><strong style="color:var(--text)">최소 노출</strong>— 수집은 사설망에만, 보고서는 외부 API(Bedrock·Slack)에만
+                    <li><strong style="color:var(--text)">관심사 분리</strong> 수집(적재)과 분석·전달(LLM 호출·알림)은 책임이 다른 작업</li>
+                    <li><strong style="color:var(--text)">최소 노출</strong> 수집은 사설망에만, 보고서는 외부 API(Bedrock·Slack)에만
                       접근. 한 함수에 사설망과 인터넷을 동시에 열지 않음</li>
-                    <li><strong style="color:var(--text)">운영·비용 효율</strong>— 사설망 접근은 VPC 내부(S3 Gateway
+                    <li><strong style="color:var(--text)">운영·비용 효율</strong> 사설망 접근은 VPC 내부(S3 Gateway
                       Endpoint), 외부 호출은 VPC 외부. 두 영역을 잇는 상시 NAT Gateway 불필요</li>
                   </ul>
                 </div>
@@ -514,13 +541,15 @@
 </section>
 
 <section id="security" class="pdf-detail-page pdf-project-wanderpool">
+    <div class="pdf-page-number">10</div>
     <div class="pdf-detail-content">
       <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>WanderPool</strong><div class="pdf-chapter-tag">보안 · SECURITY</div></div>
-      <h2 class="stitle">소스코드와 이미지를 외부에 두지 않기</h2>
+      <h2 class="stitle">보안 의사결정 기록</h2>
       <div class="fi on">
-        
-        
+
+
         <div class="card">
+          <div class="subh" style="margin-top:0">소스코드와 이미지를 외부에 두지 않기</div>
           <table class="ops-table">
             <tr>
               <th>도구</th>
@@ -553,18 +582,19 @@
 </section>
 
 <section id="ops-ai-1" class="pdf-detail-page pdf-project-wanderpool">
+    <div class="pdf-page-number">11</div>
     <div class="pdf-detail-content">
-      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>WanderPool</strong><div class="pdf-chapter-tag">Operation</div></div>
+      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>WanderPool</strong><div class="pdf-chapter-tag">운영 · OPERATIONS</div></div>
       <h2 class="stitle">AI Observability Pipeline</h2>
       <div class="fi on">
-        
-        
+
+
         <div class="card"><img src="wanderpool/aipipeline.png" alt="WanderPool AI Observability Pipeline" class="aimg">
 
           <div class="pipe">
             <div class="pstep">
               <div class="psname">On-Premise 수집</div>
-              <div class="psdesc">Prometheus :9090(메트릭), Elasticsearch :9200(로그) — S2S VPN 경유</div>
+              <div class="psdesc">Prometheus :9090(메트릭), Elasticsearch :9200(로그) S2S VPN 경유</div>
             </div>
             <div class="pstep">
               <div class="psname">수집 Lambda (VPC 내부)</div>
@@ -589,16 +619,17 @@
 </section>
 
 <section id="ops-ai-2" class="pdf-detail-page pdf-project-wanderpool">
+    <div class="pdf-page-number">12</div>
     <div class="pdf-detail-content">
-      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>WanderPool</strong><div class="pdf-chapter-tag">Operation</div></div>
+      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>WanderPool</strong><div class="pdf-chapter-tag">운영 · OPERATIONS</div></div>
       <h2 class="stitle">AI Observability Pipeline</h2>
       <div class="fi on">
-        
-        
+
+
         <div class="card"><div class="subh">어떤 데이터를 넣었는지</div>
           <ul style="font-size:13px;color:var(--text-sub);line-height:1.9;list-style:none;margin-bottom:8px">
-            <li> <strong style="color:var(--text)">메트릭(Prometheus)</strong>— Pod 상태, 재시작 횟수, 요청량(req/s), CPU/Memory</li>
-            <li> <strong style="color:var(--text)">로그(Elasticsearch)</strong>— <code>error</code>필터링 로그를 네임스페이스별·Pod별로
+            <li> <strong style="color:var(--text)">메트릭(Prometheus)</strong> Pod 상태, 재시작 횟수, 요청량(req/s), CPU/Memory</li>
+            <li> <strong style="color:var(--text)">로그(Elasticsearch)</strong> <code>error</code>필터링 로그를 네임스페이스별·Pod별로
               집계</li>
           </ul>
 
@@ -618,63 +649,14 @@
         </div>
 </section>
 
-<section id="migration" class="pdf-detail-page pdf-project-wanderpool">
-    <div class="pdf-detail-content">
-      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>WanderPool</strong><div class="pdf-chapter-tag">Cloud Migration</div></div>
-      <h2 class="stitle">온프레미스 → AWS 마이그레이션</h2>
-      <div class="fi on">
-        
-        
-        <div class="card">
-          <table class="ops-table">
-            <tr>
-              <th>영역</th>
-              <th>온프레미스</th>
-              <th>AWS</th>
-            </tr>
-            <tr>
-              <td>클러스터</td>
-              <td>kubeadm 자체 구축</td>
-              <td>EKS</td>
-            </tr>
-            <tr>
-              <td>데이터베이스</td>
-              <td>VM에 MySQL/PostgreSQL/Redis 직접 설치</td>
-              <td>RDS(MySQL/PostgreSQL) + ElastiCache(Redis)</td>
-            </tr>
-            <tr>
-              <td>이미지 레지스트리</td>
-              <td>Harbor</td>
-              <td>ECR (imagePullSecret 제거)</td>
-            </tr>
-            <tr>
-              <td>TLS</td>
-              <td>cert-manager + Cloudflare DNS-01</td>
-              <td>ALB + ACM</td>
-            </tr>
-            <tr>
-              <td>권한</td>
-              <td>ServiceAccount</td>
-              <td>IRSA (워크로드별 최소 권한)</td>
-            </tr>
-            <tr>
-              <td>네트워크</td>
-              <td>VM NAT + NodePort</td>
-              <td>VPC 3-tier</td>
-            </tr>
-          </table>
-        </div>
-      </div>
-        </div>
-</section>
-
 <section id="dr-wp" class="pdf-detail-page pdf-project-wanderpool">
+    <div class="pdf-page-number">13</div>
     <div class="pdf-detail-content">
-      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>WanderPool</strong><div class="pdf-chapter-tag">Operation</div></div>
+      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>WanderPool</strong><div class="pdf-chapter-tag">운영 · OPERATIONS</div></div>
       <h2 class="stitle">재해복구(DR) 계획 · 런북</h2>
       <div class="fi on">
-        
-        
+
+
         <div class="card">
           <p style="font-size:14px;color:var(--text-sub);line-height:1.9;margin-bottom:20px;">
             이미 구축된 시스템을 <strong>네트워크 · Kubernetes · DB · 외부 연동</strong>레이어별로 분리해, 각 계층에서
@@ -724,17 +706,69 @@
         </div>
 </section>
 
-<section id="ts-wp-1" class="pdf-detail-page pdf-project-wanderpool">
+<section id="migration" class="pdf-detail-page pdf-project-wanderpool">
+    <div class="pdf-page-number">14</div>
     <div class="pdf-detail-content">
-      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>WanderPool</strong><div class="pdf-chapter-tag">Troubleshooting</div></div>
+      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>WanderPool</strong><div class="pdf-chapter-tag">클라우드 마이그레이션 · CLOUD MIGRATION</div></div>
+      <h2 class="stitle">온프레미스 → AWS 마이그레이션</h2>
+      <div class="fi on">
+
+
+        <div class="card">
+          <table class="ops-table">
+            <tr>
+              <th>영역</th>
+              <th>온프레미스</th>
+              <th>AWS</th>
+            </tr>
+            <tr>
+              <td>클러스터</td>
+              <td>kubeadm 자체 구축</td>
+              <td>EKS</td>
+            </tr>
+            <tr>
+              <td>데이터베이스</td>
+              <td>VM에 MySQL/PostgreSQL/Redis 직접 설치</td>
+              <td>RDS(MySQL/PostgreSQL) + ElastiCache(Redis)</td>
+            </tr>
+            <tr>
+              <td>이미지 레지스트리</td>
+              <td>Harbor</td>
+              <td>ECR (imagePullSecret 제거)</td>
+            </tr>
+            <tr>
+              <td>TLS</td>
+              <td>cert-manager + Cloudflare DNS-01</td>
+              <td>ALB + ACM</td>
+            </tr>
+            <tr>
+              <td>권한</td>
+              <td>ServiceAccount</td>
+              <td>IRSA (워크로드별 최소 권한)</td>
+            </tr>
+            <tr>
+              <td>네트워크</td>
+              <td>VM NAT + NodePort</td>
+              <td>VPC 3-tier</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+        </div>
+</section>
+
+<section id="ts-wp-1" class="pdf-detail-page pdf-project-wanderpool">
+    <div class="pdf-page-number">15</div>
+    <div class="pdf-detail-content">
+      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>WanderPool</strong><div class="pdf-chapter-tag">트러블슈팅 · TROUBLESHOOTING</div></div>
       <h2 class="stitle">트러블슈팅</h2>
       <div class="fi on">
-        
-        
+
+
         <div class="twrap pdf-ts-grid">
 <div class="titem">
               <div class="thead" onclick="tog(this)"><span class="tnum">01</span><span class="ttitle">MetalLB L2 모드
-                  미동작 — 외부 접근 불가</span><span class="tarrow">▼</span></div>
+                  미동작 외부 접근 불가</span><span class="tarrow">▼</span></div>
               <div class="tbody">
                 <span class="tlabel ts">현상</span>
                 <p>MetalLB L2 모드로 서비스에 External IP를 할당했지만 외부에서 접근이 되지 않음.</p>
@@ -781,12 +815,13 @@
 </section>
 
 <section id="ts-wp-2" class="pdf-detail-page pdf-project-wanderpool">
+    <div class="pdf-page-number">16</div>
     <div class="pdf-detail-content">
-      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>WanderPool</strong><div class="pdf-chapter-tag">Troubleshooting</div></div>
+      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>WanderPool</strong><div class="pdf-chapter-tag">트러블슈팅 · TROUBLESHOOTING</div></div>
       <h2 class="stitle">트러블슈팅</h2>
       <div class="fi on">
-        
-        
+
+
         <div class="twrap pdf-ts-grid">
 <div class="titem">
               <div class="thead" onclick="tog(this)"><span class="tnum">04</span><span class="ttitle">사설망 Harbor →
@@ -837,12 +872,13 @@
 </section>
 
 <section id="summary-wp" class="pdf-detail-page pdf-project-wanderpool">
+    <div class="pdf-page-number">17</div>
     <div class="pdf-detail-content">
-      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>WanderPool</strong><div class="pdf-chapter-tag">Retrospective</div></div>
+      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>WanderPool</strong><div class="pdf-chapter-tag">회고 · RETROSPECTIVE</div></div>
       <h2 class="stitle">배운 점 &amp; 개선사항</h2>
       <div class="fi on">
-        
-        
+
+
         <div class="card">
           <div class="subh" style="margin-top:0">배운 점</div>
           <p style="font-size:14px;color:var(--text-sub);line-height:1.9;margin-bottom:20px;">
@@ -860,13 +896,14 @@
 
     <!-- ===== 말랑이 ===== -->
     <section id="wattup" class="pdf-summary-page" data-detail="wattup/index.html">
+    <div class="pdf-page-number">18</div>
       <div class="fi">
         <div class="slabel">Team Project · Kubernetes</div>
         <h2 class="stitle">Wattup</h2>
         <div class="card">
           <div class="phead">
             <div>
-              <div class="ptitle">Wattup — EV 충전소 예약 플랫폼</div>
+              <div class="ptitle">Wattup EV 충전소 예약 플랫폼</div>
               <div class="psub">Kubernetes · On-premise · 팀 프로젝트 (5인) · 2026.02 ~ 2026.03 (종료)</div>
             </div>
             <span class="award">현대오토에버 클라우드 스쿨 우수 프로젝트상</span>
@@ -889,20 +926,20 @@
 
           <div class="hmetrics" style="margin-bottom:16px">
             <div class="hmetric">
-              <div class="hmetric-val">100%</div>
-              <div class="hmetric-label">K8s 클러스터 설계/구축</div>
+              <div class="hmetric-val">5인 팀</div>
+              <div class="hmetric-label">프로젝트 형태</div>
             </div>
             <div class="hmetric">
-              <div class="hmetric-val">50%</div>
-              <div class="hmetric-label">프론트엔드 개발</div>
+              <div class="hmetric-val">K8s·Frontend</div>
+              <div class="hmetric-label">담당 역할</div>
             </div>
             <div class="hmetric">
-              <div class="hmetric-val">95%→76%</div>
-              <div class="hmetric-label">메모리 최적화</div>
+              <div class="hmetric-val"><span class="hmetric-prefix">메모리 사용량</span>95%→76%</div>
+              <div class="hmetric-label">핵심 기술 성과</div>
             </div>
             <div class="hmetric">
-              <div class="hmetric-val">5인</div>
-              <div class="hmetric-label">팀 구성</div>
+              <div class="hmetric-val">우수 프로젝트상</div>
+              <div class="hmetric-label">프로젝트 성과</div>
             </div>
           </div>
 
@@ -919,15 +956,16 @@
     </section>
 
 <section id="stack-wt" class="pdf-detail-page pdf-project-wattup">
+    <div class="pdf-page-number">19</div>
     <div class="pdf-detail-content">
-      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>Wattup</strong><div class="pdf-chapter-tag">의사결정 · DECISION MAKING</div></div>
-      <h2 class="stitle">Tech Stack &amp; 왜 온프레미스인가</h2>
+      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>Wattup</strong><div class="pdf-chapter-tag">기술 의사결정 · DECISION MAKING</div></div>
+      <h2 class="stitle">기술 스택 및 온프레미스 구축 기술 의사결정</h2>
       <div class="fi on">
-        
-        
+
+
 
         <div class="card" style="margin-bottom:24px">
-          <div class="subh" style="margin-top:0">Tech Stack</div>
+          <div class="subh" style="margin-top:0">기술 스택</div>
           <div class="stack-grid">
             <div class="stack-group">
               <div class="stack-group-title">INFRA</div>
@@ -953,8 +991,8 @@
           </div>
         </div>
 
-        <div class="card">
-          <div class="subh" style="margin-top:0">왜 온프레미스? 왜 kubeadm?</div>
+        <div class="card" id="decision-wt">
+          <div class="subh" style="margin-top:0">온프레미스와 kubeadm 선택 근거</div>
           <div class="card-grid" style="margin-bottom:8px">
             <div class="card" style="background:var(--blue-bg)">
               <div
@@ -978,12 +1016,13 @@
 </section>
 
 <section id="arch-wt" class="pdf-detail-page pdf-project-wattup">
+    <div class="pdf-page-number">20</div>
     <div class="pdf-detail-content">
       <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>Wattup</strong><div class="pdf-chapter-tag">아키텍처 · ARCHITECTURE</div></div>
       <h2 class="stitle">네트워크 아키텍처</h2>
       <div class="fi on">
-        
-        
+
+
         <div class="card">
           <img src="wattup/wattup_archi.png" alt="Wattup Network Architecture" class="aimg">
         </div>
@@ -992,28 +1031,29 @@
 </section>
 
 <section id="memory-wt" class="pdf-detail-page pdf-project-wattup">
+    <div class="pdf-page-number">21</div>
     <div class="pdf-detail-content">
       <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>Wattup</strong><div class="pdf-chapter-tag">최적화 · OPTIMIZATION</div></div>
       <h2 class="stitle">메모리 최적화 (95% → 76%)</h2>
       <div class="fi on">
-        
-        
+
+
         <div class="card">
           <div class="mbars">
             <div>
-              <div class="mlabel">최적화 전 — 95%</div>
+              <div class="mlabel">최적화 전 95%</div>
               <div class="mtrack">
                 <div class="mfill md" data-w="95">95%</div>
               </div>
             </div>
             <div>
-              <div class="mlabel">Kafka 3→1 단일화 — 83%</div>
+              <div class="mlabel">Kafka 3→1 단일화 83%</div>
               <div class="mtrack">
                 <div class="mfill mw" data-w="83">83%</div>
               </div>
             </div>
             <div>
-              <div class="mlabel">JVM 힙 제한 (HEAP_OPTS) — 76% </div>
+              <div class="mlabel">JVM 힙 제한 (HEAP_OPTS) 76% </div>
               <div class="mtrack">
                 <div class="mfill mo" data-w="76">76%</div>
               </div>
@@ -1029,16 +1069,17 @@
 </section>
 
 <section id="ts-wt-1" class="pdf-detail-page pdf-project-wattup">
+    <div class="pdf-page-number">22</div>
     <div class="pdf-detail-content">
-      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>Wattup</strong><div class="pdf-chapter-tag">Troubleshooting</div></div>
+      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>Wattup</strong><div class="pdf-chapter-tag">트러블슈팅 · TROUBLESHOOTING</div></div>
       <h2 class="stitle">트러블슈팅</h2>
       <div class="fi on">
-        
-        
+
+
         <div class="twrap pdf-ts-grid">
 <div class="titem">
               <div class="thead" onclick="tog(this)"><span class="tnum">01</span><span class="ttitle">PostgreSQL
-                  CrashLoopBackOff — securityContext 권한 오류</span><span class="tarrow">▼</span></div>
+                  CrashLoopBackOff securityContext 권한 오류</span><span class="tarrow">▼</span></div>
               <div class="tbody">
                 <span class="tlabel ts">현상</span>
                 <p>PostgreSQL Pod가 볼륨에 접근하지 못하고 <code>CrashLoopBackOff</code> 상태를 반복했습니다.</p>
@@ -1053,8 +1094,7 @@
               </div>
             </div>
 <div class="titem">
-              <div class="thead" onclick="tog(this)"><span class="tnum">02</span><span class="ttitle">Kafka 데드락 —
-                  KRaft
+              <div class="thead" onclick="tog(this)"><span class="tnum">02</span><span class="ttitle">Kafka 데드락 KRaft
                   3-node 쿼럼 실패</span><span class="tarrow">▼</span></div>
               <div class="tbody">
                 <span class="tlabel ts">현상</span>
@@ -1070,7 +1110,7 @@
 <div class="titem">
               <div class="thead" onclick="tog(this)"><span class="tnum">03</span><span class="ttitle">Calico +
                   Tailscale
-                  충돌 — Pod 네트워크 전체 붕괴</span><span class="tarrow">▼</span></div>
+                  충돌 Pod 네트워크 전체 붕괴</span><span class="tarrow">▼</span></div>
               <div class="tbody">
                 <span class="tlabel ts">현상</span>
                 <p>Tailscale 설치 후 Calico가 <code>tailscale0</code>을 노드 IP로 착각 → CoreDNS / kube-proxy /
@@ -1089,12 +1129,13 @@
 </section>
 
 <section id="summary-wt" class="pdf-detail-page pdf-project-wattup">
+    <div class="pdf-page-number">23</div>
     <div class="pdf-detail-content">
-      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>Wattup</strong><div class="pdf-chapter-tag">Retrospective</div></div>
+      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>Wattup</strong><div class="pdf-chapter-tag">회고 · RETROSPECTIVE</div></div>
       <h2 class="stitle">배운 점 &amp; 개선사항</h2>
       <div class="fi on">
-        
-        
+
+
         <div class="card">
           <div class="subh" style="margin-top:0">배운 점</div>
           <p style="font-size:14px;color:var(--text-sub);line-height:1.9;margin-bottom:20px;">
@@ -1110,7 +1151,7 @@
             묶어 관리하는
             방식으로 개선하고 싶습니다. 이렇게 하면 인프라 레이어와 애플리케이션 레이어가 분리되어 장애 격리와 독립적인 스케일링이 가능해집니다.
           </p>
-          
+
         </div>
       </div>
         </div>
@@ -1118,6 +1159,7 @@
 
     <!-- ===== 침수사고 ===== -->
     <section id="malang" class="pdf-summary-page" data-detail="malang/index.html">
+    <div class="pdf-page-number">24</div>
       <div class="fi">
         <div class="slabel">Personal Project · Serverless</div>
         <h2 class="stitle">말랑이 메이커</h2>
@@ -1147,20 +1189,20 @@
 
           <div class="hmetrics" style="margin-bottom:16px">
             <div class="hmetric">
-              <div class="hmetric-val">$0.03</div>
-              <div class="hmetric-label">월 운영 비용</div>
+              <div class="hmetric-val">개인 프로젝트</div>
+              <div class="hmetric-label">프로젝트 형태</div>
             </div>
             <div class="hmetric">
-              <div class="hmetric-val">6s → 284ms</div>
-              <div class="hmetric-label">콜드스타트 개선</div>
+              <div class="hmetric-val">Backend·Infra</div>
+              <div class="hmetric-label">담당 역할</div>
             </div>
             <div class="hmetric">
-              <div class="hmetric-val">0%</div>
-              <div class="hmetric-label">에러율</div>
+              <div class="hmetric-val"><span class="hmetric-prefix">콜드스타트</span>6s→284ms</div>
+              <div class="hmetric-label">핵심 기술 성과</div>
             </div>
             <div class="hmetric">
-              <div class="hmetric-val">2026.02~06</div>
-              <div class="hmetric-label">서비스 운영 기간</div>
+              <div class="hmetric-val">실서비스 운영</div>
+              <div class="hmetric-label">프로젝트 성과</div>
             </div>
           </div>
 
@@ -1177,12 +1219,13 @@
     </section>
 
 <section id="preview-m" class="pdf-detail-page pdf-project-malang">
+    <div class="pdf-page-number">25</div>
     <div class="pdf-detail-content">
       <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>말랑이 메이커</strong><div class="pdf-chapter-tag">서비스 화면 · PREVIEW</div></div>
       <h2 class="stitle">서비스 화면</h2>
       <div class="fi on">
-        
-        
+
+
         <div class="card">
           <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px">
             <div>
@@ -1210,12 +1253,13 @@
 </section>
 
 <section id="arch-m" class="pdf-detail-page pdf-project-malang">
+    <div class="pdf-page-number">26</div>
     <div class="pdf-detail-content">
       <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>말랑이 메이커</strong><div class="pdf-chapter-tag">아키텍처 · ARCHITECTURE</div></div>
       <h2 class="stitle">시스템 아키텍처</h2>
       <div class="fi on">
-        
-        
+
+
         <div class="card">
           <img src="malang/malang_archi.png" alt="말랑이 AWS Architecture" class="aimg">
           <p style="font-size:12px;color:var(--text-muted);text-align:center;font-family:var(--mono);">CI/CD 배포 흐름 ·
@@ -1227,14 +1271,15 @@
 </section>
 
 <section id="infra-m-stack" class="pdf-detail-page pdf-project-malang">
+    <div class="pdf-page-number">27</div>
     <div class="pdf-detail-content">
-      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>말랑이 메이커</strong><div class="pdf-chapter-tag">의사결정 · DECISION MAKING</div></div>
-      <h2 class="stitle">테크 스택</h2>
+      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>말랑이 메이커</strong><div class="pdf-chapter-tag">기술 스택 · TECH STACK</div></div>
+      <h2 class="stitle">기술 스택</h2>
       <div class="fi on">
-        
-        
+
+
         <div class="card" style="margin-bottom:24px">
-          <div class="subh" style="margin-top:0">Tech Stack</div>
+          <div class="subh" style="margin-top:0">기술 스택</div>
           <div class="stack-grid">
             <div class="stack-group">
               <div class="stack-group-title">BACKEND</div>
@@ -1273,12 +1318,13 @@
 </section>
 
 <section id="infra-m-decisions-1" class="pdf-detail-page pdf-project-malang">
+    <div class="pdf-page-number">28</div>
     <div class="pdf-detail-content">
-      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>말랑이 메이커</strong><div class="pdf-chapter-tag">의사결정 · DECISION MAKING</div></div>
-      <h2 class="stitle">설계 이유</h2>
+      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>말랑이 메이커</strong><div class="pdf-chapter-tag">기술 의사결정 · DECISION MAKING</div></div>
+      <h2 class="stitle">인프라 기술 의사결정</h2>
       <div class="fi on">
-        
-        
+
+
         <div class="card-grid">
 <div class="card">
             <div class="subh" style="margin-top:0">Lambda vs EC2</div>
@@ -1336,12 +1382,13 @@
 </section>
 
 <section id="infra-m-decisions-2" class="pdf-detail-page pdf-project-malang">
+    <div class="pdf-page-number">29</div>
     <div class="pdf-detail-content">
-      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>말랑이 메이커</strong><div class="pdf-chapter-tag">의사결정 · DECISION MAKING</div></div>
-      <h2 class="stitle">설계 이유</h2>
+      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>말랑이 메이커</strong><div class="pdf-chapter-tag">기술 의사결정 · DECISION MAKING</div></div>
+      <h2 class="stitle">인프라 기술 의사결정</h2>
       <div class="fi on">
-        
-        
+
+
         <div class="card-grid">
 <div class="card">
             <div class="subh" style="margin-top:0">IAM 최소권한 전략</div>
@@ -1433,16 +1480,17 @@
 </section>
 
 <section id="cicd-m" class="pdf-detail-page pdf-project-malang">
+    <div class="pdf-page-number">30</div>
     <div class="pdf-detail-content">
-      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>말랑이 메이커</strong><div class="pdf-chapter-tag">CI/CD Pipeline</div></div>
+      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>말랑이 메이커</strong><div class="pdf-chapter-tag">CI/CD · PIPELINE</div></div>
       <h2 class="stitle">자동화 배포 파이프라인</h2>
       <div class="fi on">
-        
-        
+
+
         <div class="card">
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px">
             <div>
-              <div class="subh" style="margin-top:0">SAM 배포 — deploy.yaml</div>
+              <div class="subh" style="margin-top:0">SAM 배포 deploy.yaml</div>
               <div class="pipe">
                 <div class="pstep">
                   <div class="psname">GitHub Push</div>
@@ -1463,7 +1511,7 @@
               </div>
             </div>
             <div>
-              <div class="subh" style="margin-top:0">Terraform — terraform.yaml</div>
+              <div class="subh" style="margin-top:0">Terraform terraform.yaml</div>
               <div class="pipe">
                 <div class="pstep">
                   <div class="psname">my_terraform/ 변경</div>
@@ -1490,12 +1538,13 @@
 </section>
 
 <section id="load-test-overview" class="pdf-detail-page pdf-project-malang">
+    <div class="pdf-page-number">31</div>
     <div class="pdf-detail-content">
-      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>말랑이 메이커</strong><div class="pdf-chapter-tag">Load Testing</div></div>
+      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>말랑이 메이커</strong><div class="pdf-chapter-tag">부하 테스트 · LOAD TESTING</div></div>
       <h2 class="stitle">부하 테스트 · 목적과 시나리오</h2>
       <div class="fi on">
-        
-        
+
+
         <div class="card"><div class="subh" style="margin-top:0">테스트 목적</div>
           <p style="font-size:14px;color:var(--text-sub);line-height:1.9;margin-bottom:20px;">서버리스 아키텍처의 특성상 트래픽 급증 및
             콜드
@@ -1543,7 +1592,7 @@
           <div class="pipe" style="margin-bottom:28px">
             <div class="pstep">
               <div class="psname">1단계</div>
-              <div class="psdesc">평상시 트래픽 유지 (2명) — 기준값 측정</div>
+              <div class="psdesc">평상시 트래픽 유지 (2명) 기준값 측정</div>
             </div>
             <div class="pstep">
               <div class="psname">2단계</div>
@@ -1563,7 +1612,7 @@
             </div>
             <div class="pstep">
               <div class="psname">6단계</div>
-              <div class="psdesc">쓰다듬기/똥치우기 집중 테스트 — 하루 1회 제한 로직 + DB 쓰기 동시 검증 (test_user 30명)</div>
+              <div class="psdesc">쓰다듬기/똥치우기 집중 테스트 하루 1회 제한 로직 + DB 쓰기 동시 검증 (test_user 30명)</div>
             </div>
           </div>
           <div class="info">총 테스트 시간: 약 33분 / 동시 사용자 최대 50명 / 총 34,532건 요청</div></div>
@@ -1572,19 +1621,20 @@
 </section>
 
 <section id="load-test-results" class="pdf-detail-page pdf-project-malang">
+    <div class="pdf-page-number">32</div>
     <div class="pdf-detail-content">
-      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>말랑이 메이커</strong><div class="pdf-chapter-tag">Load Testing</div></div>
+      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>말랑이 메이커</strong><div class="pdf-chapter-tag">부하 테스트 · LOAD TESTING</div></div>
       <h2 class="stitle">부하 테스트 · 결과 비교</h2>
       <div class="fi on">
-        
-        
+
+
         <div class="card pdf-load-results">
           <table class="ops-table pdf-load-table">
             <thead><tr><th>지표</th><th>1차 종합</th><th>2차 쓰다듬기</th><th>2차 똥치우기</th><th>3차 웜업 후</th></tr></thead>
             <tbody>
-          <tr><td>평균 응답</td><td>45ms</td><td>50ms</td><td>56ms</td><td>—</td></tr>
+          <tr><td>평균 응답</td><td>45ms</td><td>50ms</td><td>56ms</td><td> </td></tr>
           <tr><td>p95 응답</td><td>63.84ms</td><td>70ms</td><td>75ms</td><td>78.63ms</td></tr>
-          <tr><td>최대/첫 요청</td><td>1.52s</td><td>—</td><td>—</td><td>284ms / &lt;100ms</td></tr>
+          <tr><td>최대/첫 요청</td><td>1.52s</td><td> </td><td> </td><td>284ms / &lt;100ms</td></tr>
           <tr><td>에러율</td><td>6.62%</td><td>0%</td><td>0%</td><td>0%</td></tr>
           <tr><td>Throttle</td><td>0건</td><td>미발생</td><td>미발생</td><td>미발생</td></tr>
             </tbody>
@@ -1599,12 +1649,13 @@
 </section>
 
 <section id="load-test-captures" class="pdf-detail-page pdf-project-malang">
+    <div class="pdf-page-number">33</div>
     <div class="pdf-detail-content">
-      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>말랑이 메이커</strong><div class="pdf-chapter-tag">Load Testing</div></div>
+      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>말랑이 메이커</strong><div class="pdf-chapter-tag">부하 테스트 · LOAD TESTING</div></div>
       <h2 class="stitle">부하 테스트 · CloudWatch 결과</h2>
       <div class="fi on">
-        
-        
+
+
         <div class="pdf-load-shots">
           <figure><img src="malang/cloudwatch_1st.png" alt="1차 테스트 CloudWatch 대시보드"><figcaption>1차 종합 시나리오</figcaption></figure>
           <figure><img src="malang/cloudwatch_2nd.png" alt="2차 테스트 CloudWatch 대시보드"><figcaption>2차 버그 수정 후</figcaption></figure>
@@ -1620,17 +1671,16 @@
 </section>
 
 <section id="ts-m-1" class="pdf-detail-page pdf-project-malang">
+    <div class="pdf-page-number">34</div>
     <div class="pdf-detail-content">
-      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>말랑이 메이커</strong><div class="pdf-chapter-tag">Troubleshooting</div></div>
+      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>말랑이 메이커</strong><div class="pdf-chapter-tag">트러블슈팅 · TROUBLESHOOTING</div></div>
       <h2 class="stitle">트러블슈팅</h2>
       <div class="fi on">
-        
-        
+
+
         <div class="twrap pdf-ts-grid">
 <div class="titem">
-              <div class="thead" onclick="tog(this)"><span class="tnum">01</span><span class="ttitle">Lambda 베이스 이미지
-                  —
-                  NetworkAccessForbidden (응답 없음)</span><span class="tarrow">▼</span></div>
+              <div class="thead" onclick="tog(this)"><span class="tnum">01</span><span class="ttitle">Lambda 베이스 이미지 NetworkAccessForbidden (응답 없음)</span><span class="tarrow">▼</span></div>
               <div class="tbody">
                 <span class="tlabel ts">현상</span>
                 <p>카카오톡 메시지를 보내도 응답이 없고 '네트워크 오류'만 표시. 503 에러 코드조차 뜨지 않음.</p>
@@ -1646,7 +1696,7 @@
             </div>
 <div class="titem">
               <div class="thead" onclick="tog(this)"><span class="tnum">02</span><span
-                  class="ttitle">Runtime.ImportModuleError — Unable to import module 'main'</span><span
+                  class="ttitle">Runtime.ImportModuleError Unable to import module 'main'</span><span
                   class="tarrow">▼</span></div>
               <div class="tbody">
                 <span class="tlabel tc">원인</span>
@@ -1661,7 +1711,7 @@ sam deploy</pre>
             </div>
 <div class="titem">
               <div class="thead" onclick="tog(this)"><span class="tnum">03</span><span class="ttitle">Terraform
-                  depends_on 누락 — IAM 정책 적용 전 EventBridge 생성 시도</span><span class="tarrow">▼</span></div>
+                  depends_on 누락 IAM 정책 적용 전 EventBridge 생성 시도</span><span class="tarrow">▼</span></div>
               <div class="tbody">
                 <span class="tlabel ts">현상</span>
                 <p>terraform apply 시 <code>AccessDeniedException: events:PutRule</code>에러. IAM 정책을 방금 추가했는데도 권한 없음.
@@ -1682,12 +1732,13 @@ sam deploy</pre>
 </section>
 
 <section id="summary-m" class="pdf-detail-page pdf-project-malang">
+    <div class="pdf-page-number">35</div>
     <div class="pdf-detail-content">
-      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>말랑이 메이커</strong><div class="pdf-chapter-tag">Retrospective</div></div>
+      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>말랑이 메이커</strong><div class="pdf-chapter-tag">회고 · RETROSPECTIVE</div></div>
       <h2 class="stitle">배운 점 &amp; 개선사항</h2>
       <div class="fi on">
-        
-        
+
+
         <div class="card">
           <div class="subh" style="margin-top:0">배운 점</div>
           <p style="font-size:14px;color:var(--text-sub);line-height:1.9;margin-bottom:20px;">
@@ -1711,6 +1762,7 @@ sam deploy</pre>
 
     <!-- ===== WATTUP ===== -->
     <section id="flood" class="pdf-summary-page" data-detail="flood/index.html" style="padding-bottom:80px;">
+    <div class="pdf-page-number">36</div>
       <div class="fi">
         <div class="slabel">Capstone Project</div>
         <h2 class="stitle">침수사고 예방 시스템</h2>
@@ -1740,20 +1792,20 @@ sam deploy</pre>
 
           <div class="hmetrics" style="margin-bottom:16px">
             <div class="hmetric">
+              <div class="hmetric-val">팀 프로젝트</div>
+              <div class="hmetric-label">프로젝트 형태</div>
+            </div>
+            <div class="hmetric">
+              <div class="hmetric-val">IoT·Full Stack</div>
+              <div class="hmetric-label">담당 역할</div>
+            </div>
+            <div class="hmetric">
+              <div class="hmetric-val">HTTP→WS</div>
+              <div class="hmetric-label">핵심 기술 성과</div>
+            </div>
+            <div class="hmetric">
               <div class="hmetric-val">대상</div>
-              <div class="hmetric-label">MADE IN SUNGSHIN 2023</div>
-            </div>
-            <div class="hmetric">
-              <div class="hmetric-val">팀장</div>
-              <div class="hmetric-label">2023.09 ~ 2023.12</div>
-            </div>
-            <div class="hmetric">
-              <div class="hmetric-val">2개 버전</div>
-              <div class="hmetric-label">캡스톤 · 개선판</div>
-            </div>
-            <div class="hmetric">
-              <div class="hmetric-val">HTTP → WS</div>
-              <div class="hmetric-label">실시간성 개선</div>
+              <div class="hmetric-label">프로젝트 성과</div>
             </div>
           </div>
 
@@ -1770,16 +1822,17 @@ sam deploy</pre>
     </section>
 
 <section id="compare-flood" class="pdf-detail-page pdf-project-flood">
+    <div class="pdf-page-number">37</div>
     <div class="pdf-detail-content">
-      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>IoT 기반 침수사고 예방 시스템</strong><div class="pdf-chapter-tag">Versions</div></div>
+      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>IoT 기반 침수사고 예방 시스템</strong><div class="pdf-chapter-tag">버전 비교 · VERSIONS</div></div>
       <h2 class="stitle">캡스톤 vs 개선 버전</h2>
       <div class="fi on">
-        
-        
+
+
         <div class="card">
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
             <div>
-              <div class="subh" style="margin-top:0">캡스톤 (2023) — 팀 프로젝트 대상</div>
+              <div class="subh" style="margin-top:0">캡스톤 (2023) 팀 프로젝트 대상</div>
               <div class="tags" style="margin-bottom:12px">
                 <span class="tag">Arduino</span><span class="tag">C++</span><span class="tag">React</span><span
                   class="tag">Kakao MAP API</span><span class="tag">수위/유량 센서</span>
@@ -1792,7 +1845,7 @@ sam deploy</pre>
               </ul>
             </div>
             <div>
-              <div class="subh" style="margin-top:0">개선 버전 (2025) — 개인 프로젝트</div>
+              <div class="subh" style="margin-top:0">개선 버전 (2025) 개인 프로젝트</div>
               <div class="tags" style="margin-bottom:12px">
                 <span class="tag">Node.js</span><span class="tag">Express</span><span
                   class="tag">Socket.io</span><span class="tag">MongoDB Atlas</span><span class="tag">HC-SR04</span>
@@ -1811,17 +1864,18 @@ sam deploy</pre>
 </section>
 
 <section id="ts-flood" class="pdf-detail-page pdf-project-flood">
+    <div class="pdf-page-number">38</div>
     <div class="pdf-detail-content">
-      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>IoT 기반 침수사고 예방 시스템</strong><div class="pdf-chapter-tag">Troubleshooting</div></div>
-      <h2 class="stitle">문제 해결</h2>
+      <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>IoT 기반 침수사고 예방 시스템</strong><div class="pdf-chapter-tag">트러블슈팅 · TROUBLESHOOTING</div></div>
+      <h2 class="stitle">트러블슈팅</h2>
       <div class="fi on">
-        
-        
+
+
         <div class="card">
           <div class="titem open">
             <div class="thead" onclick="tog(this)">
               <span class="tnum">01</span>
-              <span class="ttitle">HTTP 폴링 → WebSocket — 실시간 센서 데이터 지연 해결</span>
+              <span class="ttitle">HTTP 폴링 → WebSocket 실시간 센서 데이터 지연 해결</span>
               <span class="tarrow">▼</span>
             </div>
             <div class="tbody">
@@ -1845,7 +1899,7 @@ sam deploy</pre>
 </section>
 
     <footer>
-      <div class="fname">최수정 — Choi Soojung</div>
+      <div class="fname">최수정 Choi Soojung</div>
       <div class="flinks">
         <a href="https://github.com/MODIFYC" target="_blank" class="flink">GitHub</a>
         <a href="https://cmod-ify.tistory.com/category/Project" target="_blank" class="flink">Blog</a>
@@ -1886,7 +1940,7 @@ sam deploy</pre>
       glow.style.top = e.clientY + 'px';
     });
 
-    const secs = ['hero', 'wanderpool', 'malang', 'wattup', 'flood'];
+    const secs = ['hero', 'wanderpool', 'wattup', 'malang', 'flood'];
     const dots = document.querySelectorAll('.dot');
     const obs = new IntersectionObserver(es =>{
       es.forEach(e =>{

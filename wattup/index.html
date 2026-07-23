@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wattup — 최수정 Portfolio</title>
+  <title>Wattup 최수정 Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../style.css">
@@ -17,10 +17,10 @@
   <header>
     <a href="../index.html" class="hname" style="text-decoration:none">← 최수정 Portfolio</a>
     <nav class="hnav">
-      <a href="#stack-wt">Stack</a>
-      <a href="#arch-wt">Architecture</a>
-      <a href="#memory-wt">Memory</a>
-      <a href="#ts-wt">Troubleshooting</a>
+      <a href="#stack-wt">구성</a>
+      <a href="#decision-wt">의사결정</a>
+      <a href="#memory-wt">최적화</a>
+      <a href="#ts-wt">문제 해결·회고</a>
     </nav>
   </header>
 
@@ -38,7 +38,6 @@
     <!-- ===== HERO ===== -->
     <section id="hero-wattup">
       <div class="fi">
-        <div class="htag">Team Project · Kubernetes</div>
         <h1 class="hname-big" style="font-size:clamp(40px,6vw,64px)">Wattup</h1>
         <div class="hrole">EV 충전소 예약 플랫폼 &nbsp;·&nbsp; Kubernetes · On-premise</div>
         <p class="hdesc">
@@ -46,7 +45,24 @@
           VirtualBox 기반 On-premise Kubernetes 클러스터를 설계·구축하고 프론트엔드 개발을 담당했습니다.<br>
           팀 프로젝트(5인), 2026.02 ~ 2026.03 진행했습니다.
         </p>
-        <div class="role-badge">내 역할: Kubernetes 클러스터 설계/구축 100% + 프론트엔드 개발 50%</div>
+        <div class="hmetrics">
+          <div class="hmetric">
+            <div class="hmetric-val">5인 팀</div>
+            <div class="hmetric-label">프로젝트 형태</div>
+          </div>
+          <div class="hmetric">
+            <div class="hmetric-val">K8s·Frontend</div>
+            <div class="hmetric-label">담당 역할</div>
+          </div>
+          <div class="hmetric">
+            <div class="hmetric-val"><span class="hmetric-prefix">메모리 사용량</span>95%→76%</div>
+            <div class="hmetric-label">핵심 기술 성과</div>
+          </div>
+          <div class="hmetric">
+            <div class="hmetric-val">우수 프로젝트상</div>
+            <div class="hmetric-label">프로젝트 성과</div>
+          </div>
+        </div>
         <div class="hlinks" style="margin-top:20px">
           <a href="https://github.com/Watt-Up" target="_blank" class="hlink pri">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
@@ -63,10 +79,10 @@
     <section id="stack-wt">
       <div class="fi">
         <div class="slabel">Decision Making</div>
-        <h2 class="stitle">Tech Stack &amp; 왜 온프레미스인가</h2>
+        <h2 class="stitle">기술 스택 및 온프레미스 구축 기술 의사결정</h2>
 
         <div class="card" style="margin-bottom:24px">
-          <div class="subh" style="margin-top:0">Tech Stack</div>
+          <div class="subh" style="margin-top:0">기술 스택</div>
           <div class="stack-grid">
             <div class="stack-group">
               <div class="stack-group-title">INFRA</div>
@@ -92,8 +108,8 @@
           </div>
         </div>
 
-        <div class="card">
-          <div class="subh" style="margin-top:0">왜 온프레미스? 왜 kubeadm?</div>
+        <div class="card" id="decision-wt">
+          <div class="subh" style="margin-top:0">온프레미스와 kubeadm 선택 근거</div>
           <div class="card-grid" style="margin-bottom:8px">
             <div class="card" style="background:var(--blue-bg)">
               <div
@@ -134,19 +150,19 @@
         <div class="card">
           <div class="mbars">
             <div>
-              <div class="mlabel">최적화 전 — 95%</div>
+              <div class="mlabel">최적화 전 95%</div>
               <div class="mtrack">
                 <div class="mfill md" data-w="95">95%</div>
               </div>
             </div>
             <div>
-              <div class="mlabel">Kafka 3→1 단일화 — 83%</div>
+              <div class="mlabel">Kafka 3→1 단일화 83%</div>
               <div class="mtrack">
                 <div class="mfill mw" data-w="83">83%</div>
               </div>
             </div>
             <div>
-              <div class="mlabel">JVM 힙 제한 (HEAP_OPTS) — 76% </div>
+              <div class="mlabel">JVM 힙 제한 (HEAP_OPTS) 76% </div>
               <div class="mtrack">
                 <div class="mfill mo" data-w="76">76%</div>
               </div>
@@ -170,7 +186,7 @@
 
             <div class="titem">
               <div class="thead" onclick="tog(this)"><span class="tnum">01</span><span class="ttitle">PostgreSQL
-                  CrashLoopBackOff — securityContext 권한 오류</span><span class="tarrow">▼</span></div>
+                  CrashLoopBackOff securityContext 권한 오류</span><span class="tarrow">▼</span></div>
               <div class="tbody">
                 <span class="tlabel ts">현상</span>
                 <p>PostgreSQL Pod가 볼륨에 접근하지 못하고 <code>CrashLoopBackOff</code> 상태를 반복했습니다.</p>
@@ -186,8 +202,7 @@
             </div>
 
             <div class="titem">
-              <div class="thead" onclick="tog(this)"><span class="tnum">02</span><span class="ttitle">Kafka 데드락 —
-                  KRaft
+              <div class="thead" onclick="tog(this)"><span class="tnum">02</span><span class="ttitle">Kafka 데드락 KRaft
                   3-node 쿼럼 실패</span><span class="tarrow">▼</span></div>
               <div class="tbody">
                 <span class="tlabel ts">현상</span>
@@ -204,7 +219,7 @@
             <div class="titem">
               <div class="thead" onclick="tog(this)"><span class="tnum">03</span><span class="ttitle">Calico +
                   Tailscale
-                  충돌 — Pod 네트워크 전체 붕괴</span><span class="tarrow">▼</span></div>
+                  충돌 Pod 네트워크 전체 붕괴</span><span class="tarrow">▼</span></div>
               <div class="tbody">
                 <span class="tlabel ts">현상</span>
                 <p>Tailscale 설치 후 Calico가 <code>tailscale0</code>을 노드 IP로 착각 → CoreDNS / kube-proxy /
@@ -220,7 +235,7 @@
 
             <div class="titem">
               <div class="thead" onclick="tog(this)"><span class="tnum">04</span><span class="ttitle">Tailscale → K8s
-                  DNAT + MASQUERADE — TCP 연결 실패</span><span class="tarrow">▼</span></div>
+                  DNAT + MASQUERADE TCP 연결 실패</span><span class="tarrow">▼</span></div>
               <div class="tbody">
                 <span class="tlabel ts">현상</span>
                 <p>DNAT 설정 후에도 SYN 패킷만 반복. SYN-ACK 없음 (tcpdump로 확인).</p>
@@ -235,8 +250,7 @@
 
             <div class="titem">
               <div class="thead" onclick="tog(this)"><span class="tnum">05</span><span class="ttitle">Vite 환경변수
-                  하드코딩 —
-                  런타임 주입 불가</span><span class="tarrow">▼</span></div>
+                  하드코딩 런타임 주입 불가</span><span class="tarrow">▼</span></div>
               <div class="tbody">
                 <span class="tlabel ts">현상</span>
                 <p>다른 환경에 프론트엔드 컨테이너를 배포해도 API 요청이 기존 학원 PC 주소로 전송되어 서비스에 연결되지 않았습니다.</p>
@@ -251,8 +265,7 @@
 
             <div class="titem">
               <div class="thead" onclick="tog(this)"><span class="tnum">06</span><span class="ttitle">운영체제별 컨테이너 배포
-                  차이 —
-                  Podman + nftables FORWARD 차단</span><span class="tarrow">▼</span></div>
+                  차이 Podman + nftables FORWARD 차단</span><span class="tarrow">▼</span></div>
               <div class="tbody">
                 <span class="tlabel ts">현상</span>
                 <p>OCI 인스턴스에서 Podman 배포 후 외부 접근 불가. localhost는 정상.</p>
@@ -298,7 +311,7 @@
                   d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
               </svg></div>
             <div>
-              <div class="ncard-t">GitHub — Watt-Up</div>
+              <div class="ncard-t">GitHub Watt-Up</div>
               <div class="ncard-s">github.com/Watt-Up</div>
             </div>
           </a>

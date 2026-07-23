@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WanderPool — 최수정 Portfolio</title>
+  <title>WanderPool 최수정 Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../style.css">
@@ -17,15 +17,10 @@
   <header>
     <a href="../index.html" class="hname" style="text-decoration:none">← 최수정 Portfolio</a>
     <nav class="hnav">
-      <a href="#preview-wp">Preview</a>
-      <a href="#network">Network</a>
-      <a href="#cicd-wp">CI/CD</a>
-      <a href="#fe-bff">Frontend</a>
-      <a href="#decisions">Decisions</a>
-      <a href="#security">Security</a>
-      <a href="#ops-ai">Observability</a>
-      <a href="#ts-wp">Troubleshooting</a>
-      <a href="#stack-wp">Stack</a>
+      <a href="#preview-wp">구성</a>
+      <a href="#network">의사결정</a>
+      <a href="#ops-ai">운영</a>
+      <a href="#ts-wp">문제 해결·회고</a>
     </nav>
   </header>
 
@@ -33,15 +28,15 @@
     <div class="dot on" onclick="goTo('hero-wp')"></div>
     <div class="dot" onclick="goTo('preview-wp')"></div>
     <div class="dot" onclick="goTo('network')"></div>
+    <div class="dot" onclick="goTo('stack-wp')"></div>
     <div class="dot" onclick="goTo('cicd-wp')"></div>
     <div class="dot" onclick="goTo('fe-bff')"></div>
     <div class="dot" onclick="goTo('decisions')"></div>
     <div class="dot" onclick="goTo('security')"></div>
     <div class="dot" onclick="goTo('ops-ai')"></div>
-    <div class="dot" onclick="goTo('ts-wp')"></div>
-    <div class="dot" onclick="goTo('migration')"></div>
     <div class="dot" onclick="goTo('dr-wp')"></div>
-    <div class="dot" onclick="goTo('stack-wp')"></div>
+    <div class="dot" onclick="goTo('migration')"></div>
+    <div class="dot" onclick="goTo('ts-wp')"></div>
     <div class="dot" onclick="goTo('summary-wp')"></div>
     <div class="dot" onclick="goTo('links-wp')"></div>
   </nav>
@@ -51,7 +46,6 @@
     <!-- ===== HERO ===== -->
     <section id="hero-wp">
       <div class="fi">
-        <div class="htag">Team Project · MSA · 2026.04 ~ 2026.06</div>
         <h1 class="hname-big" style="font-size:clamp(40px,6vw,64px)">WanderPool</h1>
         <div class="hrole">실시간 카풀 매칭 MSA 서비스 &nbsp;·&nbsp; wanderpool.cloud</div>
         <p class="hdesc">
@@ -62,20 +56,20 @@
         </p>
         <div class="hmetrics">
           <div class="hmetric">
-            <div class="hmetric-val">4 MSA</div>
-            <div class="hmetric-label">auth·member·party·map</div>
+            <div class="hmetric-val">4인 팀</div>
+            <div class="hmetric-label">프로젝트 형태</div>
           </div>
           <div class="hmetric">
-            <div class="hmetric-val">VM 9대</div>
-            <div class="hmetric-label">물리 서버 2대 · 온프레미스 K8s</div>
+            <div class="hmetric-val">Infra·Frontend</div>
+            <div class="hmetric-label">담당 역할</div>
+          </div>
+          <div class="hmetric">
+            <div class="hmetric-val">On-prem→EKS</div>
+            <div class="hmetric-label">핵심 기술 성과</div>
           </div>
           <div class="hmetric">
             <div class="hmetric-val">우수 프로젝트상</div>
-            <div class="hmetric-label">2026.06.30</div>
-          </div>
-          <div class="hmetric">
-            <div class="hmetric-val">25%</div>
-            <div class="hmetric-label">본인 기여도</div>
+            <div class="hmetric-label">프로젝트 성과</div>
           </div>
         </div>
       </div>
@@ -124,7 +118,7 @@
 
         <!-- Network: HTTPS 외부 접근 경로 -->
         <div class="card" style="margin-bottom:24px">
-          <div class="subh" style="margin-top:0">Network — HTTPS 외부 접근 경로</div>
+          <div class="subh" style="margin-top:0">Network HTTPS 외부 접근 경로</div>
 
           <div class="pipe">
             <div class="pstep">
@@ -148,31 +142,91 @@
 
           <div class="subh">핵심 포인트</div>
           <ul style="font-size:13px;color:var(--text-sub);line-height:1.9;list-style:none">
-            <li>① <strong style="color:var(--text)">Mixed Content 방지</strong>— Vercel HTTPS 프론트엔드에 API도 동일하게 HTTPS로 제공</li>
-            <li>② <strong style="color:var(--text)">DNS-01 선택</strong>— 포트 80 없이 도메인 소유권 검증 가능. 공유기가 80포트를 열 수 없는 제약을
+            <li>① <strong style="color:var(--text)">Mixed Content 방지</strong> Vercel HTTPS 프론트엔드에 API도 동일하게 HTTPS로 제공</li>
+            <li>② <strong style="color:var(--text)">DNS-01 선택</strong> 포트 80 없이 도메인 소유권 검증 가능. 공유기가 80포트를 열 수 없는 제약을
               우회</li>
-            <li>③ <strong style="color:var(--text)">TLS 자동화</strong>— cert-manager로 인증서 발급·갱신 자동화</li>
+            <li>③ <strong style="color:var(--text)">TLS 자동화</strong> cert-manager로 인증서 발급·갱신 자동화</li>
           </ul>
         </div>
 
         <!-- Network: Kong Gateway -->
         <div class="card">
-          <div class="subh" style="margin-top:0">Network — Kong API Gateway로 MSA 진입점 통합</div>
+          <div class="subh" style="margin-top:0">Network Kong API Gateway로 MSA 진입점 통합</div>
 
           <div class="card-grid">
             <div class="card" style="background:rgba(156,163,175,.08)">
               <div
                 style="font-size:12px;font-weight:700;color:var(--text-muted);font-family:var(--mono);margin-bottom:10px">
-                BEFORE — 게이트웨이 도입 전</div>
+                BEFORE 게이트웨이 도입 전</div>
               <p style="font-size:13px;color:var(--text-sub);line-height:1.8;">클라이언트가 각 서비스로 직접 요청. 서비스마다 인증/인가 로직이
                 중복되고, 클라이언트가 보낸 헤더를 그대로 신뢰해야 하는 위험이 있었으며 진입점이 분산되어 있었습니다.</p>
             </div>
             <div class="card" style="background:var(--blue-bg)">
               <div style="font-size:12px;font-weight:700;color:var(--blue);font-family:var(--mono);margin-bottom:10px">
-                AFTER — Kong 도입 후</div>
+                AFTER Kong 도입 후</div>
               <p style="font-size:13px;color:var(--text-sub);line-height:1.8;">Kong Gateway를 단일 진입점으로 사용. Route를
                 Public(auth)/Protected(member·party·map)로 분리하고, Protected 요청은 JWT를 검증한 뒤 클라이언트 식별 헤더를 제거하고
                 검증된 Claim 기반 헤더로 교체합니다.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== 기술 스택 ===== -->
+    <section id="stack-wp">
+      <div class="fi">
+        <div class="slabel">Tech Stack</div>
+        <h2 class="stitle">기술 스택</h2>
+        <div class="card">
+          <div class="stack-grid">
+            <div class="stack-group">
+              <div class="stack-group-title">FE (FRONTEND)</div>
+              <div class="tags"><span class="tag">Next.js</span><span class="tag">Vercel</span><span
+                  class="tag">TypeScript</span></div>
+            </div>
+            <div class="stack-group">
+              <div class="stack-group-title">BE (BACKEND)</div>
+              <div class="tags"><span class="tag">Java</span><span class="tag">Spring Boot</span><span
+                  class="tag">gRPC</span></div>
+            </div>
+            <div class="stack-group">
+              <div class="stack-group-title">INFRA / NETWORK</div>
+              <div class="tags"><span class="tag">Kubernetes</span><span class="tag">kubeadm</span><span
+                  class="tag">Calico</span><span class="tag">AWS S2S VPN</span><span class="tag">strongSwan</span><span
+                  class="tag">Kong</span><span class="tag">Istio</span><span class="tag">NodePort</span><span
+                  class="tag">cert-manager</span><span class="tag">Cloudflare DNS</span></div>
+            </div>
+            <div class="stack-group">
+              <div class="stack-group-title">CLOUD (AWS)</div>
+              <div class="tags"><span class="tag">AWS EKS</span><span class="tag">Amazon ECR</span><span
+                  class="tag">Lambda</span><span class="tag">EventBridge</span><span class="tag">Bedrock</span><span
+                  class="tag">VPC</span><span class="tag">IRSA</span><span class="tag">ALB</span><span
+                  class="tag">ACM</span><span class="tag">Python</span></div>
+            </div>
+            <div class="stack-group">
+              <div class="stack-group-title">DATA / STORAGE</div>
+              <div class="tags"><span class="tag">MySQL</span><span class="tag">PostgreSQL</span><span
+                  class="tag">Redis</span><span class="tag">AWS S3</span><span class="tag">RDS</span><span
+                  class="tag">ElastiCache</span></div>
+            </div>
+            <div class="stack-group">
+              <div class="stack-group-title">CI / CD</div>
+              <div class="tags"><span class="tag">Jenkins</span><span class="tag">GitLab CI</span><span
+                  class="tag">Docker</span><span class="tag">Harbor</span><span class="tag">ArgoCD</span><span
+                  class="tag">kustomize</span><span class="tag">kubeconform</span><span
+                  class="tag">kube-score</span></div>
+            </div>
+            <div class="stack-group">
+              <div class="stack-group-title">OBSERVABILITY</div>
+              <div class="tags"><span class="tag">Prometheus</span><span class="tag">Grafana</span><span
+                  class="tag">AlertManager</span><span class="tag">Elasticsearch</span><span
+                  class="tag">Fluentd</span><span class="tag">Kibana</span><span class="tag">Kiali</span></div>
+            </div>
+            <div class="stack-group">
+              <div class="stack-group-title">COLLABORATION TOOL</div>
+              <div class="tags"><span class="tag">Jira</span><span class="tag">Slack</span><span
+                  class="tag">GitLab</span></div>
             </div>
           </div>
         </div>
@@ -193,10 +247,10 @@
 
           <div class="subh">역할 분리</div>
           <ul style="font-size:13px;color:var(--text-sub);line-height:1.9;list-style:none">
-            <li> <strong style="color:var(--text)">프론트엔드 & GitOps (본인 담당)</strong>— GitLab CI에서 MR 시점에
+            <li> <strong style="color:var(--text)">프론트엔드 & GitOps (본인 담당)</strong> GitLab CI에서 MR 시점에
               TypeCheck·ESLint 검증 후 Vercel 배포, GitOps 저장소는 kubeconform·kube-score로 매니페스트 검증. 코드·매니페스트
               검증이 병합 전에 끝나도록 구성</li>
-            <li> <strong style="color:var(--text)">백엔드 (팀원 담당)</strong>— Jenkins가 코드 품질(JaCoCo·SonarQube) 검사 후
+            <li> <strong style="color:var(--text)">백엔드 (팀원 담당)</strong> Jenkins가 코드 품질(JaCoCo·SonarQube) 검사 후
               Harbor에 이미지 Push, GitOps 저장소 이미지 태그 갱신 → ArgoCD가 감지해 Argo Rollouts로 Canary 배포</li>
           </ul>
         </div>
@@ -228,9 +282,9 @@
           </p>
 
           <ul style="font-size:13px;color:var(--text-sub);line-height:1.9;list-style:none">
-            <li> <strong style="color:var(--text)">HttpOnly 쿠키</strong>— 토큰을 HttpOnly 쿠키로 관리해 XSS로 인한 토큰 탈취
+            <li> <strong style="color:var(--text)">HttpOnly 쿠키</strong> 토큰을 HttpOnly 쿠키로 관리해 XSS로 인한 토큰 탈취
               방어</li>
-            <li> <strong style="color:var(--text)">환경변수 분리</strong>— 서버 전용 변수와 <code>NEXT_PUBLIC_*</code>클라이언트
+            <li> <strong style="color:var(--text)">환경변수 분리</strong> 서버 전용 변수와 <code>NEXT_PUBLIC_*</code>클라이언트
               노출 변수를 명확히 구분해 민감한 값이 번들에 섞여 들어가지 않도록 관리</li>
           </ul>
         </div>
@@ -241,7 +295,7 @@
     <section id="decisions">
       <div class="fi">
         <div class="slabel">Decision Making</div>
-        <h2 class="stitle">의사결정 기록</h2>
+        <h2 class="stitle">기술 의사결정 기록</h2>
 
         <div class="card-grid">
 
@@ -353,10 +407,10 @@
                 <div class="df-label">이유</div>
                 <div class="df-content">
                   <ul style="margin:4px 0 0 16px;line-height:1.8">
-                    <li><strong style="color:var(--text)">관심사 분리</strong>— 수집(적재)과 분석·전달(LLM 호출·알림)은 책임이 다른 작업</li>
-                    <li><strong style="color:var(--text)">최소 노출</strong>— 수집은 사설망에만, 보고서는 외부 API(Bedrock·Slack)에만
+                    <li><strong style="color:var(--text)">관심사 분리</strong> 수집(적재)과 분석·전달(LLM 호출·알림)은 책임이 다른 작업</li>
+                    <li><strong style="color:var(--text)">최소 노출</strong> 수집은 사설망에만, 보고서는 외부 API(Bedrock·Slack)에만
                       접근. 한 함수에 사설망과 인터넷을 동시에 열지 않음</li>
-                    <li><strong style="color:var(--text)">운영·비용 효율</strong>— 사설망 접근은 VPC 내부(S3 Gateway
+                    <li><strong style="color:var(--text)">운영·비용 효율</strong> 사설망 접근은 VPC 내부(S3 Gateway
                       Endpoint), 외부 호출은 VPC 외부. 두 영역을 잇는 상시 NAT Gateway 불필요</li>
                   </ul>
                 </div>
@@ -376,8 +430,9 @@
     <section id="security">
       <div class="fi">
         <div class="slabel">Security</div>
-        <h2 class="stitle">소스코드와 이미지를 외부에 두지 않기</h2>
+        <h2 class="stitle">보안 의사결정 기록</h2>
         <div class="card">
+          <div class="subh" style="margin-top:0">소스코드와 이미지를 외부에 두지 않기</div>
           <table class="ops-table">
             <tr>
               <th>도구</th>
@@ -411,7 +466,7 @@
     <!-- ===== AI Observability Pipeline ===== -->
     <section id="ops-ai">
       <div class="fi">
-        <div class="slabel">Operation</div>
+        <div class="slabel">Operations</div>
         <h2 class="stitle">AI Observability Pipeline</h2>
 
         <div class="card">
@@ -420,7 +475,7 @@
           <div class="pipe">
             <div class="pstep">
               <div class="psname">On-Premise 수집</div>
-              <div class="psdesc">Prometheus :9090(메트릭), Elasticsearch :9200(로그) — S2S VPN 경유</div>
+              <div class="psdesc">Prometheus :9090(메트릭), Elasticsearch :9200(로그) S2S VPN 경유</div>
             </div>
             <div class="pstep">
               <div class="psname">수집 Lambda (VPC 내부)</div>
@@ -442,8 +497,8 @@
 
           <div class="subh">어떤 데이터를 넣었는지</div>
           <ul style="font-size:13px;color:var(--text-sub);line-height:1.9;list-style:none;margin-bottom:8px">
-            <li> <strong style="color:var(--text)">메트릭(Prometheus)</strong>— Pod 상태, 재시작 횟수, 요청량(req/s), CPU/Memory</li>
-            <li> <strong style="color:var(--text)">로그(Elasticsearch)</strong>— <code>error</code>필터링 로그를 네임스페이스별·Pod별로
+            <li> <strong style="color:var(--text)">메트릭(Prometheus)</strong> Pod 상태, 재시작 횟수, 요청량(req/s), CPU/Memory</li>
+            <li> <strong style="color:var(--text)">로그(Elasticsearch)</strong> <code>error</code>필터링 로그를 네임스페이스별·Pod별로
               집계</li>
           </ul>
 
@@ -462,6 +517,106 @@
       </div>
     </section>
 
+    <!-- ===== 재해복구 계획 ===== -->
+    <section id="dr-wp">
+      <div class="fi">
+        <div class="slabel">Operations</div>
+        <h2 class="stitle">재해복구(DR) 계획 · 런북</h2>
+        <div class="card">
+          <p style="font-size:14px;color:var(--text-sub);line-height:1.9;margin-bottom:20px;">
+            이미 구축된 시스템을 <strong>네트워크 · Kubernetes · DB · 외부 연동</strong>레이어별로 분리해, 각 계층에서
+            발생할 수 있는 장애 시나리오와 복구 절차를 설계·문서화했습니다. 직접 구현한 인프라를 새로 만든 것은 아니고,
+            이미 만들어진 시스템을 운영 관점에서 다시 들여다보며 대응 체계를 정리한 작업입니다.
+          </p>
+
+          <div class="subh" style="margin-top:0">장애 등급 정의</div>
+          <table class="ops-table" style="margin-bottom:20px">
+            <tr>
+              <th>등급</th>
+              <th>장애 범위</th>
+              <th>예시</th>
+            </tr>
+            <tr>
+              <td>L1</td>
+              <td>Pod 단위</td>
+              <td>특정 마이크로서비스(party, member 등) Pod CrashLoopBackOff</td>
+            </tr>
+            <tr>
+              <td>L2</td>
+              <td>Worker Node 단위</td>
+              <td>worker1 또는 worker2 다운</td>
+            </tr>
+            <tr>
+              <td>L3</td>
+              <td>Host PC 단위</td>
+              <td>K8s용 또는 DB용 Host PC 1대 전체 다운 (Host PC 2대를 K8s용·DB용으로 분리 운영 중)</td>
+            </tr>
+            <tr>
+              <td>L4</td>
+              <td>학원 네트워크·전원 전체 장애</td>
+              <td>정전, 네트워크 완전 단절 등 외부 도달 불가 상황</td>
+            </tr>
+          </table>
+
+          <p style="font-size:14px;color:var(--text-sub);line-height:1.9;">
+            L1은 K8s의 Probe 기반 자동 재시작과 ArgoCD GitOps 재배포에 더해, AlertManager 실시간 알림과 Lambda 기반
+            일일 Bedrock 요약(AI Observability Pipeline 참고)까지 이중으로 탐지되고 있습니다. L2는 Kong이 replica
+            2 + podAntiAffinity로 노드 분산 배치되어 있고 각 서비스도 HPA minReplicas 2가 기본값이라 단일 노드
+            장애에 대한 기본 대응력은 갖췄지만, 실제 노드 장애 재현 테스트까지는 하지 못했습니다. L3(Host PC 전체
+            장애)는 문서화 과정에서 GitOps 저장소와 컨테이너 레지스트리가 K8s 클러스터와 같은 호스트 위에 있어 단일
+            장애점이 된다는 구조적 취약점을 발견했고, 이 부분이 가장 큰 보강 대상으로 남아 있습니다.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== AWS 마이그레이션 ===== -->
+    <section id="migration">
+      <div class="fi">
+        <div class="slabel">Cloud Migration</div>
+        <h2 class="stitle">온프레미스 → AWS 마이그레이션</h2>
+        <div class="card">
+          <table class="ops-table">
+            <tr>
+              <th>영역</th>
+              <th>온프레미스</th>
+              <th>AWS</th>
+            </tr>
+            <tr>
+              <td>클러스터</td>
+              <td>kubeadm 자체 구축</td>
+              <td>EKS</td>
+            </tr>
+            <tr>
+              <td>데이터베이스</td>
+              <td>VM에 MySQL/PostgreSQL/Redis 직접 설치</td>
+              <td>RDS(MySQL/PostgreSQL) + ElastiCache(Redis)</td>
+            </tr>
+            <tr>
+              <td>이미지 레지스트리</td>
+              <td>Harbor</td>
+              <td>ECR (imagePullSecret 제거)</td>
+            </tr>
+            <tr>
+              <td>TLS</td>
+              <td>cert-manager + Cloudflare DNS-01</td>
+              <td>ALB + ACM</td>
+            </tr>
+            <tr>
+              <td>권한</td>
+              <td>ServiceAccount</td>
+              <td>IRSA (워크로드별 최소 권한)</td>
+            </tr>
+            <tr>
+              <td>네트워크</td>
+              <td>VM NAT + NodePort</td>
+              <td>VPC 3-tier</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </section>
+
     <!-- ===== 트러블슈팅 ===== -->
     <section id="ts-wp">
       <div class="fi">
@@ -472,7 +627,7 @@
 
             <div class="titem">
               <div class="thead" onclick="tog(this)"><span class="tnum">01</span><span class="ttitle">MetalLB L2 모드
-                  미동작 — 외부 접근 불가</span><span class="tarrow">▼</span></div>
+                  미동작 외부 접근 불가</span><span class="tarrow">▼</span></div>
               <div class="tbody">
                 <span class="tlabel ts">현상</span>
                 <p>MetalLB L2 모드로 서비스에 External IP를 할당했지만 외부에서 접근이 되지 않음.</p>
@@ -612,166 +767,6 @@
       </div>
     </section>
 
-    <!-- ===== AWS 마이그레이션 ===== -->
-    <section id="migration">
-      <div class="fi">
-        <div class="slabel">Cloud Migration</div>
-        <h2 class="stitle">온프레미스 → AWS 마이그레이션</h2>
-        <div class="card">
-          <table class="ops-table">
-            <tr>
-              <th>영역</th>
-              <th>온프레미스</th>
-              <th>AWS</th>
-            </tr>
-            <tr>
-              <td>클러스터</td>
-              <td>kubeadm 자체 구축</td>
-              <td>EKS</td>
-            </tr>
-            <tr>
-              <td>데이터베이스</td>
-              <td>VM에 MySQL/PostgreSQL/Redis 직접 설치</td>
-              <td>RDS(MySQL/PostgreSQL) + ElastiCache(Redis)</td>
-            </tr>
-            <tr>
-              <td>이미지 레지스트리</td>
-              <td>Harbor</td>
-              <td>ECR (imagePullSecret 제거)</td>
-            </tr>
-            <tr>
-              <td>TLS</td>
-              <td>cert-manager + Cloudflare DNS-01</td>
-              <td>ALB + ACM</td>
-            </tr>
-            <tr>
-              <td>권한</td>
-              <td>ServiceAccount</td>
-              <td>IRSA (워크로드별 최소 권한)</td>
-            </tr>
-            <tr>
-              <td>네트워크</td>
-              <td>VM NAT + NodePort</td>
-              <td>VPC 3-tier</td>
-            </tr>
-          </table>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== 재해복구 계획 ===== -->
-    <section id="dr-wp">
-      <div class="fi">
-        <div class="slabel">Operation</div>
-        <h2 class="stitle">재해복구(DR) 계획 · 런북</h2>
-        <div class="card">
-          <p style="font-size:14px;color:var(--text-sub);line-height:1.9;margin-bottom:20px;">
-            이미 구축된 시스템을 <strong>네트워크 · Kubernetes · DB · 외부 연동</strong>레이어별로 분리해, 각 계층에서
-            발생할 수 있는 장애 시나리오와 복구 절차를 설계·문서화했습니다. 직접 구현한 인프라를 새로 만든 것은 아니고,
-            이미 만들어진 시스템을 운영 관점에서 다시 들여다보며 대응 체계를 정리한 작업입니다.
-          </p>
-
-          <div class="subh" style="margin-top:0">장애 등급 정의</div>
-          <table class="ops-table" style="margin-bottom:20px">
-            <tr>
-              <th>등급</th>
-              <th>장애 범위</th>
-              <th>예시</th>
-            </tr>
-            <tr>
-              <td>L1</td>
-              <td>Pod 단위</td>
-              <td>특정 마이크로서비스(party, member 등) Pod CrashLoopBackOff</td>
-            </tr>
-            <tr>
-              <td>L2</td>
-              <td>Worker Node 단위</td>
-              <td>worker1 또는 worker2 다운</td>
-            </tr>
-            <tr>
-              <td>L3</td>
-              <td>Host PC 단위</td>
-              <td>K8s용 또는 DB용 Host PC 1대 전체 다운 (Host PC 2대를 K8s용·DB용으로 분리 운영 중)</td>
-            </tr>
-            <tr>
-              <td>L4</td>
-              <td>학원 네트워크·전원 전체 장애</td>
-              <td>정전, 네트워크 완전 단절 등 외부 도달 불가 상황</td>
-            </tr>
-          </table>
-
-          <p style="font-size:14px;color:var(--text-sub);line-height:1.9;">
-            L1은 K8s의 Probe 기반 자동 재시작과 ArgoCD GitOps 재배포에 더해, AlertManager 실시간 알림과 Lambda 기반
-            일일 Bedrock 요약(AI Observability Pipeline 참고)까지 이중으로 탐지되고 있습니다. L2는 Kong이 replica
-            2 + podAntiAffinity로 노드 분산 배치되어 있고 각 서비스도 HPA minReplicas 2가 기본값이라 단일 노드
-            장애에 대한 기본 대응력은 갖췄지만, 실제 노드 장애 재현 테스트까지는 하지 못했습니다. L3(Host PC 전체
-            장애)는 문서화 과정에서 GitOps 저장소와 컨테이너 레지스트리가 K8s 클러스터와 같은 호스트 위에 있어 단일
-            장애점이 된다는 구조적 취약점을 발견했고, 이 부분이 가장 큰 보강 대상으로 남아 있습니다.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== 기술 스택 ===== -->
-    <section id="stack-wp">
-      <div class="fi">
-        <div class="slabel">Tech Stack</div>
-        <h2 class="stitle">기술 스택</h2>
-        <div class="card">
-          <div class="stack-grid">
-            <div class="stack-group">
-              <div class="stack-group-title">FE (FRONTEND)</div>
-              <div class="tags"><span class="tag">Next.js</span><span class="tag">Vercel</span><span
-                  class="tag">TypeScript</span></div>
-            </div>
-            <div class="stack-group">
-              <div class="stack-group-title">BE (BACKEND)</div>
-              <div class="tags"><span class="tag">Java</span><span class="tag">Spring Boot</span><span
-                  class="tag">gRPC</span></div>
-            </div>
-            <div class="stack-group">
-              <div class="stack-group-title">INFRA / NETWORK</div>
-              <div class="tags"><span class="tag">Kubernetes</span><span class="tag">kubeadm</span><span
-                  class="tag">Calico</span><span class="tag">AWS S2S VPN</span><span class="tag">strongSwan</span><span
-                  class="tag">Kong</span><span class="tag">Istio</span><span class="tag">NodePort</span><span
-                  class="tag">cert-manager</span><span class="tag">Cloudflare DNS</span></div>
-            </div>
-            <div class="stack-group">
-              <div class="stack-group-title">CLOUD (AWS)</div>
-              <div class="tags"><span class="tag">AWS EKS</span><span class="tag">Amazon ECR</span><span
-                  class="tag">Lambda</span><span class="tag">EventBridge</span><span class="tag">Bedrock</span><span
-                  class="tag">VPC</span><span class="tag">IRSA</span><span class="tag">ALB</span><span
-                  class="tag">ACM</span><span class="tag">Python</span></div>
-            </div>
-            <div class="stack-group">
-              <div class="stack-group-title">DATA / STORAGE</div>
-              <div class="tags"><span class="tag">MySQL</span><span class="tag">PostgreSQL</span><span
-                  class="tag">Redis</span><span class="tag">AWS S3</span><span class="tag">RDS</span><span
-                  class="tag">ElastiCache</span></div>
-            </div>
-            <div class="stack-group">
-              <div class="stack-group-title">CI / CD</div>
-              <div class="tags"><span class="tag">Jenkins</span><span class="tag">GitLab CI</span><span
-                  class="tag">Docker</span><span class="tag">Harbor</span><span class="tag">ArgoCD</span><span
-                  class="tag">kustomize</span><span class="tag">kubeconform</span><span
-                  class="tag">kube-score</span></div>
-            </div>
-            <div class="stack-group">
-              <div class="stack-group-title">OBSERVABILITY</div>
-              <div class="tags"><span class="tag">Prometheus</span><span class="tag">Grafana</span><span
-                  class="tag">AlertManager</span><span class="tag">Elasticsearch</span><span
-                  class="tag">Fluentd</span><span class="tag">Kibana</span><span class="tag">Kiali</span></div>
-            </div>
-            <div class="stack-group">
-              <div class="stack-group-title">COLLABORATION TOOL</div>
-              <div class="tags"><span class="tag">Jira</span><span class="tag">Slack</span><span
-                  class="tag">GitLab</span></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- ===== 배운 점 / 개선사항 ===== -->
     <section id="summary-wp" style="padding-bottom:80px;">
       <div class="fi">
@@ -801,7 +796,7 @@
             class="ncard">
             <div style="font-size:22px;"></div>
             <div>
-              <div class="ncard-t">WanderPool — 최종 발표자료</div>
+              <div class="ncard-t">WanderPool 최종 발표자료</div>
               <div class="ncard-s">miricanvas.com</div>
             </div>
           </a>
@@ -811,7 +806,7 @@
                   d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
               </svg></div>
             <div>
-              <div class="ncard-t">GitHub — WanderPool 저장소</div>
+              <div class="ncard-t">GitHub WanderPool 저장소</div>
               <div class="ncard-s">github.com/Mobility-SW-School-3rd-Cloud</div>
             </div>
           </a>
@@ -831,7 +826,7 @@
       glow.style.top = e.clientY + 'px';
     });
 
-    const secs = ['hero-wp', 'preview-wp', 'network', 'cicd-wp', 'fe-bff', 'decisions', 'security', 'ops-ai', 'ts-wp', 'migration', 'dr-wp', 'stack-wp', 'summary-wp', 'links-wp'];
+    const secs = ['hero-wp', 'preview-wp', 'network', 'stack-wp', 'cicd-wp', 'fe-bff', 'decisions', 'security', 'ops-ai', 'dr-wp', 'migration', 'ts-wp', 'summary-wp', 'links-wp'];
     const dots = document.querySelectorAll('.dot');
     const obs = new IntersectionObserver(es =>{
       es.forEach(e =>{

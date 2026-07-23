@@ -161,7 +161,7 @@ header {
   transform: scale(1.3)
 }
 
-/* 컨테이너 — 와이드 */
+/* 컨테이너 와이드 */
 .wrap {
   max-width: 1160px;
   margin: 0 auto;
@@ -298,13 +298,27 @@ section:last-of-type {
 }
 
 .hmetric-val {
+  position: relative;
+  transform: translateY(5px);
   font-size: 18px;
   font-weight: 700;
   color: var(--blue);
   font-family: 'Noto Sans KR', sans-serif
 }
 
+.hmetric-prefix {
+  position: absolute;
+  left: 0;
+  bottom: calc(100% - 5px);
+  font-size: 9px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -.7px;
+  white-space: nowrap;
+}
+
 .hmetric-label {
+  transform: translateY(-3px);
   font-size: 11px;
   color: var(--text-muted);
   font-family: 'Noto Sans KR', sans-serif
@@ -1510,7 +1524,7 @@ footer {
 }
 
 @page {
-  size: A4 landscape;
+  size: 297mm 210mm;
   margin: 0;
 }
 
@@ -1525,6 +1539,8 @@ footer {
   html,
   body {
     width: 297mm;
+    min-width: 297mm;
+    max-width: 297mm;
     margin: 0;
     padding: 0;
     background: #fff;
@@ -1688,6 +1704,31 @@ footer {
   .pdf-toc-number,
   .pdf-toc-kicker {
     color: #2563eb !important;
+  }
+
+  .pdf-toc-item strong,
+  .pdf-toc-line > b {
+    color: #111827 !important;
+  }
+
+  .pdf-toc-line > span {
+    color: #7b8494 !important;
+  }
+
+  .pdf-toc-item:nth-child(1) .pdf-toc-number {
+    color: #2563eb !important;
+  }
+
+  .pdf-toc-item:nth-child(2) .pdf-toc-number {
+    color: #13845a !important;
+  }
+
+  .pdf-toc-item:nth-child(3) .pdf-toc-number {
+    color: #d93b70 !important;
+  }
+
+  .pdf-toc-item:nth-child(4) .pdf-toc-number {
+    color: #087f9b !important;
   }
 
   .pdf-view img {
@@ -1988,6 +2029,61 @@ footer {
 }
 
 @media print {
+  .pdf-view #load-test-overview .card {
+    padding: 4mm 6mm;
+  }
+
+  .pdf-view #load-test-overview .card > p {
+    margin-bottom: 3mm !important;
+    font-size: 9.5pt !important;
+    line-height: 1.6 !important;
+  }
+
+  .pdf-view #load-test-overview .ops-table {
+    margin-bottom: 4mm !important;
+  }
+
+  .pdf-view #load-test-overview .ops-table th,
+  .pdf-view #load-test-overview .ops-table td {
+    padding: 1.5mm 3mm;
+  }
+
+  .pdf-view #load-test-overview .subh {
+    margin-bottom: 2mm;
+    padding-bottom: 2mm;
+  }
+
+  .pdf-view #load-test-overview .pipe {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 3mm;
+    margin-bottom: 2mm !important;
+  }
+
+  .pdf-view #load-test-overview .pstep {
+    gap: 2mm;
+    margin-left: 1mm;
+    padding: 1.3mm 0 1.3mm 3mm;
+  }
+
+  .pdf-view #load-test-overview .psname {
+    min-width: 18mm;
+    font-size: 8.5pt;
+  }
+
+  .pdf-view #load-test-overview .psdesc {
+    font-size: 9pt;
+    line-height: 1.4;
+  }
+
+  .pdf-view #load-test-overview .pstep::before {
+    top: 2.5mm !important;
+  }
+
+  .pdf-view #load-test-overview .info {
+    padding: 2mm 3mm;
+  }
+
   .pdf-load-shots {
     min-height: 118mm;
     height: 118mm;
@@ -2139,6 +2235,25 @@ footer {
   transform: none !important;
   transition: none !important;
   animation: none !important;
+}
+
+.pdf-view .pdf-summary-page,
+.pdf-view .pdf-detail-page {
+  position: relative;
+}
+
+.pdf-page-number {
+  position: absolute;
+  right: 18px;
+  bottom: 14px;
+  z-index: 20;
+  min-width: 24px;
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1;
+  text-align: right;
+  color: var(--text-muted);
 }
 
 /* Printed code must wrap inside its card instead of producing scrollbars. */
@@ -2393,8 +2508,133 @@ footer {
 }
 
 @media print {
+  .pdf-view #infra-m-decisions-1 .fi,
+  .pdf-view #infra-m-decisions-1 .card-grid,
+  .pdf-view #infra-m-decisions-1 .card,
+  .pdf-view #infra-m-decisions-2 .fi,
+  .pdf-view #infra-m-decisions-2 .card-grid,
+  .pdf-view #infra-m-decisions-2 .card {
+    height: auto !important;
+    min-height: 0 !important;
+    break-inside: auto !important;
+    page-break-inside: auto !important;
+  }
+
+  .pdf-view #infra-m-decisions-1 .card-grid,
+  .pdf-view #infra-m-decisions-2 .card-grid {
+    min-height: 0 !important;
+    gap: 4mm;
+    align-items: stretch;
+  }
+
+  .pdf-view #infra-m-decisions-1 .card,
+  .pdf-view #infra-m-decisions-2 .card {
+    display: flex;
+    flex-direction: column;
+    padding: 6mm;
+  }
+
+  .pdf-view #infra-m-decisions-1 .decision-flow,
+  .pdf-view #infra-m-decisions-2 .decision-flow {
+    flex: 1;
+    justify-content: space-between;
+  }
+
+  .pdf-view #infra-m-decisions-1 .subh,
+  .pdf-view #infra-m-decisions-2 .subh {
+    margin-bottom: 3mm;
+    padding-bottom: 2mm;
+    font-size: 10pt;
+  }
+
+  .pdf-view #infra-m-decisions-1 .df-step,
+  .pdf-view #infra-m-decisions-2 .df-step {
+    grid-template-columns: 18mm minmax(0, 1fr);
+    margin-left: 2mm;
+    padding: 1.8mm 0 1.8mm 4mm;
+  }
+
+  .pdf-view #infra-m-decisions-1 .df-label,
+  .pdf-view #infra-m-decisions-2 .df-label {
+    font-size: 7.5pt;
+  }
+
+  .pdf-view #infra-m-decisions-1 .df-content,
+  .pdf-view #infra-m-decisions-2 .df-content {
+    font-size: 9.2pt;
+    line-height: 1.55;
+  }
+
+  .pdf-view #infra-m-decisions-1 .igrid,
+  .pdf-view #infra-m-decisions-2 .igrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 2mm;
+    margin: 3mm 0 0 !important;
+  }
+
+  .pdf-view #infra-m-decisions-1 .iitem,
+  .pdf-view #infra-m-decisions-2 .iitem {
+    padding: 3mm 2mm;
+  }
+
+  .pdf-view #decisions-1 .fi,
+  .pdf-view #decisions-1 .card-grid,
+  .pdf-view #decisions-1 .card,
+  .pdf-view #decisions-2 .fi,
+  .pdf-view #decisions-2 .card-grid,
+  .pdf-view #decisions-2 .card {
+    height: auto !important;
+    min-height: 0 !important;
+  }
+
+  .pdf-view #decisions-1 .card-grid,
   .pdf-view #decisions-2 .card-grid {
-    min-height: 130mm;
+    gap: 4mm;
+    align-items: stretch;
+    min-height: 128mm !important;
+  }
+
+  .pdf-view #decisions-1 .card,
+  .pdf-view #decisions-2 .card {
+    display: flex;
+    flex-direction: column;
+    padding: 6mm;
+  }
+
+  .pdf-view #decisions-1 .decision-flow,
+  .pdf-view #decisions-2 .decision-flow {
+    flex: 1;
+    justify-content: space-between;
+  }
+
+  .pdf-view #decisions-1 .subh,
+  .pdf-view #decisions-2 .subh {
+    margin-bottom: 3mm;
+    padding-bottom: 2mm;
+    font-size: 10pt;
+  }
+
+  .pdf-view #decisions-1 .df-step,
+  .pdf-view #decisions-2 .df-step {
+    grid-template-columns: 18mm minmax(0, 1fr);
+    margin-left: 2mm;
+    padding: 3mm 0 3mm 4mm;
+  }
+
+  .pdf-view #decisions-1 .df-label,
+  .pdf-view #decisions-2 .df-label {
+    font-size: 7.5pt;
+  }
+
+  .pdf-view #decisions-1 .df-content,
+  .pdf-view #decisions-2 .df-content {
+    font-size: 9.2pt;
+    line-height: 1.62;
+  }
+
+  .pdf-view #decisions-1 .df-content ul,
+  .pdf-view #decisions-2 .df-content ul {
+    line-height: 1.55 !important;
   }
 
   .pdf-view #decisions-1 .pdf-detail-content,
@@ -2472,6 +2712,12 @@ footer {
 }
 
 @media print {
+  .pdf-page-number {
+    right: 7mm;
+    bottom: 5mm;
+    font-size: 8pt;
+  }
+
   /* Chromium can expand the themed header shadow across the whole printed page. */
   .pdf-view .pdf-detail-page .pdf-project-context {
     box-shadow: none !important;
@@ -2575,15 +2821,15 @@ footer {
 }
 
 .pdf-toc-item:nth-child(2) .pdf-toc-number {
-  background: #fff0f6;
-  border-color: #f1b2ca;
-  color: #d93b70;
-}
-
-.pdf-toc-item:nth-child(3) .pdf-toc-number {
   background: #eaf9f2;
   border-color: #a8ddc4;
   color: #13845a;
+}
+
+.pdf-toc-item:nth-child(3) .pdf-toc-number {
+  background: #fff0f6;
+  border-color: #f1b2ca;
+  color: #d93b70;
 }
 
 .pdf-toc-item:nth-child(4) .pdf-toc-number {
@@ -2650,4 +2896,27 @@ footer {
   font-size: 12px;
   line-height: 1.75;
   color: var(--text-sub);
+}
+
+.pdf-toc-item .pdf-toc-details {
+  display: grid;
+  gap: 4px;
+}
+
+.pdf-toc-line {
+  display: grid;
+  grid-template-columns: 82px minmax(0, 1fr);
+  gap: 12px;
+  align-items: baseline;
+}
+
+.pdf-toc-line > b {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text);
+  white-space: nowrap;
+}
+
+.pdf-toc-line > span {
+  color: var(--text-muted);
 }

@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>말랑이 메이커 — 최수정 Portfolio</title>
+  <title>말랑이 메이커 최수정 Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../style.css">
@@ -17,12 +17,10 @@
   <header>
     <a href="../index.html" class="hname" style="text-decoration:none">← 최수정 Portfolio</a>
     <nav class="hnav">
-      <a href="#arch-m">Architecture</a>
-      <a href="#infra-m">Decisions</a>
-      <a href="#cicd-m">CI/CD</a>
-      <a href="#ops-m">Operations</a>
-      <a href="#load-test">Load Test</a>
-      <a href="#ts-m">Troubleshooting</a>
+      <a href="#preview-m">구성</a>
+      <a href="#infra-m">의사결정</a>
+      <a href="#load-test">검증</a>
+      <a href="#ts-m">문제 해결·회고</a>
     </nav>
   </header>
 
@@ -43,7 +41,6 @@
     <!-- ===== HERO ===== -->
     <section id="hero-malang">
       <div class="fi">
-        <div class="htag">Personal Project · Serverless</div>
         <h1 class="hname-big" style="font-size:clamp(40px,6vw,64px)">말랑이 메이커</h1>
         <div class="hrole">MalangMaker &nbsp;·&nbsp; AWS Serverless · KakaoTalk Chatbot</div>
         <p class="hdesc">
@@ -53,20 +50,20 @@
         </p>
         <div class="hmetrics">
           <div class="hmetric">
-            <div class="hmetric-val">$0.03</div>
-            <div class="hmetric-label">월 운영 비용</div>
+            <div class="hmetric-val">개인 프로젝트</div>
+            <div class="hmetric-label">프로젝트 형태</div>
           </div>
           <div class="hmetric">
-            <div class="hmetric-val">6s → 284ms</div>
-            <div class="hmetric-label">콜드스타트 개선</div>
+            <div class="hmetric-val">Backend·Infra</div>
+            <div class="hmetric-label">담당 역할</div>
           </div>
           <div class="hmetric">
-            <div class="hmetric-val">0%</div>
-            <div class="hmetric-label">에러율</div>
+            <div class="hmetric-val"><span class="hmetric-prefix">콜드스타트</span>6s→284ms</div>
+            <div class="hmetric-label">핵심 기술 성과</div>
           </div>
           <div class="hmetric">
-            <div class="hmetric-val">2026.02~06</div>
-            <div class="hmetric-label">서비스 운영 기간</div>
+            <div class="hmetric-val">실서비스 운영</div>
+            <div class="hmetric-label">프로젝트 성과</div>
           </div>
         </div>
         <div class="hlinks">
@@ -131,11 +128,11 @@
     <section id="infra-m">
       <div class="fi">
         <div class="slabel">Decision Making</div>
-        <h2 class="stitle">테크 스택 및 설계 이유</h2>
+        <h2 class="stitle">기술 스택 및 인프라 기술 의사결정</h2>
 
         <!-- 테크스택 -->
         <div class="card" style="margin-bottom:24px">
-          <div class="subh" style="margin-top:0">Tech Stack</div>
+          <div class="subh" style="margin-top:0">기술 스택</div>
           <div class="stack-grid">
             <div class="stack-group">
               <div class="stack-group-title">BACKEND</div>
@@ -326,7 +323,7 @@
         <div class="card">
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px">
             <div>
-              <div class="subh" style="margin-top:0">SAM 배포 — deploy.yaml</div>
+              <div class="subh" style="margin-top:0">SAM 배포 deploy.yaml</div>
               <div class="pipe">
                 <div class="pstep">
                   <div class="psname">GitHub Push</div>
@@ -347,7 +344,7 @@
               </div>
             </div>
             <div>
-              <div class="subh" style="margin-top:0">Terraform — terraform.yaml</div>
+              <div class="subh" style="margin-top:0">Terraform terraform.yaml</div>
               <div class="pipe">
                 <div class="pstep">
                   <div class="psname">my_terraform/ 변경</div>
@@ -512,7 +509,7 @@
           <div class="pipe" style="margin-bottom:28px">
             <div class="pstep">
               <div class="psname">1단계</div>
-              <div class="psdesc">평상시 트래픽 유지 (2명) — 기준값 측정</div>
+              <div class="psdesc">평상시 트래픽 유지 (2명) 기준값 측정</div>
             </div>
             <div class="pstep">
               <div class="psname">2단계</div>
@@ -532,7 +529,7 @@
             </div>
             <div class="pstep">
               <div class="psname">6단계</div>
-              <div class="psdesc">쓰다듬기/똥치우기 집중 테스트 — 하루 1회 제한 로직 + DB 쓰기 동시 검증 (test_user 30명)</div>
+              <div class="psdesc">쓰다듬기/똥치우기 집중 테스트 하루 1회 제한 로직 + DB 쓰기 동시 검증 (test_user 30명)</div>
             </div>
           </div>
           <div class="info">총 테스트 시간: 약 33분 / 동시 사용자 최대 50명 / 총 34,532건 요청</div>
@@ -587,7 +584,7 @@
 
           <img src="cloudwatch_1st.png" alt="1차 테스트 CloudWatch 대시보드" class="aimg" style="margin-top:16px;">
 
-          <div class="subh">2차 테스트 결과 (버그 수정 후 — 쓰다듬기/똥치우기 집중)</div>
+          <div class="subh">2차 테스트 결과 (버그 수정 후 쓰다듬기/똥치우기 집중)</div>
           <table class="ops-table" style="margin-bottom:20px">
             <tr>
               <th>지표</th>
@@ -642,7 +639,7 @@
             </tr>
             <tr>
               <td>최대 응답시간</td>
-              <td>—</td>
+              <td> </td>
               <td>284ms</td>
             </tr>
             <tr>
@@ -666,9 +663,7 @@
           <div class="twrap">
 
             <div class="titem">
-              <div class="thead" onclick="tog(this)"><span class="tnum">01</span><span class="ttitle">Lambda 베이스 이미지
-                  —
-                  NetworkAccessForbidden (응답 없음)</span><span class="tarrow">▼</span></div>
+              <div class="thead" onclick="tog(this)"><span class="tnum">01</span><span class="ttitle">Lambda 베이스 이미지 NetworkAccessForbidden (응답 없음)</span><span class="tarrow">▼</span></div>
               <div class="tbody">
                 <span class="tlabel ts">현상</span>
                 <p>카카오톡 메시지를 보내도 응답이 없고 '네트워크 오류'만 표시. 503 에러 코드조차 뜨지 않음.</p>
@@ -684,8 +679,7 @@
             </div>
 
             <div class="titem">
-              <div class="thead" onclick="tog(this)"><span class="tnum">02</span><span class="ttitle">Mangum lifespan —
-                  NetworkAccessForbidden (503)</span><span class="tarrow">▼</span></div>
+              <div class="thead" onclick="tog(this)"><span class="tnum">02</span><span class="ttitle">Mangum lifespan NetworkAccessForbidden (503)</span><span class="tarrow">▼</span></div>
               <div class="tbody">
                 <span class="tlabel tc">원인</span>
                 <p>Lambda 내부 500대 에러 발생 시 카카오 측에서 연결 강제 종료. <code>sam logs</code>로 로그 직접 확인.</p>
@@ -698,7 +692,7 @@
 
             <div class="titem">
               <div class="thead" onclick="tog(this)"><span class="tnum">03</span><span
-                  class="ttitle">Runtime.ImportModuleError — Unable to import module 'main'</span><span
+                  class="ttitle">Runtime.ImportModuleError Unable to import module 'main'</span><span
                   class="tarrow">▼</span></div>
               <div class="tbody">
                 <span class="tlabel tc">원인</span>
@@ -714,8 +708,7 @@ sam deploy</pre>
 
             <div class="titem">
               <div class="thead" onclick="tog(this)"><span class="tnum">04</span><span class="ttitle">AWS_REGION 예약어
-                  충돌
-                  — Configuration Warning</span><span class="tarrow">▼</span></div>
+                  충돌 Configuration Warning</span><span class="tarrow">▼</span></div>
               <div class="tbody">
                 <span class="tlabel tc">원인</span>
                 <p><code>AWS_REGION</code>은 Lambda 런타임 예약 환경 변수. 사용자가 덮어쓰면 값이 무시되거나 충돌 경고 발생.</p>
@@ -729,7 +722,7 @@ sam deploy</pre>
 
             <div class="titem">
               <div class="thead" onclick="tog(this)"><span class="tnum">05</span><span class="ttitle">Terraform Remote
-                  Backend — EntityAlreadyExists 충돌</span><span class="tarrow">▼</span></div>
+                  Backend EntityAlreadyExists 충돌</span><span class="tarrow">▼</span></div>
               <div class="tbody">
                 <span class="tlabel ts">현상</span>
                 <p>GitHub Actions에서 <code>terraform apply</code>시 IAM 유저/그룹 전부 EntityAlreadyExists 에러.</p>
@@ -749,7 +742,7 @@ terraform init -migrate-state</pre>
             </div>
             <div class="titem">
               <div class="thead" onclick="tog(this)"><span class="tnum">06</span><span class="ttitle">Terraform
-                  depends_on 누락 — IAM 정책 적용 전 EventBridge 생성 시도</span><span class="tarrow">▼</span></div>
+                  depends_on 누락 IAM 정책 적용 전 EventBridge 생성 시도</span><span class="tarrow">▼</span></div>
               <div class="tbody">
                 <span class="tlabel ts">현상</span>
                 <p>terraform apply 시 <code>AccessDeniedException: events:PutRule</code>에러. IAM 정책을 방금 추가했는데도 권한 없음.
