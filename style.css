@@ -1876,6 +1876,18 @@ footer {
   line-height: 1.65;
 }
 
+.pdf-view #ts-wt-1 .stitle { margin-bottom: 5px; }
+.pdf-view #ts-wt-1 .pdf-wt-ts-subtitle { margin: 0 0 12px; font-size: 12px; font-style: italic; color: var(--text-muted); }
+.pdf-view #ts-wt-1 .pdf-wt-ts-progress { display: flex; align-items: center; justify-content: center; gap: 12px; margin-bottom: 12px; padding: 8px 12px; border: 1px solid var(--border); border-radius: 9px; background: var(--blue-bg); font-size: 10px; color: var(--text-sub); }
+.pdf-view #ts-wt-1 .pdf-wt-ts-progress b { margin-right: 4px; color: var(--blue); font-family: var(--mono); }
+.pdf-view #ts-wt-1 .pdf-wt-ts-progress i { color: var(--blue); font-style: normal; font-weight: 700; }
+.pdf-view #ts-wt-1 .pdf-ts-grid { gap: 10px; }
+.pdf-view #ts-wt-1 .pdf-ts-grid .thead { min-height: 48px; padding: 10px 13px; }
+.pdf-view #ts-wt-1 .pdf-ts-grid .tbody { padding: 0 13px 12px; }
+.pdf-view #ts-wt-1 .pdf-ts-grid .tbody p { margin-bottom: 3px; font-size: 10px; line-height: 1.48; }
+.pdf-view #ts-wt-1 .pdf-wt-case-heading { margin: 9px 0 2px !important; font-weight: 700; color: var(--text) !important; }
+.pdf-view #ts-wt-1 .pdf-wt-mini-flow { margin-top: 8px !important; padding: 7px 8px; border-radius: 6px; background: var(--blue-bg); font-family: var(--mono); font-size: 8px !important; color: var(--blue) !important; }
+
 .pdf-view #preview-m .fi {
   min-height: 520px;
   display: flex;

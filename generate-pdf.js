@@ -335,16 +335,22 @@ function splitWattupTroubleshootingSection(section) {
 
   const opening = section.match(/^<section\b[^>]*>/)?.[0];
   const label = section.match(/<div class="slabel">[\s\S]*?<\/div>/)?.[0] || '';
-  const title = section.match(/<h2 class="stitle">[\s\S]*?<\/h2>/)?.[0] || '';
   const items = extractBalancedDivs(section, 'titem');
   if (items.length !== 6) return [section];
 
-  const selectedItems = items.slice(0, 3);
+  const title = '<h2 class="stitle">복합 네트워크 장애 분석 및 복구</h2>';
+  const subtitle = '<p class="pdf-wt-ts-subtitle">Tailscale–Calico 충돌 → Service Routing 장애 → 전체 워크로드 복구</p>';
+  const progress = '<div class="pdf-wt-ts-progress"><span><b>01</b> 장애 전파 확인</span><i>→</i><span><b>02</b> 계층별 원인 축소</span><i>→</i><span><b>03</b> 근본 복구·재발 방지</span></div>';
+  const selectedItems = [
+    `<div class="titem"><div class="thead"><span class="tnum">01</span><span class="ttitle">장애 발생 · 영향 범위 확인</span></div><div class="tbody"><p class="pdf-wt-case-heading">Tailscale 설치 이후 Kubernetes 네트워크 연쇄 장애</p><span class="tlabel ts">현상</span><p>CoreDNS·Calico controller·local-path-provisioner CrashLoop, Kafka PVC Pending 동시 발생</p><span class="tlabel tc">영향</span><p>Service Routing·DNS·스토리지 프로비저닝 장애가 데이터 워크로드까지 연쇄 전파</p><span class="tlabel tl">판단</span><p>개별 Pod 장애가 아닌, 여러 컴포넌트가 공유하는 <strong>하위 네트워크 레이어 문제</strong>로 판단</p><p class="pdf-wt-mini-flow">Tailscale 설치 → Service Routing 장애 → DNS/Provisioner 장애 → PVC 실패 → Kafka Pending</p></div></div>`,
+    `<div class="titem"><div class="thead"><span class="tnum">02</span><span class="ttitle">계층별 검증 · 원인 특정</span></div><div class="tbody"><p class="pdf-wt-case-heading">Service Routing 검증으로 CNI 레이어까지 원인 축소</p><span class="tlabel ts">확인</span><p>API Server 직접 통신 → worker별 Service IP → <code>ip route</code> → kube-proxy 로그 → Pod 내부 통신 순으로 점검</p><span class="tlabel tc">검증</span><p>kube-proxy 재시작·임시 route로 일부 복구됐지만 Pod 내부 Service IP 장애가 재발했고, 임시 복구 후 재발을 통해 CNI 문제로 범위를 축소</p><span class="tlabel tl">원인</span><p>Calico가 내부망 NIC 대신 <strong>Tailscale 인터페이스를 Node IP로 선택</strong>해 클러스터 라우팅이 비정상화</p></div></div>`,
+    `<div class="titem"><div class="thead"><span class="tnum">03</span><span class="ttitle">근본 복구 · 재발 방지</span></div><div class="tbody"><p class="pdf-wt-case-heading">Calico 재설치 및 인터페이스 고정으로 전체 워크로드 복구</p><span class="tlabel ts">보호</span><p>CNI 재설치 전 PostgreSQL·MongoDB·Kafka StatefulSet scale down</p><span class="tlabel tc">조치</span><p>Calico 제거 → <code>tunl0</code>·CNI 잔재 정리 → 재설치 → IP autodetection을 실제 노드 NIC로 고정</p><span class="tlabel tf">결과</span><p>Kafka·MongoDB·PostgreSQL·Importer·Kafka UI·Backend <strong>전체 Running 복구</strong></p><span class="tlabel tl">재발 방지</span><p>Tailscale 설치 전 인터페이스 고정 + <code>--accept-routes=false</code> + 노드 라우팅 검증 체크리스트화</p></div></div>`
+  ];
   const pageOpening = opening
     .replace('id="ts-wt"', 'id="ts-wt-1"')
     .replace(/\sstyle="[^"]*"/, '');
 
-  return [`${pageOpening}\n      <div class="fi">\n        ${label}\n        ${title}\n        <div class="twrap pdf-ts-grid">\n${selectedItems.join('\n')}\n        </div>\n      </div>\n    </section>`];
+  return [`${pageOpening}\n      <div class="fi">\n        ${label}\n        ${title}\n        ${subtitle}\n        ${progress}\n        <div class="twrap pdf-ts-grid">\n${selectedItems.join('\n')}\n        </div>\n      </div>\n    </section>`];
 }
 
 function mergeCicdRoleAndBff(sections) {

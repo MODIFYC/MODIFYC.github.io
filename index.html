@@ -155,7 +155,7 @@
           </div>
 
           <div class="pcard-top">
-            <div class="pthumb"><img src="wattup/wattup_archi.png" alt="Wattup 네트워크 아키텍처"></div>
+            <div class="pthumb"><img src="wattup/wattup architecture.png" alt="Wattup 네트워크 아키텍처"></div>
             <div>
               <p style="font-size:14px;color:var(--text-sub);line-height:1.9;margin-bottom:14px;">
                 전기차 충전소 실시간 예약 및 현황 관리 서비스. VirtualBox 기반 On-premise Kubernetes 클러스터를 설계·구축하고
@@ -190,9 +190,9 @@
 
           <ul class="phighlights">
             <li>kubeadm으로 멀티 노드(master+worker 3개) 클러스터 직접 구축, EKS 대신 온프레미스 선택</li>
-            <li>Calico + Tailscale VPN 충돌 해결 (felixconfiguration 패치)</li>
+            <li><strong>Tailscale–Calico 충돌로 발생한 K8s 네트워크 연쇄 장애 복구</strong><br>Service 라우팅·DNS·PVC 장애를 CNI 문제로 좁혀 Calico 재설치 및 인터페이스 고정으로 전체 워크로드 정상화</li>
             <li>JVM 힙 설정으로 Kafka 메모리 사용량 95% → 76% 최적화</li>
-            <li>Vite 빌드타임 환경변수 구조 문제 해결</li>
+            <li>Vite 프론트 배포 및 온프레미스–OCI 연결</li>
           </ul>
 
           <a href="wattup/index.html" class="hlink pri">자세히 보기 →</a>

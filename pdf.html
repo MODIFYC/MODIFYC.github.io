@@ -910,7 +910,7 @@
           </div>
 
           <div class="pcard-top">
-            <div class="pthumb"><img src="wattup/wattup_archi.png" alt="Wattup 네트워크 아키텍처"></div>
+            <div class="pthumb"><img src="wattup/wattup architecture.png" alt="Wattup 네트워크 아키텍처"></div>
             <div>
               <p style="font-size:14px;color:var(--text-sub);line-height:1.9;margin-bottom:14px;">
                 전기차 충전소 실시간 예약 및 현황 관리 서비스. VirtualBox 기반 On-premise Kubernetes 클러스터를 설계·구축하고
@@ -945,9 +945,9 @@
 
           <ul class="phighlights">
             <li>kubeadm으로 멀티 노드(master+worker 3개) 클러스터 직접 구축, EKS 대신 온프레미스 선택</li>
-            <li>Calico + Tailscale VPN 충돌 해결 (felixconfiguration 패치)</li>
+            <li><strong>Tailscale–Calico 충돌로 발생한 K8s 네트워크 연쇄 장애 복구</strong><br>Service 라우팅·DNS·PVC 장애를 CNI 문제로 좁혀 Calico 재설치 및 인터페이스 고정으로 전체 워크로드 정상화</li>
             <li>JVM 힙 설정으로 Kafka 메모리 사용량 95% → 76% 최적화</li>
-            <li>Vite 빌드타임 환경변수 구조 문제 해결</li>
+            <li>Vite 프론트 배포 및 온프레미스–OCI 연결</li>
           </ul>
 
           <a href="wattup/index.html" class="hlink pri">자세히 보기 →</a>
@@ -1024,7 +1024,7 @@
 
 
         <div class="card">
-          <img src="wattup/wattup_archi.png" alt="Wattup Network Architecture" class="aimg">
+          <img src="wattup/wattup architecture.png" alt="Wattup Network Architecture" class="aimg">
         </div>
       </div>
         </div>
@@ -1072,57 +1072,16 @@
     <div class="pdf-page-number">22</div>
     <div class="pdf-detail-content">
       <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>Wattup</strong><div class="pdf-chapter-tag">트러블슈팅 · TROUBLESHOOTING</div></div>
-      <h2 class="stitle">트러블슈팅</h2>
+      <h2 class="stitle">복합 네트워크 장애 분석 및 복구</h2>
       <div class="fi on">
 
 
+        <p class="pdf-wt-ts-subtitle">Tailscale–Calico 충돌 → Service Routing 장애 → 전체 워크로드 복구</p>
+        <div class="pdf-wt-ts-progress"><span><b>01</b> 장애 전파 확인</span><i>→</i><span><b>02</b> 계층별 원인 축소</span><i>→</i><span><b>03</b> 근본 복구·재발 방지</span></div>
         <div class="twrap pdf-ts-grid">
-<div class="titem">
-              <div class="thead" onclick="tog(this)"><span class="tnum">01</span><span class="ttitle">PostgreSQL
-                  CrashLoopBackOff securityContext 권한 오류</span><span class="tarrow">▼</span></div>
-              <div class="tbody">
-                <span class="tlabel ts">현상</span>
-                <p>PostgreSQL Pod가 볼륨에 접근하지 못하고 <code>CrashLoopBackOff</code> 상태를 반복했습니다.</p>
-                <span class="tlabel tc">원인</span>
-                <p><code>local-path-provisioner</code>가 PVC 디렉토리를 root 소유로 생성. <code>runAsUser: 999</code>를 함께 설정하면
-                  오히려
-                  권한이 없어짐.</p>
-                <span class="tlabel tf">해결</span>
-                <p>사용자와 그룹을 강제로 지정하던 설정을 제거하고, 볼륨 파일에 PostgreSQL 그룹 권한이 적용되도록 <code>fsGroup</code>만 지정해 정상적으로 데이터 디렉토리에 접근하도록 수정했습니다.</p>
-                <span class="tlabel tl">학습</span>
-                <p>컨테이너 실행 사용자뿐 아니라 볼륨을 생성하는 프로비저너의 소유권 방식까지 함께 확인해야 합니다. 이후 StatefulSet 배포 가이드에 <code>fsGroup</code> 적용 원칙을 명시했습니다.</p>
-              </div>
-            </div>
-<div class="titem">
-              <div class="thead" onclick="tog(this)"><span class="tnum">02</span><span class="ttitle">Kafka 데드락 KRaft
-                  3-node 쿼럼 실패</span><span class="tarrow">▼</span></div>
-              <div class="tbody">
-                <span class="tlabel ts">현상</span>
-                <p>Kafka 첫 번째 Pod만 실행된 채 나머지 Pod가 준비되지 않아 클러스터 구성이 멈췄습니다.</p>
-                <span class="tlabel tc">원인</span>
-                <p>3-node KRaft는 과반수 노드가 동시에 떠야 리더 선출 가능. StatefulSet 기본 순차 실행으로 kafka-0 혼자 먼저 떠서 쿼럼 불가 → 데드락.</p>
-                <span class="tlabel tf">해결</span>
-                <p>Kafka Pod가 순차적으로 기다리지 않고 동시에 시작되도록 StatefulSet의 Pod 관리 정책을 병렬 방식으로 변경하고, 준비 상태 이전에도 노드끼리 주소를 찾을 수 있도록 Headless Service의 탐색 설정을 조정했습니다.</p>
-                <span class="tlabel tl">학습</span>
-                <p>분산 시스템의 배포 순서는 일반 애플리케이션과 달리 쿼럼 형성 조건을 먼저 고려해야 합니다. 이후 Kafka 배포 템플릿에 병렬 시작과 노드 탐색 설정을 기본값으로 반영했습니다.</p>
-              </div>
-            </div>
-<div class="titem">
-              <div class="thead" onclick="tog(this)"><span class="tnum">03</span><span class="ttitle">Calico +
-                  Tailscale
-                  충돌 Pod 네트워크 전체 붕괴</span><span class="tarrow">▼</span></div>
-              <div class="tbody">
-                <span class="tlabel ts">현상</span>
-                <p>Tailscale 설치 후 Calico가 <code>tailscale0</code>을 노드 IP로 착각 → CoreDNS / kube-proxy /
-                  local-path-provisioner 연쇄 CrashLoop.</p>
-                <span class="tlabel tc">원인</span>
-                <p>Calico IP 자동 감지가 Tailscale VPN 인터페이스를 우선 선택. Pod 네트워크 라우팅 전체 붕괴.</p>
-                <span class="tlabel tf">해결</span>
-                <p>Calico가 실제 내부망 인터페이스만 노드 IP로 감지하도록 대상을 고정하고, Tailscale이 외부 라우트를 받아 CNI 경로를 변경하지 않도록 설정해 Pod 네트워크를 복구했습니다.</p>
-                <span class="tlabel tl">학습</span>
-                <p>한 노드에 CNI와 VPN 인터페이스가 함께 존재하면 자동 감지에 의존해서는 안 됩니다. 이후 VPN 설치 전에 Calico 인터페이스를 고정하고 설치 후 전체 노드의 CNI 상태를 확인하는 절차를 문서화했습니다.</p>
-              </div>
-            </div>
+<div class="titem"><div class="thead"><span class="tnum">01</span><span class="ttitle">장애 발생 · 영향 범위 확인</span></div><div class="tbody"><p class="pdf-wt-case-heading">Tailscale 설치 이후 Kubernetes 네트워크 연쇄 장애</p><span class="tlabel ts">현상</span><p>CoreDNS·Calico controller·local-path-provisioner CrashLoop, Kafka PVC Pending 동시 발생</p><span class="tlabel tc">영향</span><p>Service Routing·DNS·스토리지 프로비저닝 장애가 데이터 워크로드까지 연쇄 전파</p><span class="tlabel tl">판단</span><p>개별 Pod 장애가 아닌, 여러 컴포넌트가 공유하는 <strong>하위 네트워크 레이어 문제</strong>로 판단</p><p class="pdf-wt-mini-flow">Tailscale 설치 → Service Routing 장애 → DNS/Provisioner 장애 → PVC 실패 → Kafka Pending</p></div></div>
+<div class="titem"><div class="thead"><span class="tnum">02</span><span class="ttitle">계층별 검증 · 원인 특정</span></div><div class="tbody"><p class="pdf-wt-case-heading">Service Routing 검증으로 CNI 레이어까지 원인 축소</p><span class="tlabel ts">확인</span><p>API Server 직접 통신 → worker별 Service IP → <code>ip route</code> → kube-proxy 로그 → Pod 내부 통신 순으로 점검</p><span class="tlabel tc">검증</span><p>kube-proxy 재시작·임시 route로 일부 복구됐지만 Pod 내부 Service IP 장애가 재발했고, 임시 복구 후 재발을 통해 CNI 문제로 범위를 축소</p><span class="tlabel tl">원인</span><p>Calico가 내부망 NIC 대신 <strong>Tailscale 인터페이스를 Node IP로 선택</strong>해 클러스터 라우팅이 비정상화</p></div></div>
+<div class="titem"><div class="thead"><span class="tnum">03</span><span class="ttitle">근본 복구 · 재발 방지</span></div><div class="tbody"><p class="pdf-wt-case-heading">Calico 재설치 및 인터페이스 고정으로 전체 워크로드 복구</p><span class="tlabel ts">보호</span><p>CNI 재설치 전 PostgreSQL·MongoDB·Kafka StatefulSet scale down</p><span class="tlabel tc">조치</span><p>Calico 제거 → <code>tunl0</code>·CNI 잔재 정리 → 재설치 → IP autodetection을 실제 노드 NIC로 고정</p><span class="tlabel tf">결과</span><p>Kafka·MongoDB·PostgreSQL·Importer·Kafka UI·Backend <strong>전체 Running 복구</strong></p><span class="tlabel tl">재발 방지</span><p>Tailscale 설치 전 인터페이스 고정 + <code>--accept-routes=false</code> + 노드 라우팅 검증 체크리스트화</p></div></div>
         </div>
       </div>
         </div>
@@ -1132,24 +1091,19 @@
     <div class="pdf-page-number">23</div>
     <div class="pdf-detail-content">
       <div class="pdf-project-context"><span>PROJECT DETAIL</span><strong>Wattup</strong><div class="pdf-chapter-tag">회고 · RETROSPECTIVE</div></div>
-      <h2 class="stitle">배운 점 &amp; 개선사항</h2>
+      <h2 class="stitle">배운 점</h2>
       <div class="fi on">
 
 
         <div class="card">
-          <div class="subh" style="margin-top:0">배운 점</div>
+          <div class="subh" style="margin-top:0">장애 분석 원칙</div>
           <p style="font-size:14px;color:var(--text-sub);line-height:1.9;margin-bottom:20px;">
-            StatefulSet을 직접 다뤄보고 싶어서 PostgreSQL, Kafka, Debezium을 모두 Kubernetes 클러스터 내에 구성했습니다. 그러나 서비스 간 의존성이
-            깊어질수록 단일
-            장애 지점(SPOF)이 생기기 쉽고, 특히 Kafka 쿼럼 실패나 PostgreSQL securityContext 오류처럼 하나의 컴포넌트 문제가 전체 서비스에 영향을 미치는 상황을
-            경험했습니다.
+            DNS·PVC·Kafka 장애를 각각 처리하기보다 공통 기반인 CNI와 Service Routing을 먼저 확인하며 원인을 좁혔습니다. kube-proxy 재시작과 수동 route는 증상을 일시적으로 완화했지만 재발했고, 이를 통해 임시 복구와 근본 복구를 구분해야 한다는 점을 배웠습니다.
           </p>
 
-          <div class="subh">개선사항</div>
+          <div class="subh">재발 방지 절차</div>
           <p style="font-size:14px;color:var(--text-sub);line-height:1.9;margin-bottom:22px;">
-            가용성과 보안성을 높이기 위해 StatefulSet 사용을 지양하고, DB + Kafka + Debezium을 별도 VM에 구성한 뒤 Tailscale VPN으로 K8s 클러스터와
-            묶어 관리하는
-            방식으로 개선하고 싶습니다. 이렇게 하면 인프라 레이어와 애플리케이션 레이어가 분리되어 장애 격리와 독립적인 스케일링이 가능해집니다.
+            CNI 재설치 전 StatefulSet을 scale down해 데이터를 보호하고, CNI 상태 초기화와 인터페이스 감지 기준 고정으로 근본 복구했습니다. 이후 Tailscale 설치 전 IP autodetection 설정 → <code>--accept-routes=false</code> → 노드 라우팅 검증을 체크리스트화했습니다. 문제 해결 절차는 증상 확인 → 장애 레이어 축소 → 임시 조치 검증 → 근본 원인 복구 → 재발 방지 순서로 정리했습니다.
           </p>
 
         </div>
